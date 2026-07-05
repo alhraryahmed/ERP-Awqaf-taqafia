@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:aspect_name",
+ "creation": "2026-07-01 12:52:19.360350",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "aspect_name",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "aspect_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Aspect Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "is active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-01 16:26:40.029296",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "exam_aspect",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "aspect_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "aspect_name"
+}

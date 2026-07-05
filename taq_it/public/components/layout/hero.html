@@ -1,0 +1,139 @@
+<!-- =======================================================
+     TAQ IT - MAIN LAYOUT
+     hero.html
+======================================================= -->
+
+<div class="taq-app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <h2>TAQ IT</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            {{ menu or "" }}
+
+        </nav>
+
+    </aside>
+
+    <!-- Main Area -->
+    <div class="taq-main">
+
+        <!-- Navbar -->
+        <header class="taq-navbar">
+
+            <div class="navbar-left">
+
+                <button class="sidebar-toggle">
+
+                    ☰
+
+                </button>
+
+                <div>
+
+                    <h3>{{ page_title or "لوحة التحكم" }}</h3>
+
+                    <small>{{ page_subtitle or "" }}</small>
+
+                </div>
+
+            </div>
+
+            <div class="navbar-right">
+
+                {{ navbar_actions or "" }}
+
+            </div>
+
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div>
+
+                    <h1>
+
+                        {{ hero_title or "مرحبًا بك" }}
+
+                    </h1>
+
+                    <p>
+
+                        {{ hero_subtitle or "" }}
+
+                    </p>
+
+                </div>
+
+                <div class="hero-buttons">
+
+                    {{ hero_actions or "" }}
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Workspace -->
+        <main class="workspace">
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                {{ stats or "" }}
+
+            </section>
+
+            <!-- Quick Links -->
+            <section class="quick-links">
+
+                {{ quick_links or "" }}
+
+            </section>
+
+            <!-- Charts -->
+            <section class="charts-grid">
+
+                {{ charts or "" }}
+
+            </section>
+
+            <!-- Notifications -->
+            <section class="notifications">
+
+                {{ notifications or "" }}
+
+            </section>
+
+            <!-- Main Content -->
+            <section class="workspace-content">
+
+                {{ content or "" }}
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="taq-footer">
+
+            <span>
+
+                © 2026 TAQ IT
+
+            </span>
+
+        </footer>
+
+    </div>
+
+</div>

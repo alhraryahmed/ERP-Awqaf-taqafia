@@ -1,0 +1,292 @@
+/* =========================
+   TAQ IT - FORMS SYSTEM
+   INPUTS & DATA ENTRY
+   ========================= */
+
+
+/* =========================
+   FORM WRAPPER
+========================= */
+
+.form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  padding: var(--space-6);
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-5);
+}
+
+.form-col-6 { grid-column: span 6; }
+.form-col-4 { grid-column: span 4; }
+.form-col-3 { grid-column: span 3; }
+.form-col-12 { grid-column: span 12; }
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+/* Required indicator */
+.form-label.required::after {
+  content: "*";
+  color: var(--color-danger);
+  margin-left: 4px;
+}
+
+/* =========================
+   INPUT BASE
+========================= */
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+
+  background: #fff;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(14,74,134,0.1);
+}
+
+/* Disabled */
+.form-input:disabled {
+  background: var(--color-bg);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================
+   SELECT
+========================= */
+
+.form-select {
+  width: 100%;
+  padding: 10px 14px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  background: #fff;
+  font-size: var(--font-size-sm);
+
+  cursor: pointer;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.form-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 10px 14px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  resize: vertical;
+  font-size: var(--font-size-sm);
+}
+
+/* =========================
+   INPUT GROUP (ICON)
+========================= */
+
+.input-group {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+  background: #fff;
+}
+
+.input-group input {
+  border: none;
+  flex: 1;
+  padding: 10px 12px;
+  font-size: var(--font-size-sm);
+}
+
+.input-group-icon {
+  padding: 0 12px;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   HELP TEXT
+========================= */
+
+.form-help {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   ERROR STATE
+========================= */
+
+.form-error {
+  font-size: 12px;
+  color: var(--color-danger);
+}
+
+.form-input.error {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px rgba(209,67,67,0.1);
+}
+
+/* =========================
+   SUCCESS STATE
+========================= */
+
+.form-input.success {
+  border-color: var(--color-success);
+  box-shadow: 0 0 0 3px rgba(30,142,90,0.1);
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section {
+  margin-bottom: var(--space-6);
+}
+
+.form-section-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+/* Divider */
+.form-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-5) 0;
+}
+
+/* =========================
+   CHECKBOX / RADIO
+========================= */
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.form-check input {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* =========================
+   READONLY MODE
+========================= */
+
+.form-readonly {
+  background: var(--color-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-col-6,
+  .form-col-4,
+  .form-col-3 {
+    grid-column: span 12;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* =========================
+   FORM FIX (ERPNext Override)
+========================= */
+
+.form-group {
+    margin-bottom: 16px !important;
+}
+
+.form-control {
+    width: 100% !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    border: 1px solid #E5EBF3 !important;
+}
+
+/* منع التداخل العمودي */
+frappe-control {
+    display: block !important;
+    margin-bottom: 12px !important;
+}
+
+/* Labels */
+.control-label {
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+    color: #24324A !important;
+}

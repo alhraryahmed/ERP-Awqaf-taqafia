@@ -1,0 +1,398 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-02 14:44:52.834442",
+  "name": "Successful in the written exam",
+  "style": "",
+  "workflow_state_name": "Successful in the written exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-02 14:45:42.207049",
+  "name": "Failing",
+  "style": "",
+  "workflow_state_name": "Failing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2025-09-21 18:26:18.572217",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-01 15:57:58.200808",
+  "name": "مقبول",
+  "style": "Success",
+  "workflow_state_name": "مقبول"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:05:02.388233",
+  "name": "إكتمال النشاط",
+  "style": "Success",
+  "workflow_state_name": "إكتمال النشاط"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-01 15:57:49.949055",
+  "name": "مرفوض",
+  "style": "Danger",
+  "workflow_state_name": "مرفوض"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:05:13.993754",
+  "name": "إحالة النشاط",
+  "style": "Primary",
+  "workflow_state_name": "إحالة النشاط"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:04:28.778843",
+  "name": "تكليف بنشاط",
+  "style": "Primary",
+  "workflow_state_name": "تكليف بنشاط"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:05:25.138615",
+  "name": "طلب نشاط",
+  "style": "Inverse",
+  "workflow_state_name": "طلب نشاط"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:04:44.059325",
+  "name": "نشاط معتمد",
+  "style": "Info",
+  "workflow_state_name": "نشاط معتمد"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:04:54.988118",
+  "name": "نشاط محال",
+  "style": "Primary",
+  "workflow_state_name": "نشاط محال"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-24 15:01:20.766676",
+  "name": "مستمر",
+  "style": "Success",
+  "workflow_state_name": "مستمر"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:05:08.275280",
+  "name": "إعتماد النشاط",
+  "style": "Info",
+  "workflow_state_name": "إعتماد النشاط"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:04:18.427406",
+  "name": "تكليف معتمد",
+  "style": "Info",
+  "workflow_state_name": "تكليف معتمد"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-24 15:00:28.079032",
+  "name": "منقطع",
+  "style": "Danger",
+  "workflow_state_name": "منقطع"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-13 16:04:35.504270",
+  "name": "نشاط مكتمل",
+  "style": "Success",
+  "workflow_state_name": "نشاط مكتمل"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-24 15:01:14.573288",
+  "name": "موقوف",
+  "style": "Inverse",
+  "workflow_state_name": "موقوف"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-24 15:01:29.926952",
+  "name": "جديد",
+  "style": "Info",
+  "workflow_state_name": "جديد"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-18 16:32:31.496481",
+  "name": "Suspended",
+  "style": "",
+  "workflow_state_name": "Suspended"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-18 16:32:38.275536",
+  "name": "Disconnected",
+  "style": "",
+  "workflow_state_name": "Disconnected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:29:39.201385",
+  "name": "In Progress",
+  "style": "Info",
+  "workflow_state_name": "In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:29:58.101127",
+  "name": "Completed",
+  "style": "Success",
+  "workflow_state_name": "Completed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:30:09.206815",
+  "name": "Observed",
+  "style": "Primary",
+  "workflow_state_name": "Observed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-29 16:07:40.533059",
+  "name": "Passed the wr_exam",
+  "style": "",
+  "workflow_state_name": "Passed the wr_exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-07-05 15:30:24.800736",
+  "name": "Written Approved",
+  "style": "Success",
+  "workflow_state_name": "Written Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-07-02 19:51:40.455139",
+  "name": "Oral In Progress",
+  "style": "Info",
+  "workflow_state_name": "Oral In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:30:12.713807",
+  "name": "Written Graded",
+  "style": "Info",
+  "workflow_state_name": "Written Graded"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 13:34:44.526073",
+  "name": "Oral Graded",
+  "style": "",
+  "workflow_state_name": "Oral Graded"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:29:56.119304",
+  "name": "in the written exam",
+  "style": "Primary",
+  "workflow_state_name": "in the written exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:29:49.960545",
+  "name": "Passed the Written Exam",
+  "style": "Success",
+  "workflow_state_name": "Passed the Written Exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:29:43.035154",
+  "name": "Failed Written",
+  "style": "Danger",
+  "workflow_state_name": "Failed Written"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:29:38.478292",
+  "name": "Failed Oral",
+  "style": "Danger",
+  "workflow_state_name": "Failed Oral"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2025-09-21 18:26:18.574559",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-29 15:32:11.034014",
+  "name": "Ongoing",
+  "style": "Success",
+  "workflow_state_name": "Ongoing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:15:49.185537",
+  "name": "Scheduled",
+  "style": "",
+  "workflow_state_name": "Scheduled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2025-09-21 18:26:18.576756",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:30:32.143549",
+  "name": "In the oral exam",
+  "style": "Info",
+  "workflow_state_name": "In the oral exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-07-02 19:51:40.442094",
+  "name": "Written In Progress",
+  "style": "Info",
+  "workflow_state_name": "Written In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-23 17:59:56.496945",
+  "name": "Scheduling an appointment",
+  "style": "Primary",
+  "workflow_state_name": "Scheduling an appointment"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:29:52.656847",
+  "name": "Cancelled",
+  "style": "Danger",
+  "workflow_state_name": "Cancelled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:30:07.089850",
+  "name": "Oral Approved",
+  "style": "Success",
+  "workflow_state_name": "Oral Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-23 18:00:37.937937",
+  "name": "New",
+  "style": "Info",
+  "workflow_state_name": "New"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:38:46.756492",
+  "name": "Under Grading",
+  "style": "",
+  "workflow_state_name": "Under Grading"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-23 12:16:49.262583",
+  "name": "referred for the exam",
+  "style": "",
+  "workflow_state_name": "referred for the exam"
+ }
+]

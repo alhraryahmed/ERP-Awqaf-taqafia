@@ -1,0 +1,306 @@
+/* =========================
+   TAQ IT - LAYOUT SYSTEM
+   APP STRUCTURE & GRID
+   ========================= */
+
+
+/* =========================
+   APP WRAPPER
+========================= */
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+/* =========================
+   SIDEBAR AREA
+========================= */
+
+.sidebar {
+  width: 260px;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width var(--transition-normal);
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* =========================
+   MAIN WORKSPACE
+========================= */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =========================
+   TOP BAR / HEADER
+========================= */
+
+.topbar {
+  height: 60px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 var(--space-5);
+  flex-shrink: 0;
+}
+
+/* =========================
+   WORKSPACE CONTENT
+========================= */
+
+.workspace {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* 2 Columns */
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* 3 Columns */
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 4 Columns */
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Auto Fill Responsive */
+.grid-auto {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* =========================
+   FLEX UTILITIES
+========================= */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gap helpers */
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .sidebar { width: 220px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-3,
+  .grid-2,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace {
+    padding: var(--space-4);
+  }
+}
+
+/* =========================
+   SCROLL STYLING
+========================= */
+
+.workspace::-webkit-scrollbar {
+  width: 6px;
+}
+
+.workspace::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+.workspace::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+/* =========================
+   FIX ERPNEXT CUT TOP ISSUE
+========================= */
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--color-bg);
+}
+
+/* Fix Frappe top spacing */
+.layout-main-section {
+    padding-top: 20px !important;
+}
+
+/* Prevent clipping */
+.page-container, .page-body, .layout-main {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+}
+
+/* Fix workspace top cut */
+.taq-app {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.site-footer{
+
+    background:#0b6b4b;
+
+    color:#fff;
+
+    padding:60px 0 20px 0;
+
+    margin-top:80px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:40px;
+
+}
+
+.footer-col h3,
+.footer-col h4{
+
+    margin-bottom:15px;
+
+}
+
+.footer-col p{
+
+    line-height:1.8;
+
+    color:#d7f3e6;
+
+}
+
+.footer-col ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer-col ul li{
+
+    margin-bottom:10px;
+
+    color:#d7f3e6;
+
+}
+
+.footer-col ul li a{
+
+    color:#d7f3e6;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-col ul li a:hover{
+
+    color:#fff;
+
+    padding-right:5px;
+
+}
+
+.footer-bottom{
+
+    margin-top:40px;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    padding-top:15px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#cfe9dd;
+
+}

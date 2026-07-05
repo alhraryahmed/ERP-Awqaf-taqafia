@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-08 15:52:52.793735",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sheikh_name",
+  "book_name",
+  "publication_of_the_book"
+ ],
+ "fields": [
+  {
+   "fieldname": "sheikh_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sheikh Name",
+   "options": "Shaikh_Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Book Name",
+   "options": "sheikhs_books",
+   "reqd": 1
+  },
+  {
+   "fieldname": "publication_of_the_book",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Publication of the book"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-09 11:49:19.756766",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "shaiks_books_child",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

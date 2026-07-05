@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-11 11:23:11.332283",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "\u062a\u0641\u0627\u0635\u064a\u0644_\u0627\u0644\u0645\u0643\u062a\u0628_tab",
+  "\u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a_\u0644\u0644\u0645\u0643\u0627\u062a\u0628_section",
+  "name_mak",
+  "\u0627\u0644\u0645\u0648\u0642\u0639_\u0627\u0644\u062e\u0627\u0635_\u0628\u0627\u0644\u0645\u0643\u062a\u0628",
+  "datee",
+  "\u0645\u0631\u0641\u0642\u0627\u062a_\u0627\u0644\u0632\u064a\u0627\u0631\u0629",
+  "section_break_ugds",
+  "siiig",
+  "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u0625\u062f\u0627\u0631\u064a_tab",
+  "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u0648\u0642\u0641\u064a_tab",
+  "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u062a\u0642\u0646\u064a_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "\u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a_\u0644\u0644\u0645\u0643\u0627\u062a\u0628_section",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a \u0644\u0644\u0645\u0643\u0627\u062a\u0628"
+  },
+  {
+   "fieldname": "name_mak",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0625\u0633\u0645 \u0627\u0644\u0645\u0643\u062a\u0628",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "\u0627\u0644\u0645\u0648\u0642\u0639_\u0627\u0644\u062e\u0627\u0635_\u0628\u0627\u0644\u0645\u0643\u062a\u0628",
+   "fieldtype": "Geolocation",
+   "label": "\u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u062e\u0627\u0635 \u0628\u0627\u0644\u0645\u0643\u062a\u0628"
+  },
+  {
+   "fieldname": "datee",
+   "fieldtype": "Date",
+   "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0632\u064a\u0627\u0631\u0629"
+  },
+  {
+   "fieldname": "\u0645\u0631\u0641\u0642\u0627\u062a_\u0627\u0644\u0632\u064a\u0627\u0631\u0629",
+   "fieldtype": "Attach",
+   "label": "\u0645\u0631\u0641\u0642\u0627\u062a \u0627\u0644\u0632\u064a\u0627\u0631\u0629"
+  },
+  {
+   "fieldname": "siiig",
+   "fieldtype": "Table",
+   "label": "\u0627\u0644\u0627\u0639\u062a\u0645\u0627\u062f \u0648\u0627\u0644\u062a\u0648\u0642\u064a\u0639",
+   "options": "sig"
+  },
+  {
+   "fieldname": "section_break_ugds",
+   "fieldtype": "Section Break",
+   "label": "\u0625\u0639\u062a\u0645\u0627\u062f \u0623\u0639\u0636\u0627\u0621 \u0627\u0644\u0644\u062c\u0646\u0629"
+  },
+  {
+   "fieldname": "\u062a\u0641\u0627\u0635\u064a\u0644_\u0627\u0644\u0645\u0643\u062a\u0628_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0645\u0643\u062a\u0628"
+  },
+  {
+   "fieldname": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u0625\u062f\u0627\u0631\u064a_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631 \u0627\u0644\u0625\u062f\u0627\u0631\u064a"
+  },
+  {
+   "fieldname": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u0648\u0642\u0641\u064a_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631 \u0627\u0644\u0648\u0642\u0641\u064a"
+  },
+  {
+   "fieldname": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u062a\u0642\u0646\u064a_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631 \u0627\u0644\u062a\u0642\u0646\u064a"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-12 12:30:16.583209",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "zeyarat",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

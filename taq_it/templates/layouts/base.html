@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+      <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="utf-8">
+
+    <title>
+        {% block title %}
+        منصة الأنشطة الدعوية
+        {% endblock %}
+    </title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+          content="{% block description %}منصة الأنشطة الدعوية{% endblock %}">
+
+    <meta name="keywords"
+          content="الأوقاف, الدعوة, الأنشطة, المحاضرات, الدروس">
+
+    <meta name="theme-color"
+          content="#0B6B4B">
+
+    <link rel="icon"
+          href="/assets/taq_it/images/favicon.png">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/variables.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/design_system.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/layout.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/navbar.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/cards.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/forms.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/animations.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/responsive.css">
+
+    <link rel="stylesheet"
+          href="/assets/taq_it/css/website.css">
+
+    {% block styles %}
+
+    {% endblock %}
+
+</head>
+
+<body>
+
+<div class="website-wrapper">
+
+    {% include "taq_it/templates/includes/header.html" %}
+
+    <main class="website-main">
+
+        {% block page %}
+
+        {% endblock %}
+
+    </main>
+
+    {% include "taq_it/templates/includes/footer.html" %}
+
+</div>
+
+<!-- Javascript -->
+
+<script src="/assets/taq_it/js/app.js"></script>
+
+<script src="/assets/taq_it/js/animations.js"></script>
+
+<script src="/assets/taq_it/js/search.js"></script>
+
+<script src="/assets/taq_it/js/website.js"></script>
+
+{% block scripts %}
+
+{% endblock %}
+
+</body>
+
+</html>

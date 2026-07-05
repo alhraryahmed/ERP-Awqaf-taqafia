@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": ".exam_type.-.form_name.-.###",
+ "creation": "2026-07-01 15:45:53.358693",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "form_name",
+  "exam_type",
+  "max_score",
+  "column_break_efxu",
+  "program",
+  "program_name",
+  "success_rate",
+  "section_break_kreh",
+  "aspects",
+  "questions"
+ ],
+ "fields": [
+  {
+   "fieldname": "form_name",
+   "fieldtype": "Data",
+   "label": "\u0623\u0633\u0645 \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646"
+  },
+  {
+   "fieldname": "exam_type",
+   "fieldtype": "Link",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646",
+   "options": "exam_type"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062c",
+   "options": "program"
+  },
+  {
+   "fieldname": "aspects",
+   "fieldtype": "Table",
+   "label": "Aspects",
+   "options": "exam_form_aspect"
+  },
+  {
+   "fieldname": "questions",
+   "fieldtype": "Table",
+   "label": "Questions",
+   "options": "exam_form_question"
+  },
+  {
+   "fieldname": "column_break_efxu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kreh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "program.program_name",
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0628\u0631\u0646\u0627\u0645\u062c",
+   "read_only": 1
+  },
+  {
+   "fieldname": "max_score",
+   "fieldtype": "Float",
+   "label": "\u062f\u0631\u062c\u0629 \u0627\u0644\u0646\u0647\u0627\u0626\u064a\u0629 \u0644\u0644\u0627\u0645\u062a\u062d\u0627\u0646"
+  },
+  {
+   "fieldname": "success_rate",
+   "fieldtype": "Percent",
+   "label": "\u0646\u0633\u0628\u0629 \u0627\u0644\u0646\u062c\u0627\u062d \u0641\u064a \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-02 21:05:48.537907",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "exam_form",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u0645\u0639\u062a\u0645\u062f \u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "form_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "form_name",
+ "translated_doctype": 1
+}

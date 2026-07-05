@@ -1,0 +1,575 @@
+/* =========================
+   TAQ_IT DESIGN SYSTEM
+   ========================= */
+
+/* Root Variables */
+:root {
+  /* Colors */
+  --color-primary: #0E4A86;
+  --color-primary-hover: #145AA6;
+  --color-gold: #C9A13B;
+  --color-gold-hover: #B88E26;
+
+  --color-success: #1E8E5A;
+  --color-warning: #E4A11B;
+  --color-danger: #D14343;
+
+  --color-bg: #F6F8FB;
+  --color-surface: #FFFFFF;
+  --color-border: #E5EBF3;
+
+  --color-text: #24324A;
+  --color-text-secondary: #708198;
+
+  /* Typography */
+  --font-base: 'Cairo', sans-serif;
+  --font-heading: 'IBM Plex Sans Arabic', sans-serif;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.04);
+  --shadow-md: 0 8px 24px rgba(0,0,0,.08);
+  --shadow-lg: 0 18px 50px rgba(0,0,0,.12);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1,h2,h3,h4,h5 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-gold {
+  background: var(--color-gold);
+  color: white;
+}
+
+/* Cards */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* =========================
+   TAQ IT - DESIGN SYSTEM
+   BASE COMPONENTS
+   يعتمد على variables.css
+   ========================= */
+
+/* استدعاء الخطوط (اختياري إذا لم تُستدعَ في ERPNext) */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap');
+
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+h4 { font-size: 22px; }
+h5 { font-size: 18px; }
+h6 { font-size: var(--font-size-md); }
+
+p {
+  color: var(--color-text-secondary);
+}
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Secondary */
+.btn-secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+/* Outline */
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  background: var(--color-bg);
+}
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.btn-ghost:hover {
+  background: rgba(14,74,134,0.08);
+}
+
+/* Danger */
+.btn-danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+/* Icon Button */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* =========================
+   CARDS SYSTEM
+========================= */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Types */
+.card-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.card-value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   INPUT SYSTEM
+========================= */
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: #fff;
+
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+
+  transition: all var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(14,74,134,0.1);
+}
+
+/* Label */
+.label {
+  font-size: var(--font-size-sm);
+  margin-bottom: 6px;
+  display: block;
+  color: var(--color-text-secondary);
+}
+
+/* =========================
+   TABLE SYSTEM
+========================= */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  background: var(--color-bg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.table td {
+  padding: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+}
+
+.badge-success {
+  background: rgba(30,142,90,0.1);
+  color: var(--color-success);
+}
+
+.badge-warning {
+  background: rgba(228,161,27,0.1);
+  color: var(--color-warning);
+}
+
+.badge-danger {
+  background: rgba(209,67,67,0.1);
+  color: var(--color-danger);
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-muted { color: var(--color-text-muted); }
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* =========================
+   VIBRANT UI UPGRADE
+========================= */
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #0E4A86, #2B7BFF);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(43,123,255,0.3);
+}
+
+/* Cards */
+.card {
+    border: 1px solid #E5EBF3;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Links */
+a {
+    color: #2B7BFF;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #0E4A86;
+}
+
+/* Status colors (LISTS) */
+.badge-success {
+    background: #D1FADF;
+    color: #027A48;
+}
+
+.badge-warning {
+    background: #FEF3C7;
+    color: #B54708;
+}
+
+.badge-danger {
+    background: #FEE4E2;
+    color: #B42318;
+}
+
+.badge-info {
+    background: #D1E9FF;
+    color: #175CD3;
+}
+/* =========================
+   BUTTONS - VIBRANT STYLE
+========================= */
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Primary */
+.btn-primary {
+    background: linear-gradient(135deg, #0E4A86, #2B7BFF);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(43,123,255,0.3);
+}
+
+/* Success */
+.btn-success {
+    background: linear-gradient(135deg, #1E8E5A, #2ECC71);
+    color: white;
+}
+
+/* Warning */
+.btn-warning {
+    background: linear-gradient(135deg, #E4A11B, #F39C12);
+    color: white;
+}
+
+/* Danger */
+.btn-danger {
+    background: linear-gradient(135deg, #D14343, #FF5A5F);
+    color: white;
+}
+
+/* Outline */
+.btn-outline {
+    border: 2px solid #0E4A86;
+    background: transparent;
+    color: #0E4A86;
+}
+/* =========================
+   STATUS BADGES
+========================= */
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* States */
+.badge-success {
+    background: #D1FADF;
+    color: #027A48;
+}
+
+.badge-warning {
+    background: #FEF3C7;
+    color: #B54708;
+}
+
+.badge-danger {
+    background: #FEE4E2;
+    color: #B42318;
+}
+
+.badge-info {
+    background: #D1E9FF;
+    color: #175CD3;
+}

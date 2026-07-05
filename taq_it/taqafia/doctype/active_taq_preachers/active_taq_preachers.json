@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-01 17:17:11.880474",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "preacher",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "preacher",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preacher Name",
+   "link_filters": "[[\"waed_info\",\"waed_status\",\"=\",\"Ongoing\"]]",
+   "options": "waed_info"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Title",
+   "options": "enac_taq"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-01 20:27:36.985763",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "Active Taq Preachers",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2025-12-04 13:13:48.269024",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-12-04 13:13:59.432193",
+ "modified_by": "Administrator",
+ "module": "EDI",
+ "name": "device_connect",
+ "owner": "Administrator",
+ "page_name": "device_connect",
+ "roles": [],
+ "script": null,
+ "standard": "no",
+ "style": null,
+ "system_page": 0,
+ "title": "الاتصال بالأجهزة"
+}

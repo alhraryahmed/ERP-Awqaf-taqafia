@@ -1,0 +1,162 @@
+/* =========================
+   TAQ IT - CARDS SYSTEM
+   ADVANCED COMPONENTS
+   ========================= */
+
+/* =========================
+   BASE CARD (Enhanced)
+========================= */
+
+.card {
+  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(246, 248, 251, 0.95) 100%);
+  border: 1px solid rgba(229, 235, 243, 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-gold) 100%);
+  border-radius: 999px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.card-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+/* =========================
+   STAT CARD
+========================= */
+
+.card-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.card-stat-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+/* =========================
+   ACTION CARD
+========================= */
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   ICON CARD
+========================= */
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(14, 74, 134, 0.12) 0%, rgba(201, 161, 59, 0.16) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* =========================
+   INFO CARD
+========================= */
+
+.card-info {
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(14, 74, 134, 0.04) 0%, rgba(201, 161, 59, 0.05) 100%);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(229, 235, 243, 0.75);
+}
+
+/* =========================
+   NOTIFICATION CARD
+========================= */
+
+.card-notification {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-left: 3px solid var(--color-primary);
+  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(246, 248, 251, 0.9) 100%);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* =========================
+   LIST CARD
+========================= */
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card-list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(229, 235, 243, 0.6);
+}
+
+.card-list-item:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   EMPTY CARD
+========================= */
+
+.card-empty {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--color-text-muted);
+  background: linear-gradient(135deg, rgba(14, 74, 134, 0.03) 0%, rgba(201, 161, 59, 0.04) 100%);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-border);
+}

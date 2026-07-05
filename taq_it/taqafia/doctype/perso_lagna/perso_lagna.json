@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{na}-{see}",
+ "creation": "2025-11-11 11:32:27.184015",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "\u0623\u0639\u0636\u0627\u0621_\u0644\u062c\u0646\u0629_\u0631\u0641\u0639_\u0627\u0644\u0643\u0641\u0627\u0626\u0629_section",
+  "na",
+  "see"
+ ],
+ "fields": [
+  {
+   "fieldname": "na",
+   "fieldtype": "Data",
+   "label": "\u0625\u0633\u0645 \u0627\u0644\u0639\u0636\u0648"
+  },
+  {
+   "fieldname": "\u0623\u0639\u0636\u0627\u0621_\u0644\u062c\u0646\u0629_\u0631\u0641\u0639_\u0627\u0644\u0643\u0641\u0627\u0626\u0629_section",
+   "fieldtype": "Section Break",
+   "label": "\u0623\u0639\u0636\u0627\u0621 \u0644\u062c\u0646\u0629 \u0631\u0641\u0639 \u0627\u0644\u0643\u0641\u0627\u0626\u0629"
+  },
+  {
+   "fieldname": "see",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0635\u0641\u0629"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-11 13:03:02.890635",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "perso_lagna",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

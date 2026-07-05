@@ -1,0 +1,3923 @@
+[
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:43:24.002522",
+  "name": "60o6hctcel",
+  "permitted_roles": [
+   {
+    "parent": "60o6hctcel",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the wr_exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:43:26.527619",
+  "name": "61hcvap737",
+  "permitted_roles": [
+   {
+    "parent": "61hcvap737",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:43:28.117328",
+  "name": "621ici7ebh",
+  "permitted_roles": [
+   {
+    "parent": "621ici7ebh",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:44:34.639423",
+  "name": "6mq380g1qq",
+  "permitted_roles": [
+   {
+    "parent": "6mq380g1qq",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Under Grading"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:44:35.316330",
+  "name": "6n1o4fbemn",
+  "permitted_roles": [
+   {
+    "parent": "6n1o4fbemn",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the wr_exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:44:36.037132",
+  "name": "6n81jtmena",
+  "permitted_roles": [
+   {
+    "parent": "6n81jtmena",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 17:44:37.096174",
+  "name": "6njep65qpc",
+  "permitted_roles": [
+   {
+    "parent": "6njep65qpc",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 18:12:32.413445",
+  "name": "n34skd7s0u",
+  "permitted_roles": [
+   {
+    "parent": "n34skd7s0u",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "n33f6h1an7",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 18:12:38.136339",
+  "name": "n4t410p8su",
+  "permitted_roles": [
+   {
+    "parent": "n4t410p8su",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "n33f6h1an7",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 16:42:05.705236",
+  "name": "aj9i0d5msb",
+  "permitted_roles": [
+   {
+    "parent": "aj9i0d5msb",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 16:56:21.053881",
+  "name": "iuirdgca3d",
+  "permitted_roles": [
+   {
+    "parent": "iuirdgca3d",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 16:56:35.353673",
+  "name": "j31mrjshfe",
+  "permitted_roles": [
+   {
+    "parent": "j31mrjshfe",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 16:56:38.842195",
+  "name": "j44j01cs4m",
+  "permitted_roles": [
+   {
+    "parent": "j44j01cs4m",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Under Grading"
+ },
+ {
+  "completed_by": "alhraryahmed110@gmail.com",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-30 16:44:58.150053",
+  "name": "o15dlc3h4f",
+  "permitted_roles": [
+   {
+    "parent": "o15dlc3h4f",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-الصلاة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-30 16:45:12.184740",
+  "name": "o5h9klu79s",
+  "permitted_roles": [
+   {
+    "parent": "o5h9klu79s",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-الصلاة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 17:05:11.665388",
+  "name": "tcchhag7p0",
+  "permitted_roles": [
+   {
+    "parent": "tcchhag7p0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-26-03",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "In Progress"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 17:05:25.395394",
+  "name": "tglmicf32d",
+  "permitted_roles": [
+   {
+    "parent": "tglmicf32d",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مسعود-الفلاح-مكتب-سوق-الجمعة-0040",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:25:53.919943",
+  "name": "6bjeo03h8g",
+  "permitted_roles": [
+   {
+    "parent": "6bjeo03h8g",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-26-03",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:26:55.355880",
+  "name": "6upf076ojp",
+  "permitted_roles": [
+   {
+    "parent": "6upf076ojp",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-25-04",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:27:08.906614",
+  "name": "7312qn3l3f",
+  "permitted_roles": [
+   {
+    "parent": "7312qn3l3f",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-25-02",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:27:08.935348",
+  "name": "731cr9n8pg",
+  "permitted_roles": [
+   {
+    "parent": "731cr9n8pg",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-25-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 14:50:46.167773",
+  "name": "6rt00dct8o",
+  "permitted_roles": [
+   {
+    "parent": "6rt00dct8o",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عادل التومي-مكتب أوقاف طرابلس - AD",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 15:01:37.955093",
+  "name": "d7j2h5divs",
+  "permitted_roles": [
+   {
+    "parent": "d7j2h5divs",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عادل التومي-مكتب أوقاف طرابلس - AD",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 15:01:45.100173",
+  "name": "d9rk7u5eff",
+  "permitted_roles": [
+   {
+    "parent": "d9rk7u5eff",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عادل التومي-مكتب أوقاف طرابلس - AD",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "موقوف"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 15:01:50.916222",
+  "name": "dblv16ves2",
+  "permitted_roles": [
+   {
+    "parent": "dblv16ves2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عادل التومي-مكتب أوقاف طرابلس - AD",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "منقطع"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 15:11:45.912031",
+  "name": "j5jlvanm7u",
+  "permitted_roles": [
+   {
+    "parent": "j5jlvanm7u",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:20:20.662786",
+  "name": "ugemvpa9kp",
+  "permitted_roles": [
+   {
+    "parent": "ugemvpa9kp",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000002",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:32:00.631934",
+  "name": "5b6tcqu5nu",
+  "permitted_roles": [
+   {
+    "parent": "5b6tcqu5nu",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000003",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:46:38.849647",
+  "name": "dtks23ip40",
+  "permitted_roles": [
+   {
+    "parent": "dtks23ip40",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000004",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:51:22.666744",
+  "name": "gmasqnidup",
+  "permitted_roles": [
+   {
+    "parent": "gmasqnidup",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000005",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:52:37.092332",
+  "name": "hdi5srlhg5",
+  "permitted_roles": [
+   {
+    "parent": "hdi5srlhg5",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000006",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:53:51.550403",
+  "name": "i4r4oj15d3",
+  "permitted_roles": [
+   {
+    "parent": "i4r4oj15d3",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000007",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:54:46.333757",
+  "name": "ilvmjgfte2",
+  "permitted_roles": [
+   {
+    "parent": "ilvmjgfte2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000008",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-09-24 17:55:55.738202",
+  "name": "jbl6ndkmp2",
+  "permitted_roles": [
+   {
+    "parent": "jbl6ndkmp2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000009",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 14:51:05.937527",
+  "name": "pa37ramaub",
+  "permitted_roles": [
+   {
+    "parent": "pa37ramaub",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000010",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 14:54:33.531081",
+  "name": "ravno0c6jj",
+  "permitted_roles": [
+   {
+    "parent": "ravno0c6jj",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000011",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 14:58:16.007402",
+  "name": "tggu9jbv7v",
+  "permitted_roles": [
+   {
+    "parent": "tggu9jbv7v",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000012",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 14:59:34.764894",
+  "name": "u93c8ppo0q",
+  "permitted_roles": [
+   {
+    "parent": "u93c8ppo0q",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000013",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:02:07.532058",
+  "name": "vor486r6ra",
+  "permitted_roles": [
+   {
+    "parent": "vor486r6ra",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000014",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:05:47.590336",
+  "name": "1tjh2k4gjg",
+  "permitted_roles": [
+   {
+    "parent": "1tjh2k4gjg",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000015",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:08:05.714792",
+  "name": "38p50hoqlo",
+  "permitted_roles": [
+   {
+    "parent": "38p50hoqlo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000016",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:10:18.878335",
+  "name": "4icit8sb2j",
+  "permitted_roles": [
+   {
+    "parent": "4icit8sb2j",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000017",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:22:24.563971",
+  "name": "bl58lvbsfr",
+  "permitted_roles": [
+   {
+    "parent": "bl58lvbsfr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000018",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:24:29.745837",
+  "name": "cs9c674p28",
+  "permitted_roles": [
+   {
+    "parent": "cs9c674p28",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000019",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:26:44.709977",
+  "name": "e6ff0ggek3",
+  "permitted_roles": [
+   {
+    "parent": "e6ff0ggek3",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000020",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:33:08.360115",
+  "name": "hubve50hn4",
+  "permitted_roles": [
+   {
+    "parent": "hubve50hn4",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000021",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:39:00.378384",
+  "name": "lcb55764e8",
+  "permitted_roles": [
+   {
+    "parent": "lcb55764e8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000022",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 15:40:53.176633",
+  "name": "mfj43onmui",
+  "permitted_roles": [
+   {
+    "parent": "mfj43onmui",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000020",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 16:12:12.554268",
+  "name": "8qt464ckjh",
+  "permitted_roles": [
+   {
+    "parent": "8qt464ckjh",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000023",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 16:12:19.030135",
+  "name": "8sulcp7ksi",
+  "permitted_roles": [
+   {
+    "parent": "8sulcp7ksi",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "8su4lllt3h",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-01 16:13:10.589253",
+  "name": "9d1b5p340u",
+  "permitted_roles": [
+   {
+    "parent": "9d1b5p340u",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000023",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-06 11:51:29.064003",
+  "name": "aqa52pmvn8",
+  "permitted_roles": [
+   {
+    "parent": "aqa52pmvn8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000024",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-06 11:51:36.491229",
+  "name": "askmn9sral",
+  "permitted_roles": [
+   {
+    "parent": "askmn9sral",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "مكتب أوقاف طرابلس - AD-معاذ مفتاح البهلول",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-06 12:14:29.371544",
+  "name": "o9lojt7du3",
+  "permitted_roles": [
+   {
+    "parent": "o9lojt7du3",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000025",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-06 12:15:28.701863",
+  "name": "os7m6ilu43",
+  "permitted_roles": [
+   {
+    "parent": "os7m6ilu43",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000026",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-06 12:15:33.928427",
+  "name": "otr2mqgf8j",
+  "permitted_roles": [
+   {
+    "parent": "otr2mqgf8j",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "مكتب أوقاف طرابلس - AD-قثلثقاقفنت",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-09 12:34:55.201934",
+  "name": "7go3ltii56",
+  "permitted_roles": [
+   {
+    "parent": "7go3ltii56",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000027",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-09 12:35:12.639640",
+  "name": "7m6pis3m93",
+  "permitted_roles": [
+   {
+    "parent": "7m6pis3m93",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "مكتب أوقاف طرابلس - AD-ناصر مختار الورشفاني",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-12 09:37:35.265400",
+  "name": "2ron5clh27",
+  "permitted_roles": [
+   {
+    "parent": "2ron5clh27",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "0000027",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-12 11:17:35.763222",
+  "name": "tet5smqt6j",
+  "permitted_roles": [
+   {
+    "parent": "tet5smqt6j",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي محمد علي ساسي-0000028",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-13 16:07:14.860405",
+  "name": "itsjvf1viq",
+  "permitted_roles": [
+   {
+    "parent": "itsjvf1viq",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الصلاة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-13 16:07:18.766426",
+  "name": "iv3volpsc3",
+  "permitted_roles": [
+   {
+    "parent": "iv3volpsc3",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الصلاة",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-13 16:08:10.769488",
+  "name": "jfbsur4sh8",
+  "permitted_roles": [
+   {
+    "parent": "jfbsur4sh8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "jfbgdkfpg5",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-13 16:08:13.808289",
+  "name": "jgab1r53q9",
+  "permitted_roles": [
+   {
+    "parent": "jgab1r53q9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "jfbgdkfpg5",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-13 16:09:53.443866",
+  "name": "kfe732s4fc",
+  "permitted_roles": [
+   {
+    "parent": "kfe732s4fc",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف غريان - AD-الايمان",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-13 16:10:26.653867",
+  "name": "kpqsl7qf52",
+  "permitted_roles": [
+   {
+    "parent": "kpqsl7qf52",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "kpquo7fa3j",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-22 15:02:40.765160",
+  "name": "mr7i3emggc",
+  "permitted_roles": [
+   {
+    "parent": "mr7i3emggc",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مالك انديش-0000029",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-22 15:03:06.455185",
+  "name": "n38rk1qvu1",
+  "permitted_roles": [
+   {
+    "parent": "n38rk1qvu1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "مكتب أوقاف الخمس - AD-مالك انديش",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-22 15:06:35.807056",
+  "name": "p4m06fit4h",
+  "permitted_roles": [
+   {
+    "parent": "p4m06fit4h",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مالك انديش-0000029",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-22 15:07:31.106833",
+  "name": "plv98ao4rd",
+  "permitted_roles": [
+   {
+    "parent": "plv98ao4rd",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "plu6fv52mm",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-22 15:08:39.631596",
+  "name": "qbcr88j4ge",
+  "permitted_roles": [
+   {
+    "parent": "qbcr88j4ge",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "plu6fv52mm",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-26 12:09:08.830101",
+  "name": "05g4e185mi",
+  "permitted_roles": [
+   {
+    "parent": "05g4e185mi",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AD-التوحيد",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-26 12:09:26.239160",
+  "name": "0au277td2a",
+  "permitted_roles": [
+   {
+    "parent": "0au277td2a",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AD-التوحيد",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-26 12:09:52.394953",
+  "name": "0j3j53j5tg",
+  "permitted_roles": [
+   {
+    "parent": "0j3j53j5tg",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "0j31a34td5",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:26:03.997155",
+  "name": "b1ojghauvt",
+  "permitted_roles": [
+   {
+    "parent": "b1ojghauvt",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عاشور بنور-0000030",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:26:44.345127",
+  "name": "bebotvjkth",
+  "permitted_roles": [
+   {
+    "parent": "bebotvjkth",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "مكتب أوقاف طرابلس - AD-أحمد عاشور بنور",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:31:12.823500",
+  "name": "e28gqcqjkk",
+  "permitted_roles": [
+   {
+    "parent": "e28gqcqjkk",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عاشور بنور-0000030",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:31:17.534580",
+  "name": "e3n7u00d7i",
+  "permitted_roles": [
+   {
+    "parent": "e3n7u00d7i",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عاشور بنور-0000030",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "موقوف"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:31:19.612400",
+  "name": "e4cbt95o4c",
+  "permitted_roles": [
+   {
+    "parent": "e4cbt95o4c",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "أحمد عاشور بنور-0000030",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "منقطع"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:34:38.213893",
+  "name": "g2eu9jfalc",
+  "permitted_roles": [
+   {
+    "parent": "g2eu9jfalc",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الكنوز الاثرية",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:35:14.736773",
+  "name": "gdroflbjsp",
+  "permitted_roles": [
+   {
+    "parent": "gdroflbjsp",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الكنوز الاثرية",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:35:50.344396",
+  "name": "govonpf8gq",
+  "permitted_roles": [
+   {
+    "parent": "govonpf8gq",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "govt4t178r",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:35:53.014138",
+  "name": "gpqavg904h",
+  "permitted_roles": [
+   {
+    "parent": "gpqavg904h",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "govt4t178r",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-28 15:36:56.704955",
+  "name": "hdnl31auj0",
+  "permitted_roles": [
+   {
+    "parent": "hdnl31auj0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الكنوز الاثرية",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط معتمد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 20:04:43.028309",
+  "name": "hieoko4361",
+  "permitted_roles": [
+   {
+    "parent": "hieoko4361",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مالك انديش-0000029",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "موقوف"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:22:02.847934",
+  "name": "usc2saku5i",
+  "permitted_roles": [
+   {
+    "parent": "usc2saku5i",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الاحسان",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:22:41.820997",
+  "name": "v8ip4p068a",
+  "permitted_roles": [
+   {
+    "parent": "v8ip4p068a",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الاحسان",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:23:10.371354",
+  "name": "vhf5cq4r86",
+  "permitted_roles": [
+   {
+    "parent": "vhf5cq4r86",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "vhfpqrpjpm",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:23:16.055036",
+  "name": "vj8lvp12lj",
+  "permitted_roles": [
+   {
+    "parent": "vj8lvp12lj",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "vhfpqrpjpm",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:23:46.508772",
+  "name": "vsp9h0rot8",
+  "permitted_roles": [
+   {
+    "parent": "vsp9h0rot8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف الخمس - AD-الاحسان",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:36:19.041129",
+  "name": "77u14jr487",
+  "permitted_roles": [
+   {
+    "parent": "77u14jr487",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "نافع الهادي زهمول-0000031",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:36:46.817188",
+  "name": "7gkc58f213",
+  "permitted_roles": [
+   {
+    "parent": "7gkc58f213",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "مكتب أوقاف طرابلس - AD-نافع الهادي زهمول",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "جديد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:38:37.824568",
+  "name": "8ja6njmmip",
+  "permitted_roles": [
+   {
+    "parent": "8ja6njmmip",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "نافع الهادي زهمول-0000031",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "مستمر"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2025-10-31 21:39:16.807652",
+  "name": "8vg5n461f8",
+  "permitted_roles": [
+   {
+    "parent": "8vg5n461f8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "8vgii7trfn",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-22 16:31:49.364164",
+  "name": "ialqhhtg2n",
+  "permitted_roles": [
+   {
+    "parent": "ialqhhtg2n",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد محمد النجار-office-001-024",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "مدير إدارة الشؤون الثقافية والدعوية",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:23:13.823316",
+  "name": "lsi3or9bka",
+  "permitted_roles": [
+   {
+    "parent": "lsi3or9bka",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "مدير إدارة الشؤون الثقافية والدعوية"
+   },
+   {
+    "parent": "lsi3or9bka",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد النجار-مكتب سوق الجمعة-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "مدير إدارة الشؤون الثقافية والدعوية",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:25:05.117416",
+  "name": "mvbndt4bvs",
+  "permitted_roles": [
+   {
+    "parent": "mvbndt4bvs",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "مدير إدارة الشؤون الثقافية والدعوية"
+   },
+   {
+    "parent": "mvbndt4bvs",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "محود الورفلي-مكتب طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "مدير إدارة الشؤون الثقافية والدعوية",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:25:22.541555",
+  "name": "n4pniiqule",
+  "permitted_roles": [
+   {
+    "parent": "n4pniiqule",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "مدير إدارة الشؤون الثقافية والدعوية"
+   },
+   {
+    "parent": "n4pniiqule",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "كمال النعاس-مكتب طرابلس-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "مدير إدارة الشؤون الثقافية والدعوية",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:26:36.679169",
+  "name": "nrurseus1e",
+  "permitted_roles": [
+   {
+    "parent": "nrurseus1e",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "مدير إدارة الشؤون الثقافية والدعوية"
+   },
+   {
+    "parent": "nrurseus1e",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي الشعتاني-مكتب سوق الجمعة-0001",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "مدير إدارة الشؤون الثقافية والدعوية",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:27:12.156351",
+  "name": "o710h9bnc2",
+  "permitted_roles": [
+   {
+    "parent": "o710h9bnc2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "مدير إدارة الشؤون الثقافية والدعوية"
+   },
+   {
+    "parent": "o710h9bnc2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي الشعتاني-مكتب سوق الجمعة-0002",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:38:39.239906",
+  "name": "utou7hjjvm",
+  "permitted_roles": [
+   {
+    "parent": "utou7hjjvm",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "utou7hjjvm",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "مدير إدارة الشؤون الثقافية والدعوية"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "محود-الورفلي-مكتب-طرابلس-0033",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:39:39.568799",
+  "name": "vgjapmicno",
+  "permitted_roles": [
+   {
+    "parent": "vgjapmicno",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد النجار-مكتب سوق الجمعة-0001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:39:42.584700",
+  "name": "vhhfhcdhjp",
+  "permitted_roles": [
+   {
+    "parent": "vhhfhcdhjp",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "محود الورفلي-مكتب طرابلس-0001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:39:49.455139",
+  "name": "vjmp4tuf6b",
+  "permitted_roles": [
+   {
+    "parent": "vjmp4tuf6b",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "كمال النعاس-مكتب طرابلس-0001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 15:39:52.691504",
+  "name": "vkm6ei3olr",
+  "permitted_roles": [
+   {
+    "parent": "vkm6ei3olr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي الشعتاني-مكتب سوق الجمعة-0001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-23 17:59:00.466182",
+  "name": "h5copg8vrt",
+  "permitted_roles": [
+   {
+    "parent": "h5copg8vrt",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي الشعتاني-مكتب سوق الجمعة-0002",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 15:28:13.190600",
+  "name": "4i348ngfle",
+  "permitted_roles": [
+   {
+    "parent": "4i348ngfle",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "Committee-2026-06-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:28:38.147114",
+  "name": "7uth9atcle",
+  "permitted_roles": [
+   {
+    "parent": "7uth9atcle",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-25-01",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "In Progress"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:28:43.972961",
+  "name": "80nckdooab",
+  "permitted_roles": [
+   {
+    "parent": "80nckdooab",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-06-25-02",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "In Progress"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-24 16:48:47.357120",
+  "name": "jopi6ou1ir",
+  "permitted_roles": [
+   {
+    "parent": "jopi6ou1ir",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مسعود-الفلاح-مكتب-سوق-الجمعة-0040",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 14:46:43.239193",
+  "name": "7002sij6vc",
+  "permitted_roles": [
+   {
+    "parent": "7002sij6vc",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-النجار-مكتب-طرابلس-0001",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 14:47:18.885676",
+  "name": "7b4vq9t3so",
+  "permitted_roles": [
+   {
+    "parent": "7b4vq9t3so",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 14:48:50.819953",
+  "name": "87soudkhf6",
+  "permitted_roles": [
+   {
+    "parent": "87soudkhf6",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "Committee-2026-06-02",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-06-29 15:39:33.473007",
+  "name": "5um8poa2kt",
+  "permitted_roles": [
+   {
+    "parent": "5um8poa2kt",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "احمد-الحراري-مكتب-طرابلس-0003",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 20:02:45.935042",
+  "name": "nlr5sdd1gk",
+  "permitted_roles": [
+   {
+    "parent": "nlr5sdd1gk",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-العقيدة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-01 20:03:00.524783",
+  "name": "nqd76e9rj1",
+  "permitted_roles": [
+   {
+    "parent": "nqd76e9rj1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "nqcg5nqjls",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 14:18:25.607343",
+  "name": "plg2uf28vj",
+  "permitted_roles": [
+   {
+    "parent": "plg2uf28vj",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_lag_data",
+  "reference_name": "Committee-2026-07-03",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:19:03.053299",
+  "name": "t66usp1cji",
+  "permitted_roles": [
+   {
+    "parent": "t66usp1cji",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "nqcg5nqjls",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:25:31.778250",
+  "name": "0vliurr3b7",
+  "permitted_roles": [
+   {
+    "parent": "0vliurr3b7",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-دروس علمية متنوعة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:26:16.294823",
+  "name": "1dj9vlr2os",
+  "permitted_roles": [
+   {
+    "parent": "1dj9vlr2os",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "1dia2aar7f",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:26:25.020148",
+  "name": "1gamkrv325",
+  "permitted_roles": [
+   {
+    "parent": "1gamkrv325",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "1dia2aar7f",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:26:41.478128",
+  "name": "1le742e5pr",
+  "permitted_roles": [
+   {
+    "parent": "1le742e5pr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-الصلاة",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "نشاط معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:26:48.016436",
+  "name": "1ngqa4kk45",
+  "permitted_roles": [
+   {
+    "parent": "1ngqa4kk45",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-دروس علمية متنوعة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:26:49.405732",
+  "name": "1nu3pu6vjv",
+  "permitted_roles": [
+   {
+    "parent": "1nu3pu6vjv",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-دروس علمية متنوعة",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "نشاط معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:27:46.842289",
+  "name": "29spa1j3ae",
+  "permitted_roles": [
+   {
+    "parent": "29spa1j3ae",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-العقيدة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط محال"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 15:27:48.115681",
+  "name": "2a9l0njmru",
+  "permitted_roles": [
+   {
+    "parent": "2a9l0njmru",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-العقيدة",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "نشاط معتمد"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 18:02:12.169315",
+  "name": "sp9lupv8g4",
+  "permitted_roles": [
+   {
+    "parent": "sp9lupv8g4",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-العقيدة-0031",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 18:02:34.599844",
+  "name": "t0a33nt5ae",
+  "permitted_roles": [
+   {
+    "parent": "t0a33nt5ae",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "t098t07cgo",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف بنشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "موظفي الثقافية بالديوان",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 18:02:37.815505",
+  "name": "t1ak52n49s",
+  "permitted_roles": [
+   {
+    "parent": "t1ak52n49s",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "active_taq",
+  "reference_name": "t098t07cgo",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "تكليف معتمد"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:19:09.153232",
+  "name": "d13u36cv2k",
+  "permitted_roles": [
+   {
+    "parent": "d13u36cv2k",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسامة-مكتب-طرابلس-0038",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:19:29.973977",
+  "name": "d7ja0531jn",
+  "permitted_roles": [
+   {
+    "parent": "d7ja0531jn",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسامة-مكتب-طرابلس-0038",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:37:31.641225",
+  "name": "npkc06vlri",
+  "permitted_roles": [
+   {
+    "parent": "npkc06vlri",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:38:10.933175",
+  "name": "o5tk89k2n6",
+  "permitted_roles": [
+   {
+    "parent": "o5tk89k2n6",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:38:16.520061",
+  "name": "o7lsuhb79e",
+  "permitted_roles": [
+   {
+    "parent": "o7lsuhb79e",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:38:16.718879",
+  "name": "o7np3uq6dd",
+  "permitted_roles": [
+   {
+    "parent": "o7np3uq6dd",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:38:38.745129",
+  "name": "oejunuupmv",
+  "permitted_roles": [
+   {
+    "parent": "oejunuupmv",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:38:38.828977",
+  "name": "oeksmkb2hi",
+  "permitted_roles": [
+   {
+    "parent": "oeksmkb2hi",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-07-01-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:38:40.572024",
+  "name": "of5cvfqgok",
+  "permitted_roles": [
+   {
+    "parent": "of5cvfqgok",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-07-01-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:40:43.249802",
+  "name": "plg0ajkif3",
+  "permitted_roles": [
+   {
+    "parent": "plg0ajkif3",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Under Grading"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:48:34.593199",
+  "name": "u8plktdqv7",
+  "permitted_roles": [
+   {
+    "parent": "u8plktdqv7",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the wr_exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:48:34.660168",
+  "name": "u8qs34ik4t",
+  "permitted_roles": [
+   {
+    "parent": "u8qs34ik4t",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-02 20:48:54.545043",
+  "name": "uf17ed57sv",
+  "permitted_roles": [
+   {
+    "parent": "uf17ed57sv",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المرجيني-مكتب-طرابلس-0044",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 14:22:13.674048",
+  "name": "v4o1o77ldo",
+  "permitted_roles": [
+   {
+    "parent": "v4o1o77ldo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 14:22:13.767671",
+  "name": "v4p9h4p9eq",
+  "permitted_roles": [
+   {
+    "parent": "v4p9h4p9eq",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسامة-مكتب-طرابلس-0038",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 14:22:13.796624",
+  "name": "v4qca9aq33",
+  "permitted_roles": [
+   {
+    "parent": "v4qca9aq33",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-07-30-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 14:22:16.516573",
+  "name": "v5lpg4vq57",
+  "permitted_roles": [
+   {
+    "parent": "v5lpg4vq57",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-07-30-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 14:23:31.919465",
+  "name": "vt7b6h9eqb",
+  "permitted_roles": [
+   {
+    "parent": "vt7b6h9eqb",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 14:23:32.069566",
+  "name": "vt8bcm56fq",
+  "permitted_roles": [
+   {
+    "parent": "vt8bcm56fq",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسامة-مكتب-طرابلس-0038",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 15:00:30.593008",
+  "name": "lih9trm0p1",
+  "permitted_roles": [
+   {
+    "parent": "lih9trm0p1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 15:00:30.647923",
+  "name": "liik8k88tr",
+  "permitted_roles": [
+   {
+    "parent": "liik8k88tr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 15:16:50.448802",
+  "name": "v4osvndef9",
+  "permitted_roles": [
+   {
+    "parent": "v4osvndef9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "المسعودي-مكتب-طرابلس-0041",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 17:10:38.625258",
+  "name": "1qi2190cod",
+  "permitted_roles": [
+   {
+    "parent": "1qi2190cod",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مصطفى-الحمدون-مكتب-طرابلس-0046",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 17:11:03.661426",
+  "name": "22csk39jje",
+  "permitted_roles": [
+   {
+    "parent": "22csk39jje",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 17:11:21.394141",
+  "name": "27uot2m08l",
+  "permitted_roles": [
+   {
+    "parent": "27uot2m08l",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 17:11:26.028697",
+  "name": "29crp76abo",
+  "permitted_roles": [
+   {
+    "parent": "29crp76abo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:13:08.070221",
+  "name": "6e8hl9bv52",
+  "permitted_roles": [
+   {
+    "parent": "6e8hl9bv52",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:13:12.343476",
+  "name": "6fjaodv68v",
+  "permitted_roles": [
+   {
+    "parent": "6fjaodv68v",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:15:19.583700",
+  "name": "7nb7n6hd7c",
+  "permitted_roles": [
+   {
+    "parent": "7nb7n6hd7c",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:15:19.685690",
+  "name": "7ncjoamlc7",
+  "permitted_roles": [
+   {
+    "parent": "7ncjoamlc7",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:15:19.703537",
+  "name": "7nd6s02ui9",
+  "permitted_roles": [
+   {
+    "parent": "7nd6s02ui9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-01-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:15:27.647708",
+  "name": "7psm8jpesf",
+  "permitted_roles": [
+   {
+    "parent": "7psm8jpesf",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-01-01",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:17:29.448335",
+  "name": "8vuq8ee3kf",
+  "permitted_roles": [
+   {
+    "parent": "8vuq8ee3kf",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:19:50.614000",
+  "name": "ac23etlsmk",
+  "permitted_roles": [
+   {
+    "parent": "ac23etlsmk",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:21:14.531122",
+  "name": "b69p968n3v",
+  "permitted_roles": [
+   {
+    "parent": "b69p968n3v",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:21:14.702500",
+  "name": "b6bvdqvtgj",
+  "permitted_roles": [
+   {
+    "parent": "b6bvdqvtgj",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:21:14.956749",
+  "name": "b6dj8nk5q8",
+  "permitted_roles": [
+   {
+    "parent": "b6dj8nk5q8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:21:15.004452",
+  "name": "b6ehu7237m",
+  "permitted_roles": [
+   {
+    "parent": "b6ehu7237m",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:23:27.601000",
+  "name": "cfsfair8h0",
+  "permitted_roles": [
+   {
+    "parent": "cfsfair8h0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:23:27.765172",
+  "name": "cftep5h8p7",
+  "permitted_roles": [
+   {
+    "parent": "cftep5h8p7",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:37:02.824464",
+  "name": "kekhgup2is",
+  "permitted_roles": [
+   {
+    "parent": "kekhgup2is",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:37:02.925167",
+  "name": "kel9jglrp9",
+  "permitted_roles": [
+   {
+    "parent": "kel9jglrp9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مصطفى-الحمدون-مكتب-طرابلس-0046",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:38:31.590668",
+  "name": "labq2r5h5g",
+  "permitted_roles": [
+   {
+    "parent": "labq2r5h5g",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:38:31.651917",
+  "name": "lacr1e3ni5",
+  "permitted_roles": [
+   {
+    "parent": "lacr1e3ni5",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مصطفى-الحمدون-مكتب-طرابلس-0046",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:38:31.667694",
+  "name": "laclqlt5si",
+  "permitted_roles": [
+   {
+    "parent": "laclqlt5si",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-07-30-02",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:38:37.566644",
+  "name": "lc7soqkuvt",
+  "permitted_roles": [
+   {
+    "parent": "lc7soqkuvt",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-07-30-02",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:44:10.882234",
+  "name": "okcffsggmk",
+  "permitted_roles": [
+   {
+    "parent": "okcffsggmk",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:44:11.029357",
+  "name": "okeh4j0ago",
+  "permitted_roles": [
+   {
+    "parent": "okeh4j0ago",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مصطفى-الحمدون-مكتب-طرابلس-0046",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:53:31.209541",
+  "name": "u3gme8q4kf",
+  "permitted_roles": [
+   {
+    "parent": "u3gme8q4kf",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:53:31.259108",
+  "name": "u3g22dki8f",
+  "permitted_roles": [
+   {
+    "parent": "u3g22dki8f",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:53:31.344724",
+  "name": "u3h3bg7dna",
+  "permitted_roles": [
+   {
+    "parent": "u3h3bg7dna",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مصطفى-الحمدون-مكتب-طرابلس-0046",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:53:31.404747",
+  "name": "u3i0acog0q",
+  "permitted_roles": [
+   {
+    "parent": "u3i0acog0q",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "مصطفى-الحمدون-مكتب-طرابلس-0046",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 18:53:59.978374",
+  "name": "ucfi6lf2kr",
+  "permitted_roles": [
+   {
+    "parent": "ucfi6lf2kr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 19:21:20.976403",
+  "name": "ed9rj9q5ro",
+  "permitted_roles": [
+   {
+    "parent": "ed9rj9q5ro",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اسماعيل-شعبان-الواعر-مكتب-طرابلس-0050",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Ongoing"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 19:21:21.135936",
+  "name": "edbp62o7em",
+  "permitted_roles": [
+   {
+    "parent": "edbp62o7em",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "خالد-المدني-مكتب-طرابلس-0048",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Ongoing"
+ },
+ {
+  "completed_by": "alhraryahmed110@gmail.com",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-07-05 19:21:21.192860",
+  "name": "edbauiq5hr",
+  "permitted_roles": [
+   {
+    "parent": "edbauiq5hr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "الاغا-مكتب-طرابلس-0047",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Ongoing"
+ }
+]

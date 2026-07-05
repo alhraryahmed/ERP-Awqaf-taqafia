@@ -1,0 +1,20 @@
+{
+ "action": "Create Entry",
+ "action_label": "\u062a\u0643\u0644\u064a\u0641 \u0648\u0627\u0639\u0638 \u0628\u0646\u0634\u0627\u0637",
+ "creation": "2026-06-28 19:44:49.794219",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-06-29 14:02:05.045027",
+ "modified_by": "Administrator",
+ "name": "\u062a\u0643\u0644\u064a\u0641 \u0648\u0627\u0639\u0638 \u0628\u0646\u0634\u0627\u0637",
+ "owner": "Administrator",
+ "reference_document": "active_taq",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "\u062a\u0643\u0644\u064a\u0641 \u0648\u0627\u0639\u0638 \u0628\u0646\u0634\u0627\u0637",
+ "validate_action": 1
+}

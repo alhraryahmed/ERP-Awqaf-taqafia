@@ -1,0 +1,140 @@
+{% extends "taq_it/templates/layouts/base.html" %}
+
+{% block title %}الرئيسية - منصة الأنشطة{% endblock %}
+
+{% block page %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <h1>منصة الأنشطة الدعوية</h1>
+
+        <p>
+            تابع أحدث الأنشطة والمحاضرات والدروس العلمية لحظة بلحظة
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="/activities" class="btn-primary">استعرض الأنشطة</a>
+
+            <a href="/gallery" class="btn-outline">معرض الصور</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+            <h2>120+</h2>
+            <p>نشاط دعوي</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>35</h2>
+            <p>مكتب</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>200+</h2>
+            <p>واعظ</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>50+</h2>
+            <p>منطقة</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- UPCOMING -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>الإعلانات القادمة</h2>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <div class="badge upcoming">قادم</div>
+                <h3>محاضرة الصلاة</h3>
+                <p>مسجد بن جابر - طرابلس</p>
+            </div>
+
+            <div class="card">
+                <div class="badge upcoming">قادم</div>
+                <h3>درس العقيدة</h3>
+                <p>مكتب الأوقاف - المدينة القديمة</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ONGOING -->
+<section class="section dark">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>الأنشطة الجارية الآن</h2>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <div class="badge live">مباشر</div>
+                <h3>خطبة الجمعة</h3>
+                <p>مسجد الكبير</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LATEST -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>آخر الأنشطة</h2>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <h3>درس التفسير</h3>
+                <p>تم بتاريخ 30-06-2026</p>
+            </div>
+
+            <div class="card">
+                <h3>محاضرة الشباب</h3>
+                <p>تم بتاريخ 29-06-2026</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

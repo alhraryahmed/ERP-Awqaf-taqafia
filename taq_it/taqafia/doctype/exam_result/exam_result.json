@@ -1,0 +1,324 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{exam_group_date}-{waed}",
+ "creation": "2026-07-01 17:52:03.871731",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "exam_group_date",
+  "waed",
+  "column_break_identity",
+  "written_exam_form",
+  "oral_exam_form",
+  "written_section",
+  "written_status",
+  "written_pass_status",
+  "column_break_written_totals",
+  "written_total",
+  "written_max_total",
+  "written_percentage",
+  "written_questions_section",
+  "written_questions",
+  "oral_section",
+  "oral_status",
+  "oral_pass_status",
+  "column_break_oral_totals",
+  "oral_total",
+  "oral_max_total",
+  "oral_percentage",
+  "oral_questions_section",
+  "oral_questions",
+  "final_section",
+  "status",
+  "pass_status",
+  "column_break_final_totals",
+  "total_score",
+  "max_total",
+  "percentage",
+  "legacy_section",
+  "exam_form",
+  "questions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "exam_group_date",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Exam Group Date",
+   "options": "exam_group_date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "waed",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Preacher",
+   "options": "waed_info",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_identity",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "written_exam_form",
+   "fieldtype": "Link",
+   "label": "Written Exam Form",
+   "options": "exam_form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "oral_exam_form",
+   "fieldtype": "Link",
+   "label": "Oral Exam Form",
+   "options": "exam_form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "written_section",
+   "fieldtype": "Section Break",
+   "label": "Written Exam"
+  },
+  {
+   "default": "Not Graded",
+   "fieldname": "written_status",
+   "fieldtype": "Select",
+   "label": "Written Status",
+   "options": "Not Graded\nGraded\nApproved",
+   "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "written_pass_status",
+   "fieldtype": "Select",
+   "label": "Written Pass Status",
+   "options": "Pending\nPassed\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_written_totals",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "written_total",
+   "fieldtype": "Float",
+   "label": "Written Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "written_max_total",
+   "fieldtype": "Float",
+   "label": "Written Max Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "written_percentage",
+   "fieldtype": "Percent",
+   "label": "Written Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "written_questions_section",
+   "fieldtype": "Section Break",
+   "label": "Written Questions"
+  },
+  {
+   "fieldname": "written_questions",
+   "fieldtype": "Table",
+   "label": "Written Questions",
+   "options": "exam_result_question",
+   "read_only": 1
+  },
+  {
+   "fieldname": "oral_section",
+   "fieldtype": "Section Break",
+   "label": "Oral Exam"
+  },
+  {
+   "default": "Not Required",
+   "fieldname": "oral_status",
+   "fieldtype": "Select",
+   "label": "Oral Status",
+   "options": "Not Required\nNot Graded\nGraded\nApproved",
+   "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "oral_pass_status",
+   "fieldtype": "Select",
+   "label": "Oral Pass Status",
+   "options": "Pending\nPassed\nFailed\nNot Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oral_totals",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "oral_total",
+   "fieldtype": "Float",
+   "label": "Oral Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "oral_max_total",
+   "fieldtype": "Float",
+   "label": "Oral Max Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "oral_percentage",
+   "fieldtype": "Percent",
+   "label": "Oral Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "oral_questions_section",
+   "fieldtype": "Section Break",
+   "label": "Oral Questions"
+  },
+  {
+   "fieldname": "oral_questions",
+   "fieldtype": "Table",
+   "label": "Oral Questions",
+   "options": "exam_result_question",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_section",
+   "fieldtype": "Section Break",
+   "label": "Final Result"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Result Status",
+   "options": "Draft\nWritten Graded\nWritten Approved\nOral Graded\nFinal Approved",
+   "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "pass_status",
+   "fieldtype": "Select",
+   "label": "Final Pass Status",
+   "options": "Pending\nFailed Written\nFailed Oral\nPassed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_final_totals",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_score",
+   "fieldtype": "Float",
+   "label": "Final Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "max_total",
+   "fieldtype": "Float",
+   "label": "Final Max Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Final Percentage",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "legacy_section",
+   "fieldtype": "Section Break",
+   "label": "Legacy Compatibility"
+  },
+  {
+   "fieldname": "exam_form",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Legacy Exam Form",
+   "options": "exam_form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "questions",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Legacy Questions",
+   "options": "exam_result_question",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "exam_result",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-07-02 16:23:18.480559",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "exam_result",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "مشرف رصد الامتحانات",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "معتمد نتائج الامتحانات",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

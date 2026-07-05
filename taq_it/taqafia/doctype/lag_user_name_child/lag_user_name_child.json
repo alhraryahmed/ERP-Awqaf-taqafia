@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-24 14:16:10.709540",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_name",
+  "the_adjective"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User Name",
+   "options": "lag_user_name"
+  },
+  {
+   "fieldname": "the_adjective",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "The adjective",
+   "options": "\u0627\u062e\u062a\u0631 \u0627\u0644\u0635\u0641\u0629\n\u0631\u0626\u064a\u0633 \u0644\u062c\u0646\u0629\n\u0645\u0642\u0631\u0631\n\u0639\u0636\u0648"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-24 14:21:28.175859",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "lag_user_name_child",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

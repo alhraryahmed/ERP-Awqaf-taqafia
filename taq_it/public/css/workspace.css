@@ -1,0 +1,306 @@
+/* =========================
+   TAQ IT - WORKSPACE SYSTEM
+   MAIN CONTENT AREA
+   ========================= */
+
+/* =========================
+   WORKSPACE HEADER
+========================= */
+
+.workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.workspace-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.workspace-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* =========================
+   PAGE ACTIONS
+========================= */
+
+.workspace-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* =========================
+   DASHBOARD GRID
+========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-5);
+}
+
+/* Card spans */
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-8 { grid-column: span 8; }
+.col-12 { grid-column: span 12; }
+
+/* =========================
+   DASHBOARD WIDGETS
+========================= */
+
+.widget {
+  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(255,255,255,0.98) 100%);
+  border: 1px solid rgba(229, 235, 243, 0.9);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.widget::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-gold) 100%);
+  border-radius: 999px;
+}
+
+.widget:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Widget header */
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.widget-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-10);
+  color: var(--color-text-muted);
+  background: linear-gradient(135deg, rgba(14, 74, 134, 0.04), rgba(201, 161, 59, 0.05));
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.empty-state-icon {
+  font-size: 40px;
+  margin-bottom: var(--space-3);
+}
+
+.empty-state-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.empty-state-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* =========================
+   LIST PAGE
+========================= */
+
+.list-page {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* List toolbar */
+.list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(90deg, rgba(14, 74, 134, 0.03), rgba(201, 161, 59, 0.03));
+}
+
+/* =========================
+   CARDS GRID (WORKSPACE)
+========================= */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+/* =========================
+   SECTION BLOCK
+========================= */
+
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+  position: relative;
+  padding-left: 12px;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-gold) 100%);
+}
+
+/* =========================
+   STATISTICS ROW
+========================= */
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+/* =========================
+   REPORT AREA
+========================= */
+
+.report-container {
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(246,248,251,0.95) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   LOADING SKELETON
+========================= */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg) 25%,
+    #e9eef5 50%,
+    var(--color-bg) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+
+.page {
+  padding: var(--space-5);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .col-8, .col-6 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* =========================
+   WORKSPACE FIX
+========================= */
+
+.taq-workspace {
+  padding: 24px !important;
+  --workspace-accent: var(--color-primary);
+  --workspace-accent-2: var(--color-gold);
+}
+
+/* Fix overlapping cards */
+.taq-workspace .card {
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(246, 248, 251, 0.95) 100%);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(229, 235, 243, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taq-workspace .card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Better spacing grid */
+.stats-grid,
+.charts-grid,
+.quick-links {
+  display: grid;
+  gap: 16px;
+}
+
+/* Fix vertical overlap */
+.workspace-content {
+  margin-top: 24px;
+}

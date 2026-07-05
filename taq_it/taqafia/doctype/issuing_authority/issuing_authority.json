@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:issuing_authority",
+ "creation": "2026-06-08 13:26:58.088930",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "create_issuing_authority_section",
+  "issuing_authority"
+ ],
+ "fields": [
+  {
+   "fieldname": "create_issuing_authority_section",
+   "fieldtype": "Section Break",
+   "label": "Create Issuing Authority"
+  },
+  {
+   "fieldname": "issuing_authority",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Issuing Authority",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-29 15:33:38.532675",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "Issuing_Authority",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "issuing_authority",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "issuing_authority",
+ "translated_doctype": 1
+}

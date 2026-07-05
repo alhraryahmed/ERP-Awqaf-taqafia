@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-01 18:40:35.135603",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "\u0627\u062e\u062a\u0627\u0631_\u0628\u064a\u0627\u0646\u0627\u062a_\u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646_\u0627\u0644\u0630\u064a_\u062a\u0631\u064a\u062f__\u0631\u0635\u062f_\u062f\u0631\u062c\u0627\u062a\u0647_section",
+  "exam_group_date",
+  "column_break_pays",
+  "grading_stage",
+  "column_break_filters",
+  "loaded_exam_form",
+  "section_break_sdbi",
+  "grading_html",
+  "section_break_bhfd",
+  "save_grades",
+  "approve_stage"
+ ],
+ "fields": [
+  {
+   "fieldname": "exam_group_date",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Exam Group Date",
+   "link_filters": "[[\"exam_group_date\",\"exam_status\",\"!=\",\"Completed\"]]",
+   "options": "exam_group_date",
+   "reqd": 1
+  },
+  {
+   "default": "Written",
+   "fieldname": "grading_stage",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Grading Stage",
+   "options": "Written\nOral",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_filters",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loaded_exam_form",
+   "fieldtype": "Link",
+   "label": "Loaded Exam Form",
+   "options": "exam_form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grading_html",
+   "fieldtype": "HTML",
+   "label": "Grades"
+  },
+  {
+   "fieldname": "save_grades",
+   "fieldtype": "Button",
+   "label": "\u062d\u0641\u0638 \u0627\u0644\u062f\u0631\u062c\u0627\u062a"
+  },
+  {
+   "fieldname": "approve_stage",
+   "fieldtype": "Button",
+   "label": "\u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0645\u0631\u062d\u0644\u0629"
+  },
+  {
+   "fieldname": "section_break_sdbi",
+   "fieldtype": "Section Break",
+   "label": "\u062c\u062f\u0648\u0644 \u0627\u0644\u062a\u0635\u062d\u064a\u062d"
+  },
+  {
+   "fieldname": "section_break_bhfd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "\u0627\u062e\u062a\u0627\u0631_\u0628\u064a\u0627\u0646\u0627\u062a_\u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646_\u0627\u0644\u0630\u064a_\u062a\u0631\u064a\u062f__\u0631\u0635\u062f_\u062f\u0631\u062c\u0627\u062a\u0647_section",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u062e\u062a\u0627\u0631 \u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646 \u0627\u0644\u0630\u064a \u062a\u0631\u064a\u062f  \u0631\u0635\u062f \u062f\u0631\u062c\u0627\u062a\u0647"
+  },
+  {
+   "fieldname": "column_break_pays",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-07-05 18:52:21.038182",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "exam_grading_tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "\u0645\u0639\u062a\u0645\u062f \u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "\u0645\u0634\u0631\u0641 \u0631\u0635\u062f \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

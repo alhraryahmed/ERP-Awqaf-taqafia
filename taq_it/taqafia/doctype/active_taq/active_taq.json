@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "creation": "2025-10-12 09:55:25.246677",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "\u0627\u0644\u0627\u0646\u0634\u0637\u0629_\u0648\u0627\u0644\u0641\u0627\u0639\u0644\u064a\u0627\u062a_\u0644\u0644\u0648\u0639\u0627\u0638_section",
+  "assignment_type",
+  "naa",
+  "preachers",
+  "en",
+  "ty",
+  "mak",
+  "\u0645\u0648\u0639\u062f_\u0648\u0645\u0643\u0627\u0646_\u0627\u0644\u0646\u0634\u0627\u0637_column",
+  "da",
+  "locc",
+  "route",
+  "significant_event",
+  "are_you",
+  "are_you_counts",
+  "counts_display"
+ ],
+ "fields": [
+  {
+   "fieldname": "\u0627\u0644\u0627\u0646\u0634\u0637\u0629_\u0648\u0627\u0644\u0641\u0627\u0639\u0644\u064a\u0627\u062a_\u0644\u0644\u0648\u0639\u0627\u0638_section",
+   "fieldtype": "Section Break",
+   "label": "Preacher Activities Section"
+  },
+  {
+   "fetch_from": "en.ja_mak",
+   "fieldname": "ty",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "tyac_taq",
+   "reqd": 1
+  },
+  {
+   "fieldname": "en",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity Title",
+   "options": "mak_taq",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "en.ma",
+   "fieldname": "mak",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Office",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "en.da",
+   "fieldname": "da",
+   "fieldtype": "Date",
+   "label": "Activity Date",
+   "options": "mak_taq",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.assignment_type==\"\u0641\u0631\u062f\u064a\"",
+   "fieldname": "naa",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preacher Name",
+   "link_filters": "[[\"waed_info\",\"waed_status\",\"=\",\"Ongoing\"]]",
+   "options": "waed_info"
+  },
+  {
+   "fieldname": "\u0645\u0648\u0639\u062f_\u0648\u0645\u0643\u0627\u0646_\u0627\u0644\u0646\u0634\u0627\u0637_column",
+   "fieldtype": "Column Break",
+   "label": "Activity Time and Place"
+  },
+  {
+   "fetch_from": "en.loc_mak",
+   "fieldname": "locc",
+   "fieldtype": "Link",
+   "label": "Location on Map",
+   "options": "loc_taq",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "assignment_type",
+   "fieldtype": "Select",
+   "label": "Assignment Type",
+   "options": "\n\u0641\u0631\u062f\u064a\n\u062c\u0645\u0627\u0639\u064a"
+  },
+  {
+   "depends_on": "eval:doc.assignment_type==\"\u062c\u0645\u0627\u0639\u064a\"",
+   "fieldname": "preachers",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "Preachers",
+   "options": "Active Taq Preachers"
+  },
+  {
+   "default": "0",
+   "fieldname": "significant_event",
+   "fieldtype": "Check",
+   "label": "Significant Event"
+  },
+  {
+   "fieldname": "are_you",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Are you interested in this event",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "default": "{}",
+   "fieldname": "are_you_counts",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Total Interest Responses a"
+  },
+  {
+   "fieldname": "counts_display",
+   "fieldtype": "HTML",
+   "label": "Total Interest Responses"
+  }
+ ],
+ "grid_page_length": 50,
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-05 19:10:50.983619",
+ "modified_by": "alhraryahmed110@gmail.com",
+ "module": "taqafia",
+ "name": "active_taq",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u0645\u0646\u0627\u0637\u0642",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u062f\u064a\u0648\u0627\u0646",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u0631\u0624\u0633\u0627\u0621 \u0627\u0644\u0627\u0642\u0633\u0627\u0645 \u0648\u0627\u0644\u0648\u062d\u062f\u0627\u062a \u0628\u0627\u0644\u062b\u0627\u0641\u064a\u0629 \u0641\u064a \u0627\u0644\u062f\u064a\u0648\u0627\u0646",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u0645\u062f\u064a\u0631 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "active_taq/Activety",
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,78 @@
+<!-- ==========================================
+     TAQ IT
+     Reusable Report Component
+========================================== -->
+
+<div class="report">
+
+    <!-- Report Header -->
+    <div class="report-header">
+
+        <div>
+
+            <h2 class="report-title">
+
+                {{ title or "التقرير" }}
+
+            </h2>
+
+            {% if subtitle %}
+            <p class="report-subtitle">
+
+                {{ subtitle }}
+
+            </p>
+            {% endif %}
+
+        </div>
+
+        <div class="report-actions">
+
+            {{ actions or "" }}
+
+        </div>
+
+    </div>
+
+    <!-- Filters -->
+    <div class="report-filters">
+
+        {{ filters or "" }}
+
+    </div>
+
+    <!-- KPI Cards -->
+    {% if kpis %}
+    <div class="kpi-row">
+
+        {{ kpis }}
+
+    </div>
+    {% endif %}
+
+    <!-- Chart -->
+    {% if chart %}
+    <div class="chart-container">
+
+        {{ chart }}
+
+    </div>
+    {% endif %}
+
+    <!-- Report Table -->
+    <div class="report-table-container">
+
+        {{ table or "" }}
+
+    </div>
+
+    <!-- Empty State -->
+    {% if empty %}
+    <div class="report-empty">
+
+        {{ empty }}
+
+    </div>
+    {% endif %}
+
+</div>

@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-22 15:23:31.276957",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "exam_day",
+  "exam_period",
+  "column_break_sjhy",
+  "exam_time",
+  "examination_committee",
+  "section_break_qxnq",
+  "written_exam",
+  "column_break_flwy",
+  "oral_exam",
+  "section_break_swuv",
+  "get_preachers",
+  "column_break_ocfd",
+  "count_to_exam",
+  "count_waes_exam",
+  "section_break_iglw",
+  "waed_info_to_exam"
+ ],
+ "fields": [
+  {
+   "fieldname": "exam_day",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0623\u0645\u062a\u062d\u0627\u0646",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exam_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "\u062a\u0648\u0642\u064a\u062a \u0627\u0644\u0623\u0645\u062a\u062d\u0627\u0646",
+   "reqd": 1
+  },
+  {
+   "fieldname": "examination_committee",
+   "fieldtype": "Link",
+   "label": "\u0644\u062c\u0646\u0629 \u0627\u0644\u0623\u0645\u062a\u062d\u0627\u0646",
+   "link_filters": "[[\"exam_lag_data\",\"committee_state\",\"=\",\"Approved\"]]",
+   "options": "exam_lag_data"
+  },
+  {
+   "fieldname": "column_break_sjhy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_swuv",
+   "fieldtype": "Section Break",
+   "label": "the preachers to be tested"
+  },
+  {
+   "fieldname": "waed_info_to_exam",
+   "fieldtype": "Table",
+   "label": "Information about the preachers to be tested",
+   "options": "exam-group-data-child"
+  },
+  {
+   "fieldname": "get_preachers",
+   "fieldtype": "Button",
+   "label": "\u062c\u0644\u0628  \u0627\u0644\u0645\u062a\u062a\u062d\u0646\u064a\u0646"
+  },
+  {
+   "default": "30",
+   "fieldname": "count_to_exam",
+   "fieldtype": "Data",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0648\u0639\u0627\u0638 \u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u0625\u0645\u062a\u062d\u0627\u0646\u0647\u0645"
+  },
+  {
+   "fieldname": "count_waes_exam",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0648\u0639\u0627\u0638 \u0627\u0644\u0645\u062d\u0645\u0644\u064a\u0646",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qxnq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "written_exam",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646 \u0627\u0644\u062a\u062d\u0631\u064a\u0631\u064a",
+   "link_filters": "[[\"exam_form\",\"exam_type\",\"=\",\"\u062a\u062d\u0631\u064a\u0631\u064a\"]]",
+   "options": "exam_form",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_flwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oral_exam",
+   "fieldtype": "Link",
+   "label": "\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646 \u0627\u0644\u0634\u0641\u0648\u064a",
+   "link_filters": "[[\"exam_form\",\"exam_type\",\"=\",\"\u0634\u0641\u0648\u064a\"]]",
+   "options": "exam_form"
+  },
+  {
+   "fieldname": "column_break_ocfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_iglw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "exam_period",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0641\u062a\u0631\u0629",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-05 18:38:00.730754",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "exam_group_date",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "\u0645\u0639\u062a\u0645\u062f \u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

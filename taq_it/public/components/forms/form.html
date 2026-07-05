@@ -1,0 +1,50 @@
+<!-- ==========================================
+     TAQ IT
+     Reusable Form Component
+=========================================== -->
+
+<div class="form">
+
+    <!-- Form Header -->
+    <div class="form-section">
+
+        <div class="section-title">
+
+            <h2>{{ title or "نموذج" }}</h2>
+
+            {% if subtitle %}
+            <p>{{ subtitle }}</p>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <!-- Form Body -->
+    <div class="form-grid">
+
+        {{ body or "" }}
+
+    </div>
+
+    <!-- Divider -->
+    <div class="form-divider"></div>
+
+    <!-- Actions -->
+    <div class="form-actions">
+
+        <button class="btn btn-secondary">
+
+            إلغاء
+
+        </button>
+
+        <button class="btn btn-primary">
+
+            حفظ
+
+        </button>
+
+    </div>
+
+</div>
