@@ -25,7 +25,8 @@ function generate_score_sheet(frm) {
     frappe.call({
         method: "taq_it.taqafia.doctype.exam_result.exam_result.generate_score_sheet",
         args: {
-            waed: frm.doc.name
+            waed: frm.doc.name,
+            force: 0
         },
         freeze: true,
         freeze_message: "جاري إنشاء كشف الدرجات...",
@@ -33,12 +34,14 @@ function generate_score_sheet(frm) {
             if (!r.message || !r.message.file_url) return;
 
             frappe.show_alert({
-                message: "تم إنشاء كشف الدرجات وإرفاقه بنجاح",
-                indicator: "green"
-            });
+    message: r.message.cached
+        ? "تم فتح كشف الدرجات الموجود مسبقاً"
+        : "تم إنشاء كشف الدرجات وإرفاقه بنجاح",
+    indicator: r.message.cached ? "blue" : "green"
+});
 
-            frm.reload_doc();
-            window.open(r.message.file_url, "_blank");
+            window.open(encodeURI(r.message.file_url), "_blank");
+frm.reload_doc();
         }
     });
 }

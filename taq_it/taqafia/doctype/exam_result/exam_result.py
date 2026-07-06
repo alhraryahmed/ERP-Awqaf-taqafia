@@ -4,6 +4,7 @@
 import frappe
 from frappe.model.document import Document
 from frappe.utils.file_manager import save_file
+import re
 
 WRITTEN_STAGE = "Written"
 ORAL_STAGE = "Oral"
@@ -246,9 +247,9 @@ def get_stage_percentage_field(stage):
 
 
 @frappe.whitelist()
-def generate_score_sheet(waed):
+def generate_score_sheet(waed, force=0):
     if not waed:
-        frappe.throw("Preacher is required.")
+        frappe.throw("الواعظ مطلوب.")
 
     frappe.has_permission("waed_info", "read", doc=waed, throw=True)
     frappe.has_permission("exam_result", "read", throw=True)
@@ -265,7 +266,29 @@ def generate_score_sheet(waed):
 
     result_status = frappe.db.get_value("exam_result", result_name, "status")
     if result_status == STATUS_DRAFT:
-        frappe.throw("لا يمكن إصدار كشف الدرجات قبل رصد أي درجات لهذا الواعظ.")
+        frappe.throw("لا يمكن إصدار كشف الدرجات قبل رصد الدرجات.")
+
+    waed_name = frappe.db.get_value("waed_info", waed, "namee") or waed
+    safe_waed_name = re.sub(r'[\\/:*?"<>|]', "", waed_name).strip()
+    file_name = f"كشف درجات {safe_waed_name}.pdf"
+    name_without_ext = file_name[:-4]  # يزيل ".pdf" فقط من أجل مطابقة الاسم مع أي لاحقة عشوائية أضافها Frappe
+
+    if not frappe.utils.cint(force):
+        existing_file = frappe.db.get_value(
+            "File",
+            {
+                "attached_to_doctype": "waed_info",
+                "attached_to_name": waed,
+                "file_name": ["like", f"{name_without_ext}%"],
+                "is_folder": 0,
+            },
+            ["file_url"],
+            order_by="creation desc",
+            as_dict=True,
+        )
+
+        if existing_file:
+            return {"file_url": existing_file.file_url, "cached": True}
 
     pdf_content = frappe.get_print(
         "exam_result",
@@ -273,9 +296,6 @@ def generate_score_sheet(waed):
         print_format="result",
         as_pdf=True,
     )
-
-    waed_name = frappe.db.get_value("waed_info", waed, "namee") or waed
-    file_name = "كشف درجات - {0}.pdf".format(waed_name)
 
     file_doc = save_file(
         file_name,
@@ -285,4 +305,4 @@ def generate_score_sheet(waed):
         is_private=1,
     )
 
-    return {"file_url": file_doc.file_url}
+    return {"file_url": file_doc.file_url, "cached": False}

@@ -910,11 +910,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:16.029070",
-=======
-  "modified": "2026-06-28 17:47:44.573398",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "HR",
   "name": "HR",
   "number_cards": [],
@@ -1583,11 +1579,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:16.648284",
-=======
-  "modified": "2026-06-28 17:47:20.333651",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Manufacturing",
   "name": "Manufacturing",
   "number_cards": [],
@@ -1883,11 +1875,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.159601",
-=======
-  "modified": "2026-06-28 17:47:09.549733",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Payroll",
   "name": "Payroll",
   "number_cards": [],
@@ -2309,11 +2297,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.834105",
-=======
-  "modified": "2026-06-28 17:46:55.431440",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "ERPNext Integrations",
   "name": "ERPNext Integrations",
   "number_cards": [],
@@ -3096,11 +3080,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.592720",
-=======
-  "modified": "2026-06-28 17:46:59.375659",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Setup",
   "name": "ERPNext Settings",
   "number_cards": [],
@@ -7570,11 +7550,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:14.956776",
-=======
-  "modified": "2026-06-28 17:56:38.930922",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Setup",
   "name": "Home",
   "number_cards": [],
@@ -10079,11 +10055,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:15.655058",
-=======
-  "modified": "2026-06-28 17:47:31.216116",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Buying",
   "name": "Buying",
   "number_cards": [],
@@ -10590,11 +10562,7 @@
     "type": "Card Break"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.088841",
-=======
-  "modified": "2026-06-28 17:47:11.774223",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Website",
   "name": "Website",
   "number_cards": [],
@@ -11178,11 +11146,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:15.206512",
-=======
-  "modified": "2026-06-28 17:47:36.652757",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Automation",
   "name": "Tools",
   "number_cards": [],
@@ -11530,11 +11494,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.017826",
-=======
-  "modified": "2026-06-28 17:47:13.510837",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Core",
   "name": "Users",
   "number_cards": [],
@@ -11883,11 +11843,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.700353",
-=======
-  "modified": "2026-06-28 17:46:57.928103",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Integrations",
   "name": "Integrations",
   "number_cards": [],
@@ -12929,11 +12885,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:15.314763",
-=======
-  "modified": "2026-06-28 17:47:33.041624",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Accounts",
   "name": "Accounting",
   "number_cards": [
@@ -14464,11 +14416,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:15.841516",
-=======
-  "modified": "2026-06-28 17:47:25.657544",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Stock",
   "name": "Stock",
   "number_cards": [
@@ -14985,11 +14933,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:15.954207",
-=======
-  "modified": "2026-06-28 17:47:24.110264",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Assets",
   "name": "Assets",
   "number_cards": [],
@@ -15399,11 +15343,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:16.859073",
-=======
-  "modified": "2026-06-28 17:47:17.324378",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Projects",
   "name": "Projects",
   "number_cards": [],
@@ -15821,11 +15761,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:16.940605",
-=======
-  "modified": "2026-06-28 17:47:15.382440",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Support",
   "name": "Support",
   "number_cards": [],
@@ -16138,11 +16074,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:16.772106",
-=======
-  "modified": "2026-06-28 17:47:18.707651",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Quality Management",
   "name": "Quality",
   "number_cards": [],
@@ -16992,11 +16924,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:17.496425",
-=======
-  "modified": "2026-06-28 17:47:01.609711",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Setup",
   "name": "Settings",
   "number_cards": [],
@@ -18392,7 +18320,6 @@
  },
  {
   "charts": [],
-<<<<<<< HEAD
   "content": "[{\"id\":\"LptPj4mOuK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"EqavRTRRlF\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر إدارة الشؤون الثقافية والدعوية\",\"col\":12}}]",
   "custom_blocks": [
    {
@@ -18403,10 +18330,6 @@
     "parenttype": "Workspace"
    }
   ],
-=======
-  "content": "[{\"id\":\"1-yKJCCL22\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>                                       إدارة الشؤون الثقافيــــــة والدعويـــــــة</b></span>\",\"col\":12}},{\"id\":\"D8W6ekGDPO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"dYqssULL0X\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\">                                قسم الوعاظ</span>\",\"col\":12}},{\"id\":\"MLfosQlqti\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"الوعاظ  المتقدمين الجدد\",\"col\":6}},{\"id\":\"NYmTiQZkv2\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"الوعاظ المحالين لتحديد موعد\",\"col\":6}},{\"id\":\"KQkekGzQgY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"lXV6QPTddD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"لجان الامتحانات\",\"col\":4}},{\"id\":\"oiuIqNBEW-\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"الامتحانات القائمة\",\"col\":4}},{\"id\":\"ONC0BJzc4J\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"لجنة تحديد موعد الامتحانات\",\"col\":4}}]",
-  "custom_blocks": [],
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "docstatus": 0,
   "doctype": "Workspace",
   "for_user": "",
@@ -18416,197 +18339,21 @@
   "is_hidden": 0,
   "label": "إدارة الشؤون الثقافية والدعوية",
   "links": [],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:55:42.554931",
-=======
-  "modified": "2026-06-28 18:14:36.425886",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "taqafia",
   "name": "إدارة الشؤون الثقافية والدعوية",
   "number_cards": [],
   "parent_page": "",
   "public": 1,
-<<<<<<< HEAD
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
   "sequence_id": 33.0,
-=======
-  "quick_lists": [
-   {
-    "document_type": "waed_info",
-    "label": "الوعاظ  المتقدمين الجدد",
-    "parent": "إدارة الشؤون الثقافية والدعوية",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"waed_info\",\"waed_status\",\"=\",\"New\",false]]"
-   },
-   {
-    "document_type": "exam_lag_data",
-    "label": "لجان الامتحانات",
-    "parent": "إدارة الشؤون الثقافية والدعوية",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[]"
-   },
-   {
-    "document_type": "exam_group_date",
-    "label": "الامتحانات القائمة",
-    "parent": "إدارة الشؤون الثقافية والدعوية",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"exam_group_date\",\"exam_status\",\"=\",\"In Progress\",false]]"
-   },
-   {
-    "document_type": "exam_group_date",
-    "label": "لجنة تحديد موعد الامتحانات",
-    "parent": "إدارة الشؤون الثقافية والدعوية",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"exam_group_date\",\"exam_status\",\"=\",\"Scheduled\",false]]"
-   },
-   {
-    "document_type": "waed_info",
-    "label": "الوعاظ المحالين لتحديد موعد",
-    "parent": "إدارة الشؤون الثقافية والدعوية",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[[\"waed_info\",\"waed_status\",\"=\",\"Scheduling an appointment\",false]]"
-   }
-  ],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 23.0,
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "shortcuts": [],
   "title": "إدارة الشؤون الثقافية والدعوية"
  },
  {
   "charts": [],
-<<<<<<< HEAD
-=======
-  "content": "[{\"id\":\"6D1TkpV_V0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Core Inventory</span>\",\"col\":12}},{\"id\":\"TkVX8DuN-0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Warehouse\",\"col\":4}},{\"id\":\"aUTMO4cyZU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BOM\",\"col\":4}},{\"id\":\"dZ3rzm8wWd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":4}},{\"id\":\"7_7E_IXTYh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":6}},{\"id\":\"BiZuS-sCj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Receipt\",\"col\":6}},{\"id\":\"B-EktFCmFs\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"item\",\"col\":12}},{\"id\":\"p3HW69P4oI\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>gogo</b></span>\",\"col\":12}}]",
-  "custom_blocks": [],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "stock",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "Stock-management",
-  "links": [],
-  "modified": "2025-11-13 21:30:21.123603",
-  "module": "ERPNext-sys",
-  "name": "Stock-management",
-  "number_cards": [],
-  "parent_page": "",
-  "public": 1,
-  "quick_lists": [
-   {
-    "document_type": "Item",
-    "label": "item",
-    "parent": "Stock-management",
-    "parentfield": "quick_lists",
-    "parenttype": "Workspace",
-    "quick_list_filter": "[]"
-   }
-  ],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 23.0,
-  "shortcuts": [
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "BOM",
-    "link_to": "BOM",
-    "parent": "Stock-management",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Warehouse",
-    "link_to": "Warehouse",
-    "parent": "Stock-management",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Purchase Order",
-    "link_to": "Purchase Order",
-    "parent": "Stock-management",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Grey",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Stock Entry",
-    "link_to": "Stock Entry",
-    "parent": "Stock-management",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Purchase Receipt",
-    "link_to": "Purchase Receipt",
-    "parent": "Stock-management",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   }
-  ],
-  "title": "Stock-management"
- },
- {
-  "charts": [],
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "content": "[{\"id\":\"HXRmktXYHy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DocType\",\"col\":3}},{\"id\":\"NosD6wA0vD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Module Def\",\"col\":3}},{\"id\":\"62hseENHbd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"MmEJpjEdGR\",\"type\":\"card\",\"data\":{\"card_name\":\"Views\",\"col\":4}},{\"id\":\"2ZdtgxQZqq\",\"type\":\"card\",\"data\":{\"card_name\":\"Customization\",\"col\":4}},{\"id\":\"NPFolijIcb\",\"type\":\"card\",\"data\":{\"card_name\":\"Scripting\",\"col\":4}},{\"id\":\"BIHjudL0T_\",\"type\":\"card\",\"data\":{\"card_name\":\"Modules\",\"col\":4}},{\"id\":\"iK3JQ9RXJE\",\"type\":\"card\",\"data\":{\"card_name\":\"Packages\",\"col\":4}},{\"id\":\"TiO9FCUUeC\",\"type\":\"card\",\"data\":{\"card_name\":\"System Logs\",\"col\":4}}]",
   "custom_blocks": [],
   "docstatus": 0,
@@ -19141,11 +18888,7 @@
     "type": "Link"
    }
   ],
-<<<<<<< HEAD
   "modified": "2026-06-30 18:11:15.091368",
-=======
-  "modified": "2026-06-28 17:47:41.326663",
->>>>>>> b3eda98b098e7b9e3af6a7224d06d27567aa3deb
   "module": "Core",
   "name": "Build",
   "number_cards": [],
