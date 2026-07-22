@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"LptPj4mOuK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"EqavRTRRlF\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"\u0647\u064a\u062f\u0631 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629\",\"col\":12}}]",
- "creation": "2026-06-30 18:06:44.375448",
+ "creation": "2026-07-13 15:23:46.222770",
  "custom_blocks": [
   {
    "custom_block_name": "\u0647\u064a\u062f\u0631 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629",
@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629",
  "links": [],
- "modified": "2026-06-30 18:55:42.554931",
+ "modified": "2026-07-15 16:39:49.719760",
  "modified_by": "Administrator",
  "module": "taqafia",
  "name": "\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629",
@@ -26,35 +26,9 @@
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
+ "quick_lists": [],
  "roles": [],
  "sequence_id": 33.0,
- "quick_lists": [
-  {
-   "document_type": "waed_info",
-   "label": "\u0627\u0644\u0648\u0639\u0627\u0638  \u0627\u0644\u0645\u062a\u0642\u062f\u0645\u064a\u0646 \u0627\u0644\u062c\u062f\u062f",
-   "quick_list_filter": "[[\"waed_info\",\"waed_status\",\"=\",\"New\",false]]"
-  },
-  {
-   "document_type": "exam_lag_data",
-   "label": "\u0644\u062c\u0627\u0646 \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
-   "quick_list_filter": "[]"
-  },
-  {
-   "document_type": "exam_group_date",
-   "label": "\u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a \u0627\u0644\u0642\u0627\u0626\u0645\u0629",
-   "quick_list_filter": "[[\"exam_group_date\",\"exam_status\",\"=\",\"In Progress\",false]]"
-  },
-  {
-   "document_type": "exam_group_date",
-   "label": "\u0644\u062c\u0646\u0629 \u062a\u062d\u062f\u064a\u062f \u0645\u0648\u0639\u062f \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
-   "quick_list_filter": "[[\"exam_group_date\",\"exam_status\",\"=\",\"Scheduled\",false]]"
-  },
-  {
-   "document_type": "waed_info",
-   "label": "\u0627\u0644\u0648\u0639\u0627\u0638 \u0627\u0644\u0645\u062d\u0627\u0644\u064a\u0646 \u0644\u062a\u062d\u062f\u064a\u062f \u0645\u0648\u0639\u062f",
-   "quick_list_filter": "[[\"waed_info\",\"waed_status\",\"=\",\"Scheduling an appointment\",false]]"
-  }
- ],
  "shortcuts": [],
  "title": "\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629"
 }

@@ -1854,5 +1854,53 @@
   "property_type": "Data",
   "row_name": null,
   "value": "result"
+ },
+ {
+  "default_value": null,
+  "doc_type": "exam_group_date",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "exam_day",
+  "is_system_generated": 1,
+  "modified": "2026-07-13 18:11:33.315377",
+  "module": null,
+  "name": "exam_group_date-exam_day-in_list_view",
+  "property": "in_list_view",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
+ },
+ {
+  "default_value": null,
+  "doc_type": "exam_group_date",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "exam_time",
+  "is_system_generated": 1,
+  "modified": "2026-07-13 18:11:33.332560",
+  "module": null,
+  "name": "exam_group_date-exam_time-in_list_view",
+  "property": "in_list_view",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
+ },
+ {
+  "default_value": null,
+  "doc_type": "exam_group_date",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "written_exam",
+  "is_system_generated": 1,
+  "modified": "2026-07-13 18:11:33.336797",
+  "module": null,
+  "name": "exam_group_date-written_exam-in_list_view",
+  "property": "in_list_view",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
  }
 ]

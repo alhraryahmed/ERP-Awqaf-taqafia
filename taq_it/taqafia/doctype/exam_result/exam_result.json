@@ -32,6 +32,7 @@
   "final_section",
   "status",
   "pass_status",
+  "grade",
   "column_break_final_totals",
   "total_score",
   "max_total",
@@ -45,6 +46,7 @@
   {
    "fieldname": "exam_group_date",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Exam Group Date",
    "options": "exam_group_date",
@@ -53,6 +55,7 @@
   {
    "fieldname": "waed",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Preacher",
    "options": "waed_info",
@@ -270,17 +273,24 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "label": "Grade",
+   "options": "\u0645\u0645\u062a\u0627\u0632\n\u062c\u064a\u062f\n\u062c\u064a\u062f \u062c\u062f\u0627\n\u0645\u0642\u0628\u0648\u0644",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-02 16:23:18.480559",
+ "modified": "2026-07-19 17:09:00.729389",
  "modified_by": "Administrator",
  "module": "taqafia",
  "name": "exam_result",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -301,7 +311,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "مشرف رصد الامتحانات",
+   "role": "\u0645\u0634\u0631\u0641 \u0631\u0635\u062f \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
    "share": 1,
    "write": 1
   },
@@ -311,7 +321,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "معتمد نتائج الامتحانات",
+   "role": "\u0645\u0639\u062a\u0645\u062f \u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a",
    "share": 1,
    "write": 1
   }

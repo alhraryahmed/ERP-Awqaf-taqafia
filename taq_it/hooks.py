@@ -59,13 +59,15 @@ fixtures = [
     {"doctype": "System Settings"},
     {"doctype": "Property Setter"},
 ]
+
 doc_events = {
     "lagna_taq": {
         "on_update": "taq_it.workflow_hooks.sync_workflow_from_lagna"
+    },
+    "active_taq": {
+        "on_update": "taq_it.workflow_hooks.sync_active_to_maktab"
     }
 }
-
-
 # Apps
 # ------------------
 

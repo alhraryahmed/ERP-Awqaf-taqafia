@@ -1,10 +1,11 @@
 frappe.ui.form.on("waed_info", {
     refresh(frm) {
-        add_exam_result_button(frm);
+        add_print_menu(frm);
     }
 });
 
-function add_exam_result_button(frm) {
+function add_print_menu(frm) {
+
     const ALLOWED_STATUSES = [
         "Failed Oral",
         "Failed Written",
@@ -16,32 +17,57 @@ function add_exam_result_button(frm) {
         return;
     }
 
-    frm.add_custom_button("كشف درجات", () => {
-        generate_score_sheet(frm);
+    frappe.call({
+        method: "taq_it.api.get_print_actions",
+
+        callback(r) {
+
+            if (!r.message || !r.message.length) {
+                return;
+            }
+
+            r.message.forEach(action => {
+
+                frm.add_custom_button(
+                    __(action.title),
+                    () => open_print(frm, action),
+                    __("طباعة")
+                );
+
+            });
+
+        }
+
     });
+
 }
 
-function generate_score_sheet(frm) {
+function open_print(frm, action) {
+
     frappe.call({
-        method: "taq_it.taqafia.doctype.exam_result.exam_result.generate_score_sheet",
+
+        method: "taq_it.api.get_print_url",
+
         args: {
-            waed: frm.doc.name,
-            force: 0
+            source_doctype: frm.doctype,
+            source_name: frm.doc.name,
+            target_doctype: action.target_doctype,
+            print_format: action.print_format
         },
+
         freeze: true,
-        freeze_message: "جاري إنشاء كشف الدرجات...",
+        freeze_message: __("جاري فتح صفحة الطباعة..."),
+
         callback(r) {
-            if (!r.message || !r.message.file_url) return;
 
-            frappe.show_alert({
-    message: r.message.cached
-        ? "تم فتح كشف الدرجات الموجود مسبقاً"
-        : "تم إنشاء كشف الدرجات وإرفاقه بنجاح",
-    indicator: r.message.cached ? "blue" : "green"
-});
+            if (!r.message) {
+                return;
+            }
 
-            window.open(encodeURI(r.message.file_url), "_blank");
-frm.reload_doc();
+            window.open(r.message, "_blank");
+
         }
+
     });
+
 }

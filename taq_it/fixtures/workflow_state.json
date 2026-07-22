@@ -174,9 +174,9 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-06-18 16:32:38.275536",
+  "modified": "2026-07-16 14:46:33.931199",
   "name": "Disconnected",
-  "style": "",
+  "style": "Danger",
   "workflow_state_name": "Disconnected"
  },
  {
@@ -187,15 +187,6 @@
   "name": "In Progress",
   "style": "Info",
   "workflow_state_name": "In Progress"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2026-06-24 16:29:58.101127",
-  "name": "Completed",
-  "style": "Success",
-  "workflow_state_name": "Completed"
  },
  {
   "docstatus": 0,
@@ -255,24 +246,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-07-05 15:29:56.119304",
-  "name": "in the written exam",
-  "style": "Primary",
-  "workflow_state_name": "in the written exam"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2026-07-05 15:29:49.960545",
-  "name": "Passed the Written Exam",
-  "style": "Success",
-  "workflow_state_name": "Passed the Written Exam"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2026-07-05 15:29:43.035154",
   "name": "Failed Written",
   "style": "Danger",
@@ -327,24 +300,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-07-05 15:30:32.143549",
-  "name": "In the oral exam",
-  "style": "Info",
-  "workflow_state_name": "In the oral exam"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": null,
-  "modified": "2026-07-02 19:51:40.442094",
-  "name": "Written In Progress",
-  "style": "Info",
-  "workflow_state_name": "Written In Progress"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2026-06-23 17:59:56.496945",
   "name": "Scheduling an appointment",
   "style": "Primary",
@@ -372,9 +327,9 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-06-23 18:00:37.937937",
+  "modified": "2026-07-16 14:46:51.802781",
   "name": "New",
-  "style": "Info",
+  "style": "Primary",
   "workflow_state_name": "New"
  },
  {
@@ -390,9 +345,54 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-06-23 12:16:49.262583",
+  "modified": "2026-07-05 15:29:56.119304",
+  "name": "in the written exam",
+  "style": "Primary",
+  "workflow_state_name": "in the written exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:29:49.960545",
+  "name": "Passed the Written Exam",
+  "style": "Success",
+  "workflow_state_name": "Passed the Written Exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-07-02 19:51:40.442094",
+  "name": "Written In Progress",
+  "style": "Info",
+  "workflow_state_name": "Written In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-16 14:46:01.820402",
   "name": "referred for the exam",
-  "style": "",
+  "style": "Info",
   "workflow_state_name": "referred for the exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:29:58.101127",
+  "name": "Completed",
+  "style": "Success",
+  "workflow_state_name": "Completed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-05 15:30:32.143549",
+  "name": "In the oral exam",
+  "style": "Info",
+  "workflow_state_name": "In the oral exam"
  }
 ]

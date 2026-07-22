@@ -1,8 +1,16 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"tKtcRF80iC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">مكتب المعلومات والتوثيق</span>\",\"col\":12}}]",
-  "custom_blocks": [],
+  "content": "[{\"id\":\"GzszQkA-T0\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"IT\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "IT",
+    "label": "IT",
+    "parent": "مكتب المعلومات والتوثيق",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
   "docstatus": 0,
   "doctype": "Workspace",
   "for_user": "",
@@ -12,7 +20,7 @@
   "is_hidden": 0,
   "label": "مكتب المعلومات والتوثيق",
   "links": [],
-  "modified": "2026-06-30 18:11:18.535469",
+  "modified": "2026-07-15 16:39:49.969434",
   "module": null,
   "name": "مكتب المعلومات والتوثيق",
   "number_cards": [],
@@ -21,17 +29,24 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 36.0,
+  "sequence_id": 37.0,
   "shortcuts": [],
   "title": "مكتب المعلومات والتوثيق"
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"B2tNK5Ceyc\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"waed\",\"col\":12}}]",
+  "content": "[{\"id\":\"rKJHTZVQDs\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"header\",\"col\":12}},{\"id\":\"mZW4AbzyF9\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"waedblock\",\"col\":12}}]",
   "custom_blocks": [
    {
-    "custom_block_name": "waed",
-    "label": "waed",
+    "custom_block_name": "header",
+    "label": "header",
+    "parent": "قسم الوعاظ",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   },
+   {
+    "custom_block_name": "waedblock",
+    "label": "waedblock",
     "parent": "قسم الوعاظ",
     "parentfield": "custom_blocks",
     "parenttype": "Workspace"
@@ -46,8 +61,8 @@
   "is_hidden": 0,
   "label": "قسم الوعاظ",
   "links": [],
-  "modified": "2026-07-05 17:57:45.253582",
-  "module": null,
+  "modified": "2026-07-15 16:40:18.983315",
+  "module": "taqafia",
   "name": "قسم الوعاظ",
   "number_cards": [],
   "parent_page": "إدارة الشؤون الثقافية والدعوية",
@@ -83,8 +98,16 @@
     "parenttype": "Workspace"
    }
   ],
-  "content": "[{\"id\":\"pTFhZx_U7e\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"الانشطة المكتملة\",\"col\":12}},{\"id\":\"LQoVb7W6EX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"أنشطة المكـــــاتب\",\"col\":6}},{\"id\":\"MRgNrtBRoj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"أنشطة الوعــــاظ\",\"col\":6}},{\"id\":\"0DVC1owi1e\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bw9-5qMmT3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">إختصاراتك</span>\",\"col\":12}},{\"id\":\"jK6PN896zn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"الانشطة للوعاظ\",\"col\":3}},{\"id\":\"9MKTGPP-0-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"الانشطة للمكاتب\",\"col\":3}},{\"id\":\"ILtef1TJwM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"لوحة الإحصائيات\",\"col\":3}},{\"id\":\"dSGJlJgVyo\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"7wX4tgstD-\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>الإعدادات والتقارير</b></span>\",\"col\":12}},{\"id\":\"AW6yibPf2W\",\"type\":\"card\",\"data\":{\"card_name\":\"الجوانب والعناوين\",\"col\":4}}]",
-  "custom_blocks": [],
+  "content": "[{\"id\":\"jKY1DL1wDb\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"active\",\"col\":12}},{\"id\":\"86M4wpEsj2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Tz6LJ36uQj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KzeWG9dOz0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r3kXvu-e2_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"PzPSm8lRyW\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pTFhZx_U7e\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"الانشطة المكتملة\",\"col\":12}},{\"id\":\"LQoVb7W6EX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"أنشطة المكـــــاتب\",\"col\":6}},{\"id\":\"MRgNrtBRoj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"أنشطة الوعــــاظ\",\"col\":6}},{\"id\":\"0DVC1owi1e\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bw9-5qMmT3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">إختصاراتك</span>\",\"col\":12}},{\"id\":\"jK6PN896zn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"الانشطة للوعاظ\",\"col\":3}},{\"id\":\"9MKTGPP-0-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"الانشطة للمكاتب\",\"col\":3}},{\"id\":\"ILtef1TJwM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"لوحة الإحصائيات\",\"col\":3}},{\"id\":\"dSGJlJgVyo\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"7wX4tgstD-\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>الإعدادات والتقارير</b></span>\",\"col\":12}},{\"id\":\"AW6yibPf2W\",\"type\":\"card\",\"data\":{\"card_name\":\"الجوانب والعناوين\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "active",
+    "label": "active",
+    "parent": "قسم الانشطة",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
   "docstatus": 0,
   "doctype": "Workspace",
   "for_user": "",
@@ -149,8 +172,8 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-02 14:11:21.998427",
-  "module": null,
+  "modified": "2026-07-15 18:12:39.066509",
+  "module": "taqafia",
   "name": "قسم الانشطة",
   "number_cards": [
    {
@@ -166,7 +189,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 35.0,
+  "sequence_id": 36.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -910,7 +933,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.029070",
+  "modified": "2026-07-15 16:39:47.900729",
   "module": "HR",
   "name": "HR",
   "number_cards": [],
@@ -1579,7 +1602,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.648284",
+  "modified": "2026-07-15 16:39:48.510038",
   "module": "Manufacturing",
   "name": "Manufacturing",
   "number_cards": [],
@@ -1875,7 +1898,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.159601",
+  "modified": "2026-07-15 16:39:48.950376",
   "module": "Payroll",
   "name": "Payroll",
   "number_cards": [],
@@ -2297,7 +2320,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.834105",
+  "modified": "2026-07-15 16:39:49.614247",
   "module": "ERPNext Integrations",
   "name": "ERPNext Integrations",
   "number_cards": [],
@@ -3080,7 +3103,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.592720",
+  "modified": "2026-07-15 16:39:49.383815",
   "module": "Setup",
   "name": "ERPNext Settings",
   "number_cards": [],
@@ -3541,7 +3564,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.119028",
+  "modified": "2026-07-15 16:39:48.014507",
   "module": "HR",
   "name": "Recruitment",
   "number_cards": [],
@@ -4168,7 +4191,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.189347",
+  "modified": "2026-07-15 16:39:48.113029",
   "module": "HR",
   "name": "Employee Lifecycle",
   "number_cards": [],
@@ -4693,7 +4716,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.341241",
+  "modified": "2026-07-15 16:39:48.278856",
   "module": "HR",
   "name": "Shift & Attendance",
   "number_cards": [],
@@ -5130,7 +5153,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.553583",
+  "modified": "2026-07-15 16:39:48.428176",
   "module": "HR",
   "name": "Leaves",
   "number_cards": [],
@@ -5498,7 +5521,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.267885",
+  "modified": "2026-07-15 16:39:48.208455",
   "module": "HR",
   "name": "Performance",
   "number_cards": [],
@@ -6035,7 +6058,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.445584",
+  "modified": "2026-07-15 16:39:48.351819",
   "module": "HR",
   "name": "Expense Claims",
   "number_cards": [],
@@ -6780,7 +6803,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.232065",
+  "modified": "2026-07-15 16:39:49.008799",
   "module": "Payroll",
   "name": "Salary Payout",
   "number_cards": [],
@@ -7093,7 +7116,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.328825",
+  "modified": "2026-07-15 16:39:49.096631",
   "module": "Payroll",
   "name": "Tax & Benefits",
   "number_cards": [],
@@ -7160,35 +7183,25 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"aCk49ShVRs\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Home\",\"col\":12}},{\"id\":\"kb3XPLg8lb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"nWd2KJPW8l\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"snrzfbFr5Y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"SHJKakmLLf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Supplier\",\"col\":3}},{\"id\":\"CPxEyhaf3G\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"d_KVM1gsf9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JVu8-FJZCu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"JiuSi0ubOg\",\"type\":\"card\",\"data\":{\"card_name\":\"Accounting\",\"col\":4}},{\"id\":\"ji2Jlm3Q8i\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock\",\"col\":4}},{\"id\":\"N61oiXpuwK\",\"type\":\"card\",\"data\":{\"card_name\":\"CRM\",\"col\":4}},{\"id\":\"6J0CVl1mPo\",\"type\":\"card\",\"data\":{\"card_name\":\"Data Import and Settings\",\"col\":4}}]",
-  "custom_blocks": [],
+  "content": "[{\"id\":\"uSgImaoS1u\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home Awqaf\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Home Awqaf",
+    "label": "Home Awqaf",
+    "parent": "Home",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
   "docstatus": 0,
   "doctype": "Workspace",
   "for_user": "",
   "hide_custom": 0,
   "icon": "home",
   "indicator_color": null,
-  "is_hidden": 1,
+  "is_hidden": 0,
   "label": "Home",
   "links": [
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Accounting",
-    "link_count": 0,
-    "link_to": null,
-    "link_type": null,
-    "onboard": 0,
-    "only_for": null,
-    "parent": "Home",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
    {
     "dependencies": "",
     "description": null,
@@ -7260,24 +7273,6 @@
     "parenttype": "Workspace",
     "report_ref_doctype": null,
     "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Stock",
-    "link_count": 0,
-    "link_to": null,
-    "link_type": null,
-    "onboard": 0,
-    "only_for": null,
-    "parent": "Home",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Card Break"
    },
    {
     "dependencies": "",
@@ -7370,24 +7365,6 @@
     "type": "Link"
    },
    {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "CRM",
-    "link_count": 0,
-    "link_to": null,
-    "link_type": null,
-    "onboard": 0,
-    "only_for": null,
-    "parent": "Home",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
     "dependencies": "",
     "description": null,
     "hidden": 0,
@@ -7440,24 +7417,6 @@
     "parenttype": "Workspace",
     "report_ref_doctype": null,
     "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Data Import and Settings",
-    "link_count": 0,
-    "link_to": null,
-    "link_type": null,
-    "onboard": 0,
-    "only_for": null,
-    "parent": "Home",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Card Break"
    },
    {
     "dependencies": "",
@@ -7550,7 +7509,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:14.956776",
+  "modified": "2026-07-15 16:39:46.902426",
   "module": "Setup",
   "name": "Home",
   "number_cards": [],
@@ -7560,76 +7519,7 @@
   "restrict_to_domain": "",
   "roles": [],
   "sequence_id": 1.0,
-  "shortcuts": [
-   {
-    "color": null,
-    "doc_view": null,
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Item",
-    "link_to": "Item",
-    "parent": "Home",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": null,
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Customer",
-    "link_to": "Customer",
-    "parent": "Home",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": null,
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Supplier",
-    "link_to": "Supplier",
-    "parent": "Home",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": null,
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Sales Invoice",
-    "link_to": "Sales Invoice",
-    "parent": "Home",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   }
-  ],
+  "shortcuts": [],
   "title": "Home"
  },
  {
@@ -8338,7 +8228,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.394405",
+  "modified": "2026-07-15 16:39:49.167857",
   "module": "CRM",
   "name": "CRM",
   "number_cards": [],
@@ -9071,7 +8961,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.746907",
+  "modified": "2026-07-15 16:39:47.557633",
   "module": "Selling",
   "name": "Selling",
   "number_cards": [],
@@ -10055,7 +9945,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.655058",
+  "modified": "2026-07-15 16:39:47.466938",
   "module": "Buying",
   "name": "Buying",
   "number_cards": [],
@@ -10562,7 +10452,7 @@
     "type": "Card Break"
    }
   ],
-  "modified": "2026-06-30 18:11:17.088841",
+  "modified": "2026-07-15 16:39:48.871944",
   "module": "Website",
   "name": "Website",
   "number_cards": [],
@@ -11146,7 +11036,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.206512",
+  "modified": "2026-07-15 16:39:47.069292",
   "module": "Automation",
   "name": "Tools",
   "number_cards": [],
@@ -11494,7 +11384,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.017826",
+  "modified": "2026-07-15 16:39:48.804046",
   "module": "Core",
   "name": "Users",
   "number_cards": [],
@@ -11843,7 +11733,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.700353",
+  "modified": "2026-07-15 16:39:49.506582",
   "module": "Integrations",
   "name": "Integrations",
   "number_cards": [],
@@ -12885,7 +12775,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.314763",
+  "modified": "2026-07-15 16:39:47.145824",
   "module": "Accounts",
   "name": "Accounting",
   "number_cards": [
@@ -14416,7 +14306,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.841516",
+  "modified": "2026-07-15 16:39:47.649352",
   "module": "Stock",
   "name": "Stock",
   "number_cards": [
@@ -14933,7 +14823,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.954207",
+  "modified": "2026-07-15 16:39:47.795390",
   "module": "Assets",
   "name": "Assets",
   "number_cards": [],
@@ -15343,7 +15233,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.859073",
+  "modified": "2026-07-15 16:39:48.664076",
   "module": "Projects",
   "name": "Projects",
   "number_cards": [],
@@ -15761,7 +15651,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.940605",
+  "modified": "2026-07-15 16:39:48.737585",
   "module": "Support",
   "name": "Support",
   "number_cards": [],
@@ -16074,7 +15964,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:16.772106",
+  "modified": "2026-07-15 16:39:48.598450",
   "module": "Quality Management",
   "name": "Quality",
   "number_cards": [],
@@ -16924,7 +16814,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:17.496425",
+  "modified": "2026-07-15 16:39:49.258357",
   "module": "Setup",
   "name": "Settings",
   "number_cards": [],
@@ -17341,7 +17231,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.423115",
+  "modified": "2026-07-15 16:39:47.247688",
   "module": "Accounts",
   "name": "Payables",
   "number_cards": [],
@@ -17761,7 +17651,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.497140",
+  "modified": "2026-07-15 16:39:47.322918",
   "module": "Accounts",
   "name": "Receivables",
   "number_cards": [],
@@ -18305,7 +18195,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.582298",
+  "modified": "2026-07-15 16:39:47.402312",
   "module": "Accounts",
   "name": "Financial Reports",
   "number_cards": [],
@@ -18339,7 +18229,7 @@
   "is_hidden": 0,
   "label": "إدارة الشؤون الثقافية والدعوية",
   "links": [],
-  "modified": "2026-06-30 18:55:42.554931",
+  "modified": "2026-07-15 16:39:49.719760",
   "module": "taqafia",
   "name": "إدارة الشؤون الثقافية والدعوية",
   "number_cards": [],
@@ -18888,7 +18778,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:15.091368",
+  "modified": "2026-07-15 16:39:46.979330",
   "module": "Core",
   "name": "Build",
   "number_cards": [],
@@ -18964,8 +18854,16 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"wknCZlYUPT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\" style=\\\"\\\"><a href=\\\"/helpdesk\\\">Visit Helpdesk</a></span>\",\"col\":12}},{\"id\":\"y9CBMS0tSK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0Ba1DGfXdF\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Helpdesk Configuration<br></span>\",\"col\":12}},{\"id\":\"4Cur7UEKlr\",\"type\":\"card\",\"data\":{\"card_name\":\"Ticket Configuration\",\"col\":4}},{\"id\":\"RIoumS4GVJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"البلاغات\",\"col\":3}},{\"id\":\"V-VW49rKWO\",\"type\":\"card\",\"data\":{\"card_name\":\"Agent Configuration\",\"col\":4}},{\"id\":\"qDBh4PMZ4G\",\"type\":\"card\",\"data\":{\"card_name\":\"Helpdesk Reports\",\"col\":4}},{\"id\":\"w6w3Py-aJl\",\"type\":\"card\",\"data\":{\"card_name\":\"Automation\",\"col\":4}},{\"id\":\"7dtPv1hrKB\",\"type\":\"card\",\"data\":{\"card_name\":\"Channels\",\"col\":4}}]",
-  "custom_blocks": [],
+  "content": "[{\"id\":\"y9CBMS0tSK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GonNu_YCF8\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home IT\",\"col\":12}},{\"id\":\"QUdjtP25_s\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"G2SSdGovG5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0Ba1DGfXdF\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Helpdesk Configuration<br></span>\",\"col\":12}},{\"id\":\"4Cur7UEKlr\",\"type\":\"card\",\"data\":{\"card_name\":\"Ticket Configuration\",\"col\":4}},{\"id\":\"RIoumS4GVJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"البلاغات\",\"col\":3}},{\"id\":\"V-VW49rKWO\",\"type\":\"card\",\"data\":{\"card_name\":\"Agent Configuration\",\"col\":4}},{\"id\":\"qDBh4PMZ4G\",\"type\":\"card\",\"data\":{\"card_name\":\"Helpdesk Reports\",\"col\":4}},{\"id\":\"w6w3Py-aJl\",\"type\":\"card\",\"data\":{\"card_name\":\"Automation\",\"col\":4}},{\"id\":\"7dtPv1hrKB\",\"type\":\"card\",\"data\":{\"card_name\":\"Channels\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Help IT",
+    "label": "Home IT",
+    "parent": "Helpdesk",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
   "docstatus": 0,
   "doctype": "Workspace",
   "for_user": "",
@@ -19246,7 +19144,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 18:11:18.648436",
+  "modified": "2026-07-15 16:39:50.018615",
   "module": "Helpdesk",
   "name": "Helpdesk",
   "number_cards": [],
@@ -19255,7 +19153,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 37.0,
+  "sequence_id": 38.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -19276,5 +19174,46 @@
    }
   ],
   "title": "Helpdesk"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"Vh148H0_rD\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam header\",\"col\":12}},{\"id\":\"ZivjbRcDVn\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "exam",
+    "label": "exam",
+    "parent": "قسم الامتحانات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   },
+   {
+    "custom_block_name": "exam header",
+    "label": "exam header",
+    "parent": "قسم الامتحانات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "printer",
+  "indicator_color": "orange",
+  "is_hidden": 0,
+  "label": "قسم الامتحانات",
+  "links": [],
+  "modified": "2026-07-16 10:30:44.151990",
+  "module": "taqafia",
+  "name": "قسم الامتحانات",
+  "number_cards": [],
+  "parent_page": "إدارة الشؤون الثقافية والدعوية",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 35.0,
+  "shortcuts": [],
+  "title": "قسم الامتحانات"
  }
 ]

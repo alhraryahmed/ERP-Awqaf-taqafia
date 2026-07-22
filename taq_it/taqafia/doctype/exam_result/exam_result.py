@@ -37,6 +37,7 @@ class exam_result(Document):
         self.validate_question_scores()
         self.calculate_all_totals()
         self.set_final_status()
+        self.set_grade()
 
     def prevent_changes_after_final_approval(self):
         previous = self.get_doc_before_save()
@@ -138,6 +139,25 @@ class exam_result(Document):
             return
 
         self.pass_status = self.pass_status or PASS_PENDING
+
+    def set_grade(self):
+        """يحسب التقدير (grade) تلقائيا حسب النسبة المئوية النهائية، فقط للناجحين"""
+        if self.pass_status != FINAL_PASSED:
+            self.grade = ""
+            return
+
+        pct = self.percentage or 0
+
+        if pct >= 85:
+            self.grade = "ممتاز"
+        elif pct >= 75:
+            self.grade = "جيد جدا"
+        elif pct >= 65:
+            self.grade = "جيد"
+        elif pct >= 50:
+            self.grade = "مقبول"
+        else:
+            self.grade = ""
 
     def approve_stage(self, stage):
         if stage == WRITTEN_STAGE:
@@ -247,7 +267,7 @@ def get_stage_percentage_field(stage):
 
 
 @frappe.whitelist()
-def generate_score_sheet(waed, force=0):
+def get_exam_result_print_url(waed):
     if not waed:
         frappe.throw("الواعظ مطلوب.")
 
@@ -264,45 +284,23 @@ def generate_score_sheet(waed, force=0):
     if not result_name:
         frappe.throw("لا توجد نتيجة امتحان لهذا الواعظ.")
 
-    result_status = frappe.db.get_value("exam_result", result_name, "status")
-    if result_status == STATUS_DRAFT:
-        frappe.throw("لا يمكن إصدار كشف الدرجات قبل رصد الدرجات.")
-
-    waed_name = frappe.db.get_value("waed_info", waed, "namee") or waed
-    safe_waed_name = re.sub(r'[\\/:*?"<>|]', "", waed_name).strip()
-    file_name = f"كشف درجات {safe_waed_name}.pdf"
-    name_without_ext = file_name[:-4]  # يزيل ".pdf" فقط من أجل مطابقة الاسم مع أي لاحقة عشوائية أضافها Frappe
-
-    if not frappe.utils.cint(force):
-        existing_file = frappe.db.get_value(
-            "File",
-            {
-                "attached_to_doctype": "waed_info",
-                "attached_to_name": waed,
-                "file_name": ["like", f"{name_without_ext}%"],
-                "is_folder": 0,
-            },
-            ["file_url"],
-            order_by="creation desc",
-            as_dict=True,
-        )
-
-        if existing_file:
-            return {"file_url": existing_file.file_url, "cached": True}
-
-    pdf_content = frappe.get_print(
+    result_status = frappe.db.get_value(
         "exam_result",
         result_name,
-        print_format="result",
-        as_pdf=True,
+        "status",
     )
 
-    file_doc = save_file(
-        file_name,
-        pdf_content,
-        "waed_info",
-        waed,
-        is_private=1,
+    if result_status == STATUS_DRAFT:
+        frappe.throw("لا يمكن طباعة كشف الدرجات قبل رصد الدرجات.")
+
+    url = (
+        frappe.utils.get_url()
+        + f"/printview?"
+        + f"doctype=exam_result"
+        + f"&name={result_name}"
+        + f"&format=result"
+        + f"&no_letterhead=0"
+        + f"&trigger_print=0"
     )
 
-    return {"file_url": file_doc.file_url, "cached": False}
+    return url
