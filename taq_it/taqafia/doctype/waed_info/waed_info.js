@@ -1,6 +1,26 @@
 frappe.ui.form.on("waed_info", {
     refresh(frm) {
         add_print_menu(frm);
+    },
+    agee(frm) {
+        if (frm.doc.agee && cint(frm.doc.agee) < 25) {
+            frappe.msgprint({
+                title: __("العمر غير صحيح"),
+                indicator: "red",
+                message: __("يجب أن يكون العمر 25 سنة أو أكثر.")
+            });
+
+            frm.set_value("agee", null);
+        }
+    },
+
+    validate(frm) {
+        if (frm.doc.agee && cint(frm.doc.agee) < 25) {
+            frappe.throw({
+                title: __("لا يمكن الحفظ"),
+                message: __("يجب أن يكون العمر 25 سنة أو أكثر.")
+            });
+        }
     }
 });
 

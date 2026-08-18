@@ -9,7 +9,7 @@
   "exam_group_date",
   "column_break_pays",
   "grading_stage",
-  "column_break_filters",
+  "column_break_mvnu",
   "loaded_exam_form",
   "section_break_sdbi",
   "grading_html",
@@ -23,9 +23,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Exam Group Date",
-   "link_filters": "[[\"exam_group_date\",\"exam_status\",\"!=\",\"Completed\"]]",
-   "options": "exam_group_date",
-   "reqd": 1
+   "link_filters": "[\r\n    [\"exam_group_date\", \"exam_status\", \"not in\", [\"Cancelled\", \"Completed\"]]\r\n]",
+   "options": "exam_group_date"
   },
   {
    "default": "Written",
@@ -33,19 +32,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Grading Stage",
-   "options": "Written\nOral",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_filters",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "loaded_exam_form",
-   "fieldtype": "Link",
-   "label": "Loaded Exam Form",
-   "options": "exam_form",
-   "read_only": 1
+   "options": "Written\nOral"
   },
   {
    "fieldname": "grading_html",
@@ -79,13 +66,22 @@
   {
    "fieldname": "column_break_pays",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mvnu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loaded_exam_form",
+   "fieldtype": "Data",
+   "label": "EXAM FORM"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-07-05 18:52:21.038182",
+ "modified": "2026-07-30 21:42:27.158991",
  "modified_by": "Administrator",
  "module": "taqafia",
  "name": "exam_grading_tool",

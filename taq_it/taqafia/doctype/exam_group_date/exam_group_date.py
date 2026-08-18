@@ -21,6 +21,15 @@ class exam_group_date(Document):
         self.set_exam_period()
         self.validate_exam_forms()
         self.validate_candidate_limit()
+        full_names = []
+
+        for row in self.waed_info_to_exam:
+            if row.full_name in full_names:
+                frappe.throw(
+                    f"الواعظ {row.full_name} مضاف مسبقاً إلى قائمة الامتحان"
+                )
+
+            full_names.append(row.full_name)
 
     @frappe.whitelist()
     def get_preachers(self):
@@ -31,7 +40,7 @@ class exam_group_date(Document):
         preachers = frappe.get_all(
             "waed_info",
             filters={"waed_status": WAED_STATUS_READY_FOR_APPOINTMENT},
-            fields=["name", "namee", "phoone", "office", "place"],
+            fields=["name", "namee", "phoone", "office", "place", "residence_place"],
             limit=limit,
         )
 
@@ -42,10 +51,10 @@ class exam_group_date(Document):
                 "waed_info_to_exam",
                 {
                     "waed_info": preacher.name,
-                    "full_name": preacher.namee,
-                    "phone": preacher.phoone,
-                    "office": preacher.office,
-                    "address": preacher.place,
+                    "full_name": preacher.get("namee") or "",
+                    "phone": preacher.get("phoone") or preacher.get("phone") or "",
+                    "office": preacher.get("office") or "",
+                    "address": preacher.get("place") or preacher.get("residence_place") or "",
                 },
             )
 

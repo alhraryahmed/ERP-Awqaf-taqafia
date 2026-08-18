@@ -1,0 +1,230 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"lbqNUIZ6zG\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home Awqaf\",\"col\":12}}]",
+ "creation": "2026-07-26 17:18:31.657023",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Home Awqaf",
+   "label": "Home Awqaf"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-review-points",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "home",
+ "links": [
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Chart of Accounts",
+   "link_count": 0,
+   "link_to": "Account",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company",
+   "link_count": 0,
+   "link_to": "Company",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Warehouse",
+   "link_count": 0,
+   "link_to": "Warehouse",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Brand",
+   "link_count": 0,
+   "link_to": "Brand",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit of Measure (UOM)",
+   "link_count": 0,
+   "link_to": "UOM",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Reconciliation",
+   "link_count": 0,
+   "link_to": "Stock Reconciliation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Lead",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Group",
+   "link_count": 0,
+   "link_to": "Customer Group",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Territory",
+   "link_count": 0,
+   "link_to": "Territory",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Import Data",
+   "link_count": 0,
+   "link_to": "Data Import",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opening Invoice Creation Tool",
+   "link_count": 0,
+   "link_to": "Opening Invoice Creation Tool",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Chart of Accounts Importer",
+   "link_count": 0,
+   "link_to": "Chart of Accounts Importer",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Letter Head",
+   "link_count": 0,
+   "link_to": "Letter Head",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Email Account",
+   "link_count": 0,
+   "link_to": "Email Account",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-17 12:24:35.771811",
+ "modified_by": "Administrator",
+ "module": "taqafia",
+ "name": "home",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u062f\u064a\u0648\u0627\u0646"
+  },
+  {
+   "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u0645\u0646\u0627\u0637\u0642"
+  }
+ ],
+ "sequence_id": 33.0,
+ "shortcuts": [],
+ "title": "home"
+}

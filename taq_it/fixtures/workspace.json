@@ -1,6 +1,1362 @@
 [
  {
   "charts": [],
+  "content": "[{\"id\":\"g7w4yCelQP\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيرد الانشطة\",\"col\":12}},{\"id\":\"kO--IjS1Kk\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"active\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "هيرد الانشطة",
+    "label": "هيرد الانشطة",
+    "parent": "قسم الانشطة",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   },
+   {
+    "custom_block_name": "active",
+    "label": "active",
+    "parent": "قسم الانشطة",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "review",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "قسم الانشطة",
+  "links": [],
+  "modified": "2026-08-16 17:13:25.039064",
+  "module": "taqafia",
+  "name": "قسم الانشطة",
+  "number_cards": [],
+  "parent_page": "إدارة الشؤون الثقافية والدعوية",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "parent": "قسم الانشطة",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالديوان"
+   },
+   {
+    "parent": "قسم الانشطة",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالمناطق"
+   }
+  ],
+  "sequence_id": 35.0,
+  "shortcuts": [],
+  "title": "قسم الانشطة"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"kPDXosF_36\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"M9f80RiBg-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"kjn-PeQqa1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Student\",\"col\":3}},{\"id\":\"HkSo_TH74e\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Instructor\",\"col\":3}},{\"id\":\"PCMoc9tc_K\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Program\",\"col\":3}},{\"id\":\"Xq6CSAeATl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Course\",\"col\":3}},{\"id\":\"xxjcSj__5e\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"VkVspJGqYQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Student Monthly Attendance Sheet\",\"col\":3}},{\"id\":\"vfDR1CThl5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Course Scheduling Tool\",\"col\":3}},{\"id\":\"25LD73fDQ5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Student Attendance Tool\",\"col\":3}},{\"id\":\"syV1UYrgXd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"_iVVUE4qZL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"WhCpeh8evz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student and Instructor\",\"col\":4}},{\"id\":\"zuYoZvBO0_\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"3gGgyWyn0r\",\"type\":\"card\",\"data\":{\"card_name\":\"Content Masters\",\"col\":4}},{\"id\":\"9dBmFwGKS6\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"qRTpZK9024\",\"type\":\"card\",\"data\":{\"card_name\":\"Admission\",\"col\":4}},{\"id\":\"CcvHgLgyYi\",\"type\":\"card\",\"data\":{\"card_name\":\"Fees\",\"col\":4}},{\"id\":\"kydSuuZSdB\",\"type\":\"card\",\"data\":{\"card_name\":\"Schedule\",\"col\":4}},{\"id\":\"WGne39384b\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance\",\"col\":4}},{\"id\":\"fQ0TQuXwz9\",\"type\":\"card\",\"data\":{\"card_name\":\"Assessment\",\"col\":4}},{\"id\":\"shkmvB71Ov\",\"type\":\"card\",\"data\":{\"card_name\":\"Assessment Reports\",\"col\":4}},{\"id\":\"ZWW4wtFwLa\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}},{\"id\":\"Y_MEmzWdEh\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "education",
+  "indicator_color": null,
+  "is_hidden": 1,
+  "label": "Education",
+  "links": [],
+  "modified": "2026-08-16 17:01:35.836109",
+  "module": "IT_support",
+  "name": "Education",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 27.0,
+  "shortcuts": [],
+  "title": "Education"
+ },
+ {
+  "charts": [
+   {
+    "chart_name": "الدورات التدريبية",
+    "label": "الدورات التدريبية",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   },
+   {
+    "chart_name": "قيمة إيرادات المكاتب",
+    "label": "قيمة إيرادات المكاتب",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"0gcnt4a3ex\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"لجنة التطوير\",\"col\":12}},{\"id\":\"K7JRSDcMwG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"عدد الدورات المقترحة\",\"col\":4}},{\"id\":\"ZMX9Qr0j41\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"عدد الايرادات المدخلة\",\"col\":4}},{\"id\":\"5dp58Qza2H\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"عدد التقارير المعدة\",\"col\":4}},{\"id\":\"J0ZCOrQoVk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Fmdap5eLxI\",\"type\":\"chart\",\"data\":{\"chart_name\":\"قيمة إيرادات المكاتب\",\"col\":6}},{\"id\":\"6f0Qpu_gxP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"الدورات التدريبية\",\"col\":6}},{\"id\":\"ULgPZAMCkG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BULym2LOcn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"قائمة الايرادات\",\"col\":3}},{\"id\":\"ErJN2VsuNo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"إدخال إيراد جديد\",\"col\":3}},{\"id\":\"lfFnqOFWbA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"إنشاء وقف مكتب جديد\",\"col\":3}},{\"id\":\"3WHVF6gmUG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"إنشاء مكتب جديد\",\"col\":3}},{\"id\":\"nK5suNKaFt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"كتابة التقارير\",\"col\":3}},{\"id\":\"0mzNDnQDMQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"تقارير الاجراءات المطلوبة والتوصيات\",\"col\":3}},{\"id\":\"yQufXBrgAp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"طباعة تقارير الجرد\",\"col\":3}},{\"id\":\"n7yb9YjnWI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"أعضاء اللجنة\",\"col\":3}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "لجنة التطوير",
+    "label": "لجنة التطوير",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "review",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "لجنة رفع كفائة",
+  "links": [],
+  "modified": "2026-08-16 17:01:37.454057",
+  "module": "Lagna-waqf",
+  "name": "لجنة رفع كفائة",
+  "number_cards": [
+   {
+    "label": "عدد التقارير المعدة",
+    "number_card_name": "عدد التقارير المعدة",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "عدد الدورات المقترحة",
+    "number_card_name": "عدد  المكاتب المسجلة",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "عدد الايرادات المدخلة",
+    "number_card_name": "عدد الايرادات المدخلة",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 42.0,
+  "shortcuts": [
+   {
+    "color": "Green",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "إنشاء وقف مكتب جديد",
+    "link_to": "Project",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Orange",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "إدخال إيراد جديد",
+    "link_to": "erad_waqf",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "تقارير الاجراءات المطلوبة والتوصيات",
+    "link_to": "report taq",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "أعضاء اللجنة",
+    "link_to": "ada_lagna",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "قائمة الايرادات",
+    "link_to": "R",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "طباعة تقارير الجرد",
+    "link_to": null,
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/files/erpnext_viewer_full.html"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "إنشاء مكتب جديد",
+    "link_to": "Cost Center",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Cyan",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "كتابة التقارير",
+    "link_to": "taqrer",
+    "parent": "لجنة رفع كفائة",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "لجنة رفع كفائة"
+ },
+ {
+  "charts": [
+   {
+    "chart_name": "قيمة إيرادات المكاتب",
+    "label": "قيمة إيرادات المكاتب",
+    "parent": "الايرادات الوقفية",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   },
+   {
+    "chart_name": "تحليل الإيرادات والديون",
+    "label": "تحليل الإيرادات والديون",
+    "parent": "الايرادات الوقفية",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"RLTNhjXcP3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">الايرادات الوقفية</span>\",\"col\":12}},{\"id\":\"kQ7R979jjP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"قيمة إيرادات المكاتب\",\"col\":12}},{\"id\":\"QRGK5Vfok1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"تحليل الإيرادات والديون\",\"col\":12}},{\"id\":\"JDcViXT04D\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hXeH1_IwuA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"كتابة التقارير\",\"col\":3}},{\"id\":\"a0pzS-k7XK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"gmrKQ9egOl\",\"type\":\"card\",\"data\":{\"card_name\":\"تسجيل الايرادات والديون\",\"col\":4}},{\"id\":\"8fFtXPLDVs\",\"type\":\"card\",\"data\":{\"card_name\":\"تقارير مخصصة\",\"col\":4}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "change",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "الايرادات الوقفية",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "تسجيل الايرادات والديون",
+    "link_count": 4,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الايرادات الوقفية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "تسجيل الايرادات والديون",
+    "link_count": 0,
+    "link_to": "erad_waqf",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الايرادات الوقفية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "تسجيل حساب مكتب الوقف",
+    "link_count": 0,
+    "link_to": "Account",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الايرادات الوقفية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "مكتب الوقف",
+    "link_count": 0,
+    "link_to": "Cost Center",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الايرادات الوقفية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "قائمة الايرادات",
+    "link_count": 0,
+    "link_to": "R",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الايرادات الوقفية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-08-16 17:01:37.516824",
+  "module": "Lagna-waqf",
+  "name": "الايرادات الوقفية",
+  "number_cards": [],
+  "parent_page": "لجنة رفع كفائة",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 43.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "كتابة التقارير",
+    "link_to": "taqrer",
+    "parent": "الايرادات الوقفية",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "الايرادات الوقفية"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"eBpsettYeP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">تقنية المعلومات</span>\",\"col\":12}},{\"id\":\"ubaiLDh3EP\",\"type\":\"card\",\"data\":{\"card_name\":\"الاجهزة الالكترونية\",\"col\":4}},{\"id\":\"fEzDkACBlu\",\"type\":\"card\",\"data\":{\"card_name\":\"مخزن المكتب\",\"col\":4}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "support",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "تقنية المعلومات",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "الاجهزة الالكترونية",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "أصناف الاجهزة",
+    "link_count": 0,
+    "link_to": "Item",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "مجموعة الاجهزة",
+    "link_count": 0,
+    "link_to": "Item Group",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "مخزن المكتب",
+    "link_count": 0,
+    "link_to": "Warehouse",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "مخزن المكتب",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "إدخال جرد",
+    "link_count": 0,
+    "link_to": "Stock Entry",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 1,
+    "label": "رصيد المخزون",
+    "link_count": 0,
+    "link_to": "Stock Balance",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "تقرير الجرد",
+    "link_count": 0,
+    "link_to": "Stock Ledger Entry",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "تقنية المعلومات",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-08-16 17:01:37.584990",
+  "module": "Lagna-waqf",
+  "name": "تقنية المعلومات",
+  "number_cards": [],
+  "parent_page": "لجنة رفع كفائة",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 44.0,
+  "shortcuts": [],
+  "title": "تقنية المعلومات"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"h8xImMkqk8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">القرآنية والمساجد</span>\",\"col\":12}},{\"id\":\"9rVXSU8E-_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rI-_fJhXEg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"كتابة التقارير\",\"col\":3}},{\"id\":\"ivL3qh5Z8l\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"سجل الاصول\",\"col\":3}},{\"id\":\"06r1QzyzTK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"brvLbgyfQ6\",\"type\":\"card\",\"data\":{\"card_name\":\"الاصول (مراكز تحفيظ ومساجد)\",\"col\":4}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "education",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "القرآنية والمساجد",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "الاصول (مراكز تحفيظ ومساجد)",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "القرآنية والمساجد",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "الاصول",
+    "link_count": 0,
+    "link_to": "Asset",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "القرآنية والمساجد",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "مجموعات الاصول",
+    "link_count": 0,
+    "link_to": "Asset Category",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "القرآنية والمساجد",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "حركة الاصول",
+    "link_count": 0,
+    "link_to": "Asset Movement",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "القرآنية والمساجد",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-08-16 17:01:37.637786",
+  "module": "Lagna-waqf",
+  "name": "القرآنية والمساجد",
+  "number_cards": [],
+  "parent_page": "لجنة رفع كفائة",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 45.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "كتابة التقارير",
+    "link_to": "taqrer",
+    "parent": "القرآنية والمساجد",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "سجل الاصول",
+    "link_to": "Fixed Asset Register",
+    "parent": "القرآنية والمساجد",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": "Asset",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   }
+  ],
+  "title": "القرآنية والمساجد"
+ },
+ {
+  "charts": [
+   {
+    "chart_name": "الدورات التدريبية",
+    "label": "الدورات التدريبية",
+    "parent": "الدورات التدريبية",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   },
+   {
+    "chart_name": "HRR",
+    "label": "الدورات المسجلة",
+    "parent": "الدورات التدريبية",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"iJowoiFJDX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">الدورات التدريبية</span>\",\"col\":12}},{\"id\":\"BE2yiEierR\",\"type\":\"chart\",\"data\":{\"chart_name\":\"الدورات المسجلة\",\"col\":6}},{\"id\":\"O_cwGm1bkn\",\"type\":\"chart\",\"data\":{\"chart_name\":\"الدورات التدريبية\",\"col\":6}},{\"id\":\"M_LyPlZ__H\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tws3EN3_4d\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Program\",\"col\":4}},{\"id\":\"yxREgyBbMe\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Training Event\",\"col\":4}},{\"id\":\"SPVY4Zn1td\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"AuuJ6GM5e2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zod54prYnF\",\"type\":\"card\",\"data\":{\"card_name\":\"البرامج التدريبية\",\"col\":4}},{\"id\":\"ik4U1LIp1E\",\"type\":\"card\",\"data\":{\"card_name\":\"التقارير التدريبية\",\"col\":4}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "share",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "الدورات التدريبية",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "البرامج التدريبية",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "البرامج التدريبية",
+    "link_count": 0,
+    "link_to": "Training Program",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "تنفيذ الدورات",
+    "link_count": 0,
+    "link_to": "Training Event",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "نتائج التدريب",
+    "link_count": 0,
+    "link_to": "Training Result",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "التقارير التدريبية",
+    "link_count": 2,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "تقييم التدريب / آراء المتدربين",
+    "link_count": 0,
+    "link_to": "Training Feedback",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "خريطة مهارات الموظفين",
+    "link_count": 0,
+    "link_to": "Employee Skill Map",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "الدورات التدريبية",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-08-16 17:01:37.764211",
+  "module": "Lagna-waqf",
+  "name": "الدورات التدريبية",
+  "number_cards": [],
+  "parent_page": "لجنة رفع كفائة",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 46.0,
+  "shortcuts": [
+   {
+    "color": "Cyan",
+    "doc_view": "List",
+    "format": "{}الدورات المسجلة",
+    "icon": null,
+    "kanban_board": null,
+    "label": "Training Program",
+    "link_to": "Training Program",
+    "parent": "الدورات التدريبية",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Green",
+    "doc_view": "List",
+    "format": "{}الدورات المعتمدة",
+    "icon": null,
+    "kanban_board": null,
+    "label": "Training Event",
+    "link_to": "Training Event",
+    "parent": "الدورات التدريبية",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "الدورات التدريبية"
+ },
+ {
+  "charts": [
+   {
+    "chart_name": "Incoming Leads",
+    "label": "مبادرات البيع",
+    "parent": "إدارة العملاء",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"uPHLMjAVGF\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"عنوان ادارة العملاء ارم\",\"col\":12}},{\"id\":\"HZmIEhSXjl\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"CRM\",\"col\":12}},{\"id\":\"NoDh-CxJr-\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"فرصة بيع\",\"col\":4}},{\"id\":\"iN6kkv_frw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"العملاء\",\"col\":4}},{\"id\":\"dsAYqdKwmd\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"مبادرة البيع\",\"col\":4}},{\"id\":\"Ol8L0W5Sxd\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hObgYtj1zT\",\"type\":\"chart\",\"data\":{\"chart_name\":\"مبادرات البيع\",\"col\":12}},{\"id\":\"36icAl4PAf\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"VfaTHd1YVh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>إختصاراتك</b></span>\",\"col\":12}},{\"id\":\"OTvjs0-Zqo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"فرصة\",\"col\":3}},{\"id\":\"hlCo7Q7adW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"مبادرة البيع\",\"col\":3}},{\"id\":\"H_pDyfnIgO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"العملاء\",\"col\":3}},{\"id\":\"OQp2cxRsOO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"إستبيان مبنى سكني\",\"col\":3}},{\"id\":\"V_s0PP5LPx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"لوحة التحكم\",\"col\":3}},{\"id\":\"t-NX5_iAzH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8DHTBvEYch\",\"type\":\"card\",\"data\":{\"card_name\":\"العملاء وفرص البيع \",\"col\":4}},{\"id\":\"jIX15M7XhT\",\"type\":\"card\",\"data\":{\"card_name\":\"المواعيد والمتابعة\",\"col\":4}},{\"id\":\"UucMZI3Voh\",\"type\":\"card\",\"data\":{\"card_name\":\"العروض والفواتير\",\"col\":4}},{\"id\":\"wB4GQHiexE\",\"type\":\"card\",\"data\":{\"card_name\":\"الاعدادات\",\"col\":4}},{\"id\":\"6uOJoZQPsE\",\"type\":\"spacer\",\"data\":{\"col\":8}},{\"id\":\"PSjXocz-cr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"SKv4SYqKaH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BbRyO0iC0A\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JM10I6_OIs\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"تصميم الكروت\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "عنوان ادارة العملاء ارم",
+    "label": "عنوان ادارة العملاء ارم",
+    "parent": "إدارة العملاء",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   },
+   {
+    "custom_block_name": "تصميم الكروت",
+    "label": "تصميم الكروت",
+    "parent": "إدارة العملاء",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "share",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "إدارة العملاء",
+  "links": [
+   {
+    "dependencies": null,
+    "description": "<style>\r\n/* استهداف المربع الافتراضي للنظام وتحويله لسحابة */\r\n.popover {\r\n    background-color: #ffffff !important;\r\n    border: none !important;\r\n    border-radius: 40px !important;\r\n    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15) !important;\r\n    overflow: visible !important;\r\n}\r\n/* رسم تموجات السحابة العلوية */\r\n.popover::before {\r\n    content: ''; \r\n    position: absolute; \r\n    top: -18px; \r\n    right: 20%; \r\n    width: 45px; \r\n    height: 45px; \r\n    background: #ffffff; \r\n    border-radius: 50%; \r\n    z-index: -1;\r\n}\r\n.popover::after {\r\n    content: ''; \r\n    position: absolute; \r\n    top: -28px; \r\n    right: 40%; \r\n    width: 65px; \r\n    height: 65px; \r\n    background: #ffffff; \r\n    border-radius: 50%; \r\n    z-index: -1;\r\n}\r\n/* تنسيق النص داخل السحابة */\r\n.popover-body {\r\n    padding: 18px 24px !important;\r\n    text-align: right !important;\r\n    direction: rtl !important;\r\n    font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif !important;\r\n    color: #334155 !important;\r\n    line-height: 1.6 !important;\r\n}\r\n</style>\r\n\r\n<div>\r\n    <span style=\"color: #0284c7; font-weight: bold; font-size: 15px;\">☁️ العملاء والفرص:</span><br>\r\n    <span style=\"font-size: 13px;\">وصول سريع ومباشر لإدارة جهات الاتصال ومتابعة المبادرات الخاصة بك.</span>\r\n</div>",
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "العملاء وفرص البيع ",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "مبادرة البيع",
+    "link_count": 0,
+    "link_to": "Lead",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "فرص البيع",
+    "link_count": 0,
+    "link_to": "Opportunity",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "العملاء",
+    "link_count": 0,
+    "link_to": "Customer",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "المواعيد والمتابعة",
+    "link_count": 2,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "المواعيد",
+    "link_count": 0,
+    "link_to": "Event",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "المهام والتكليفات",
+    "link_count": 0,
+    "link_to": "ToDo",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": "<div style=\"position:relative; display:inline-block;\">\r\n\r\n    <!-- زر الاستفهام -->\r\n    <span onclick=\"this.nextElementSibling.classList.toggle('show')\" \r\n    style=\"cursor:pointer; font-size:16px; background:#3b82f6; color:#fff; padding:4px 8px; border-radius:50%;\">\r\n\r\n    </span>\r\n\r\n    <!-- السحابة -->\r\n    <div class=\"bubble\">\r\n        عرض الأسعار: إنشاء عروض<br>\r\n        أمر التعاقد: تأكيد الطلب<br>\r\n        فاتورة مشروع: تحصيل الدفع\r\n    </div>\r\n\r\n</div>\r\n\r\n<style>\r\n.bubble {\r\n    position:absolute;\r\n    top:30px;\r\n    right:0;\r\n    background:#0f172a;\r\n    color:#fff;\r\n    padding:10px;\r\n    border-radius:8px;\r\n    width:200px;\r\n    font-size:12px;\r\n    line-height:1.5;\r\n\r\n    opacity:0;\r\n    transform:translateY(-8px);\r\n    transition:0.3s;\r\n    pointer-events:none;\r\n}\r\n\r\n/* سهم */\r\n.bubble::after {\r\n    content:\"\";\r\n    position:absolute;\r\n    top:-5px;\r\n    right:10px;\r\n    width:8px;\r\n    height:8px;\r\n    background:#0f172a;\r\n    transform:rotate(45deg);\r\n}\r\n\r\n.bubble.show {\r\n    opacity:1;\r\n    transform:translateY(0);\r\n    pointer-events:auto;\r\n}\r\n</style>",
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "العروض والفواتير",
+    "link_count": 4,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "العرض الفني",
+    "link_count": 0,
+    "link_to": "fanne ard",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "العرض المالي",
+    "link_count": 0,
+    "link_to": "Quotation",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "أمر تعاقد",
+    "link_count": 0,
+    "link_to": "Sales Order",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "فاتورة مشروع",
+    "link_count": 0,
+    "link_to": "Sales Invoice",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "الاعدادات",
+    "link_count": 1,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": " قوالب العرض الفني",
+    "link_count": 0,
+    "link_to": "template arm",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "إدارة العملاء",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-06-03 18:45:19.458898",
+  "module": "arm_crm_module",
+  "name": "إدارة العملاء",
+  "number_cards": [
+   {
+    "label": "فرصة بيع",
+    "number_card_name": "فرصة بيع",
+    "parent": "إدارة العملاء",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "العملاء",
+    "number_card_name": "العملاء",
+    "parent": "إدارة العملاء",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "مبادرة البيع",
+    "number_card_name": "مبادرة البيع",
+    "parent": "إدارة العملاء",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
+  "parent_page": "ARM Home",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 47.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "List",
+    "format": "{} تعيين",
+    "icon": null,
+    "kanban_board": null,
+    "label": "فرصة",
+    "link_to": "Opportunity",
+    "parent": "إدارة العملاء",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "لوحة التحكم",
+    "link_to": "CRM",
+    "parent": "إدارة العملاء",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Dashboard",
+    "url": null
+   },
+   {
+    "color": "Blue",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "العملاء",
+    "link_to": "Customer",
+    "parent": "إدارة العملاء",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Green",
+    "doc_view": "List",
+    "format": "{} مبادرات",
+    "icon": null,
+    "kanban_board": null,
+    "label": "مبادرة البيع",
+    "link_to": "Lead",
+    "parent": "إدارة العملاء",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Orange",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "إستبيان مبنى سكني",
+    "link_to": "Building Survey",
+    "parent": "إدارة العملاء",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "إدارة العملاء"
+ },
+ {
+  "charts": [],
   "content": "[{\"id\":\"GzszQkA-T0\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"IT\",\"col\":12}}]",
   "custom_blocks": [
    {
@@ -20,7 +1376,7 @@
   "is_hidden": 0,
   "label": "مكتب المعلومات والتوثيق",
   "links": [],
-  "modified": "2026-07-15 16:39:49.969434",
+  "modified": "2026-08-16 17:01:37.346377",
   "module": null,
   "name": "مكتب المعلومات والتوثيق",
   "number_cards": [],
@@ -29,7 +1385,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 37.0,
+  "sequence_id": 40.0,
   "shortcuts": [],
   "title": "مكتب المعلومات والتوثيق"
  },
@@ -61,7 +1417,7 @@
   "is_hidden": 0,
   "label": "قسم الوعاظ",
   "links": [],
-  "modified": "2026-07-15 16:40:18.983315",
+  "modified": "2026-08-16 17:01:37.133715",
   "module": "taqafia",
   "name": "قسم الوعاظ",
   "number_cards": [],
@@ -75,175 +1431,17 @@
     "parentfield": "roles",
     "parenttype": "Workspace",
     "role": "معتمد نتائج الامتحانات"
+   },
+   {
+    "parent": "قسم الوعاظ",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالديوان"
    }
   ],
-  "sequence_id": 34.0,
+  "sequence_id": 36.0,
   "shortcuts": [],
   "title": "قسم الوعاظ"
- },
- {
-  "charts": [
-   {
-    "chart_name": "أنشطة المكـــــاتب",
-    "label": "أنشطة المكـــــاتب",
-    "parent": "قسم الانشطة",
-    "parentfield": "charts",
-    "parenttype": "Workspace"
-   },
-   {
-    "chart_name": "أنشطة الوعــــاظ",
-    "label": "أنشطة الوعــــاظ",
-    "parent": "قسم الانشطة",
-    "parentfield": "charts",
-    "parenttype": "Workspace"
-   }
-  ],
-  "content": "[{\"id\":\"jKY1DL1wDb\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"active\",\"col\":12}},{\"id\":\"86M4wpEsj2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Tz6LJ36uQj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KzeWG9dOz0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r3kXvu-e2_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"PzPSm8lRyW\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pTFhZx_U7e\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"الانشطة المكتملة\",\"col\":12}},{\"id\":\"LQoVb7W6EX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"أنشطة المكـــــاتب\",\"col\":6}},{\"id\":\"MRgNrtBRoj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"أنشطة الوعــــاظ\",\"col\":6}},{\"id\":\"0DVC1owi1e\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bw9-5qMmT3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">إختصاراتك</span>\",\"col\":12}},{\"id\":\"jK6PN896zn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"الانشطة للوعاظ\",\"col\":3}},{\"id\":\"9MKTGPP-0-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"الانشطة للمكاتب\",\"col\":3}},{\"id\":\"ILtef1TJwM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"لوحة الإحصائيات\",\"col\":3}},{\"id\":\"dSGJlJgVyo\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"7wX4tgstD-\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>الإعدادات والتقارير</b></span>\",\"col\":12}},{\"id\":\"AW6yibPf2W\",\"type\":\"card\",\"data\":{\"card_name\":\"الجوانب والعناوين\",\"col\":4}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "active",
-    "label": "active",
-    "parent": "قسم الانشطة",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "review",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "قسم الانشطة",
-  "links": [
-   {
-    "dependencies": null,
-    "description": "تختص بإعداد جوانب الانشطة والفاعليات وعناوينها",
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "الجوانب والعناوين",
-    "link_count": 2,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "parent": "قسم الانشطة",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "جوانب الانشطة",
-    "link_count": 0,
-    "link_to": "tyac_taq",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "parent": "قسم الانشطة",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "عناوين الانشطة",
-    "link_count": 0,
-    "link_to": "enac_taq",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "parent": "قسم الانشطة",
-    "parentfield": "links",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "type": "Link"
-   }
-  ],
-  "modified": "2026-07-15 18:12:39.066509",
-  "module": "taqafia",
-  "name": "قسم الانشطة",
-  "number_cards": [
-   {
-    "label": "الانشطة المكتملة",
-    "number_card_name": "الانشطة المكتملة",
-    "parent": "قسم الانشطة",
-    "parentfield": "number_cards",
-    "parenttype": "Workspace"
-   }
-  ],
-  "parent_page": "إدارة الشؤون الثقافية والدعوية",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 36.0,
-  "shortcuts": [
-   {
-    "color": "Green",
-    "doc_view": "List",
-    "format": "{} تعيين",
-    "icon": null,
-    "kanban_board": null,
-    "label": "الانشطة للوعاظ",
-    "link_to": "active_taq",
-    "parent": "قسم الانشطة",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Grey",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "لوحة الإحصائيات",
-    "link_to": "الاحصائيات والتقارير",
-    "parent": "قسم الانشطة",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "Dashboard",
-    "url": null
-   },
-   {
-    "color": "Blue",
-    "doc_view": "List",
-    "format": "{}",
-    "icon": null,
-    "kanban_board": null,
-    "label": "الانشطة للمكاتب",
-    "link_to": "mak_taq",
-    "parent": "قسم الانشطة",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   }
-  ],
-  "title": "قسم الانشطة"
  },
  {
   "charts": [
@@ -933,7 +2131,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.900729",
+  "modified": "2026-08-16 17:03:02.329895",
   "module": "HR",
   "name": "HR",
   "number_cards": [],
@@ -942,7 +2140,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 12.0,
+  "sequence_id": 11.0,
   "shortcuts": [
    {
     "color": null,
@@ -1602,7 +2800,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.510038",
+  "modified": "2026-08-16 17:01:34.782700",
   "module": "Manufacturing",
   "name": "Manufacturing",
   "number_cards": [],
@@ -1611,7 +2809,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 19.0,
+  "sequence_id": 18.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -1898,7 +3096,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.950376",
+  "modified": "2026-08-16 17:01:35.355307",
   "module": "Payroll",
   "name": "Payroll",
   "number_cards": [],
@@ -1907,7 +3105,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 25.0,
+  "sequence_id": 24.0,
   "shortcuts": [
    {
     "color": null,
@@ -2320,7 +3518,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.614247",
+  "modified": "2026-08-16 17:01:36.824147",
   "module": "ERPNext Integrations",
   "name": "ERPNext Integrations",
   "number_cards": [],
@@ -3103,7 +4301,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.383815",
+  "modified": "2026-08-16 17:01:36.463031",
   "module": "Setup",
   "name": "ERPNext Settings",
   "number_cards": [],
@@ -3564,7 +4762,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.014507",
+  "modified": "2026-08-16 17:01:34.257616",
   "module": "HR",
   "name": "Recruitment",
   "number_cards": [],
@@ -3582,7 +4780,7 @@
   ],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 13.0,
+  "sequence_id": 12.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -4191,7 +5389,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.113029",
+  "modified": "2026-08-16 17:01:34.360400",
   "module": "HR",
   "name": "Employee Lifecycle",
   "number_cards": [],
@@ -4225,7 +5423,7 @@
   ],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 14.0,
+  "sequence_id": 13.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -4716,7 +5914,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.278856",
+  "modified": "2026-08-16 17:01:34.529894",
   "module": "HR",
   "name": "Shift & Attendance",
   "number_cards": [],
@@ -4725,7 +5923,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 16.0,
+  "sequence_id": 15.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -5153,7 +6351,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.428176",
+  "modified": "2026-08-16 17:01:34.719345",
   "module": "HR",
   "name": "Leaves",
   "number_cards": [],
@@ -5162,7 +6360,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 18.0,
+  "sequence_id": 17.0,
   "shortcuts": [
    {
     "color": "Orange",
@@ -5521,7 +6719,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.208455",
+  "modified": "2026-08-16 17:01:34.459111",
   "module": "HR",
   "name": "Performance",
   "number_cards": [],
@@ -5530,7 +6728,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 15.0,
+  "sequence_id": 14.0,
   "shortcuts": [
    {
     "color": "Orange",
@@ -6058,7 +7256,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.351819",
+  "modified": "2026-08-16 17:01:34.634496",
   "module": "HR",
   "name": "Expense Claims",
   "number_cards": [],
@@ -6067,7 +7265,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 17.0,
+  "sequence_id": 16.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -6803,7 +8001,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.008799",
+  "modified": "2026-08-16 17:01:35.455902",
   "module": "Payroll",
   "name": "Salary Payout",
   "number_cards": [],
@@ -6812,7 +8010,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 26.0,
+  "sequence_id": 25.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -7116,7 +8314,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.096631",
+  "modified": "2026-08-16 17:01:35.682221",
   "module": "Payroll",
   "name": "Tax & Benefits",
   "number_cards": [],
@@ -7125,7 +8323,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 27.0,
+  "sequence_id": 26.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -7183,12 +8381,12 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"uSgImaoS1u\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home Awqaf\",\"col\":12}}]",
+  "content": "[{\"id\":\"lbqNUIZ6zG\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home Awqaf\",\"col\":12}}]",
   "custom_blocks": [
    {
     "custom_block_name": "Home Awqaf",
     "label": "Home Awqaf",
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "custom_blocks",
     "parenttype": "Workspace"
    }
@@ -7197,10 +8395,10 @@
   "doctype": "Workspace",
   "for_user": "",
   "hide_custom": 0,
-  "icon": "home",
-  "indicator_color": null,
+  "icon": "color-review-points",
+  "indicator_color": "",
   "is_hidden": 0,
-  "label": "Home",
+  "label": "home",
   "links": [
    {
     "dependencies": "",
@@ -7214,7 +8412,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7232,7 +8430,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7250,7 +8448,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7268,7 +8466,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7286,7 +8484,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7304,7 +8502,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7322,7 +8520,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7340,7 +8538,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7358,7 +8556,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7376,7 +8574,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7394,7 +8592,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7412,7 +8610,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7430,7 +8628,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7448,7 +8646,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7466,7 +8664,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7484,7 +8682,7 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
@@ -7502,25 +8700,38 @@
     "link_type": "DocType",
     "onboard": 1,
     "only_for": null,
-    "parent": "Home",
+    "parent": "home",
     "parentfield": "links",
     "parenttype": "Workspace",
     "report_ref_doctype": null,
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:46.902426",
-  "module": "Setup",
-  "name": "Home",
+  "modified": "2026-08-17 12:24:35.771811",
+  "module": "taqafia",
+  "name": "home",
   "number_cards": [],
   "parent_page": "",
   "public": 1,
   "quick_lists": [],
   "restrict_to_domain": "",
-  "roles": [],
-  "sequence_id": 1.0,
+  "roles": [
+   {
+    "parent": "home",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالديوان"
+   },
+   {
+    "parent": "home",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالمناطق"
+   }
+  ],
+  "sequence_id": 33.0,
   "shortcuts": [],
-  "title": "Home"
+  "title": "home"
  },
  {
   "charts": [
@@ -8228,7 +9439,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.167857",
+  "modified": "2026-08-16 17:01:36.011884",
   "module": "CRM",
   "name": "CRM",
   "number_cards": [],
@@ -8961,7 +10172,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.557633",
+  "modified": "2026-08-16 17:01:33.494532",
   "module": "Selling",
   "name": "Selling",
   "number_cards": [],
@@ -8970,7 +10181,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 9.0,
+  "sequence_id": 8.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -9945,7 +11156,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.466938",
+  "modified": "2026-08-16 17:01:33.308843",
   "module": "Buying",
   "name": "Buying",
   "number_cards": [],
@@ -9954,7 +11165,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 8.0,
+  "sequence_id": 7.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -10452,7 +11663,7 @@
     "type": "Card Break"
    }
   ],
-  "modified": "2026-07-15 16:39:48.871944",
+  "modified": "2026-08-16 17:01:35.256982",
   "module": "Website",
   "name": "Website",
   "number_cards": [],
@@ -10461,7 +11672,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 24.0,
+  "sequence_id": 23.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -11036,7 +12247,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.069292",
+  "modified": "2026-08-16 17:01:32.711287",
   "module": "Automation",
   "name": "Tools",
   "number_cards": [],
@@ -11045,7 +12256,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 3.0,
+  "sequence_id": 2.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -11384,7 +12595,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.804046",
+  "modified": "2026-08-16 17:01:35.160830",
   "module": "Core",
   "name": "Users",
   "number_cards": [],
@@ -11393,7 +12604,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 23.0,
+  "sequence_id": 22.0,
   "shortcuts": [
    {
     "color": null,
@@ -11733,7 +12944,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.506582",
+  "modified": "2026-08-16 17:01:36.715487",
   "module": "Integrations",
   "name": "Integrations",
   "number_cards": [],
@@ -12775,7 +13986,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.145824",
+  "modified": "2026-08-16 17:01:32.793132",
   "module": "Accounts",
   "name": "Accounting",
   "number_cards": [
@@ -12813,7 +14024,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 4.0,
+  "sequence_id": 3.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -14306,7 +15517,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.649352",
+  "modified": "2026-08-16 17:01:33.686478",
   "module": "Stock",
   "name": "Stock",
   "number_cards": [
@@ -14337,7 +15548,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 10.0,
+  "sequence_id": 9.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -14823,7 +16034,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.795390",
+  "modified": "2026-08-16 17:01:34.017833",
   "module": "Assets",
   "name": "Assets",
   "number_cards": [],
@@ -14832,7 +16043,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 11.0,
+  "sequence_id": 10.0,
   "shortcuts": [
    {
     "color": null,
@@ -15233,7 +16444,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.664076",
+  "modified": "2026-08-16 17:01:34.922007",
   "module": "Projects",
   "name": "Projects",
   "number_cards": [],
@@ -15242,7 +16453,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 21.0,
+  "sequence_id": 20.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -15651,7 +16862,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.737585",
+  "modified": "2026-08-16 17:01:35.071614",
   "module": "Support",
   "name": "Support",
   "number_cards": [],
@@ -15660,7 +16871,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 22.0,
+  "sequence_id": 21.0,
   "shortcuts": [
    {
     "color": "Yellow",
@@ -15964,7 +17175,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:48.598450",
+  "modified": "2026-08-16 17:01:34.857699",
   "module": "Quality Management",
   "name": "Quality",
   "number_cards": [],
@@ -15973,7 +17184,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 20.0,
+  "sequence_id": 19.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -16814,7 +18025,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:49.258357",
+  "modified": "2026-08-16 17:01:36.226776",
   "module": "Setup",
   "name": "Settings",
   "number_cards": [],
@@ -17231,7 +18442,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.247688",
+  "modified": "2026-08-16 17:01:32.983079",
   "module": "Accounts",
   "name": "Payables",
   "number_cards": [],
@@ -17240,7 +18451,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 5.0,
+  "sequence_id": 4.0,
   "shortcuts": [
    {
     "color": null,
@@ -17651,7 +18862,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.322918",
+  "modified": "2026-08-16 17:01:33.099556",
   "module": "Accounts",
   "name": "Receivables",
   "number_cards": [],
@@ -17660,7 +18871,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 6.0,
+  "sequence_id": 5.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -18195,7 +19406,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:47.402312",
+  "modified": "2026-08-16 17:01:33.215139",
   "module": "Accounts",
   "name": "Financial Reports",
   "number_cards": [],
@@ -18204,13 +19415,13 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 7.0,
+  "sequence_id": 6.0,
   "shortcuts": [],
   "title": "Financial Reports"
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"LptPj4mOuK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"EqavRTRRlF\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر إدارة الشؤون الثقافية والدعوية\",\"col\":12}}]",
+  "content": "[{\"id\":\"LptPj4mOuK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-09O044SlW\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر إدارة الشؤون الثقافية والدعوية\",\"col\":12}}]",
   "custom_blocks": [
    {
     "custom_block_name": "هيدر إدارة الشؤون الثقافية والدعوية",
@@ -18229,7 +19440,7 @@
   "is_hidden": 0,
   "label": "إدارة الشؤون الثقافية والدعوية",
   "links": [],
-  "modified": "2026-07-15 16:39:49.719760",
+  "modified": "2026-08-16 17:02:08.568463",
   "module": "taqafia",
   "name": "إدارة الشؤون الثقافية والدعوية",
   "number_cards": [],
@@ -18237,8 +19448,15 @@
   "public": 1,
   "quick_lists": [],
   "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 33.0,
+  "roles": [
+   {
+    "parent": "إدارة الشؤون الثقافية والدعوية",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "sequence_id": 34.0,
   "shortcuts": [],
   "title": "إدارة الشؤون الثقافية والدعوية"
  },
@@ -18778,7 +19996,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:46.979330",
+  "modified": "2026-08-16 17:01:32.615976",
   "module": "Core",
   "name": "Build",
   "number_cards": [],
@@ -18787,7 +20005,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 2.0,
+  "sequence_id": 1.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -18851,6 +20069,54 @@
   "sequence_id": 22.0,
   "shortcuts": [],
   "title": "Welcome Workspace"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"Vh148H0_rD\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam header\",\"col\":12}},{\"id\":\"ZivjbRcDVn\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "exam",
+    "label": "exam",
+    "parent": "قسم الامتحانات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   },
+   {
+    "custom_block_name": "exam header",
+    "label": "exam header",
+    "parent": "قسم الامتحانات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "printer",
+  "indicator_color": "orange",
+  "is_hidden": 0,
+  "label": "قسم الامتحانات",
+  "links": [],
+  "modified": "2026-08-16 17:01:37.190169",
+  "module": "taqafia",
+  "name": "قسم الامتحانات",
+  "number_cards": [],
+  "parent_page": "إدارة الشؤون الثقافية والدعوية",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "parent": "قسم الامتحانات",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "sequence_id": 37.0,
+  "shortcuts": [],
+  "title": "قسم الامتحانات"
  },
  {
   "charts": [],
@@ -19144,7 +20410,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-15 16:39:50.018615",
+  "modified": "2026-08-16 17:01:37.387532",
   "module": "Helpdesk",
   "name": "Helpdesk",
   "number_cards": [],
@@ -19153,7 +20419,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 38.0,
+  "sequence_id": 41.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -19177,19 +20443,19 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"Vh148H0_rD\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam header\",\"col\":12}},{\"id\":\"ZivjbRcDVn\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam\",\"col\":12}}]",
+  "content": "[{\"id\":\"k42SAPMeW2\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر واعظات\",\"col\":12}},{\"id\":\"4ySOFMkQry\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"الواعظات\",\"col\":12}}]",
   "custom_blocks": [
    {
-    "custom_block_name": "exam",
-    "label": "exam",
-    "parent": "قسم الامتحانات",
+    "custom_block_name": "هيدر واعظات",
+    "label": "هيدر واعظات",
+    "parent": "قسم الواعظات",
     "parentfield": "custom_blocks",
     "parenttype": "Workspace"
    },
    {
-    "custom_block_name": "exam header",
-    "label": "exam header",
-    "parent": "قسم الامتحانات",
+    "custom_block_name": "الواعظات",
+    "label": "الواعظات",
+    "parent": "قسم الواعظات",
     "parentfield": "custom_blocks",
     "parenttype": "Workspace"
    }
@@ -19198,22 +20464,63 @@
   "doctype": "Workspace",
   "for_user": "",
   "hide_custom": 0,
-  "icon": "printer",
-  "indicator_color": "orange",
+  "icon": "share-people",
+  "indicator_color": "green",
   "is_hidden": 0,
-  "label": "قسم الامتحانات",
+  "label": "قسم الواعظات",
   "links": [],
-  "modified": "2026-07-16 10:30:44.151990",
+  "modified": "2026-08-16 17:01:37.243758",
   "module": "taqafia",
-  "name": "قسم الامتحانات",
+  "name": "قسم الواعظات",
   "number_cards": [],
   "parent_page": "إدارة الشؤون الثقافية والدعوية",
   "public": 1,
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 35.0,
+  "sequence_id": 38.0,
   "shortcuts": [],
-  "title": "قسم الامتحانات"
+  "title": "قسم الواعظات"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"WpVTi-ROhH\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر قسم امتحان واعظات\",\"col\":12}},{\"id\":\"tTyqlmErF6\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"امتحان الواعظات\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "هيدر قسم امتحان واعظات",
+    "label": "هيدر قسم امتحان واعظات",
+    "parent": "قسم امتحان الواعظات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   },
+   {
+    "custom_block_name": "امتحان الواعظات",
+    "label": "امتحان الواعظات",
+    "parent": "قسم امتحان الواعظات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "calendar",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "قسم امتحان الواعظات",
+  "links": [],
+  "modified": "2026-08-16 17:01:37.299935",
+  "module": "taqafia",
+  "name": "قسم امتحان الواعظات",
+  "number_cards": [],
+  "parent_page": "إدارة الشؤون الثقافية والدعوية",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 39.0,
+  "shortcuts": [],
+  "title": "قسم امتحان الواعظات"
  }
 ]

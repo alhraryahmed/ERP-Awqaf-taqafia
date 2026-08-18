@@ -15,12 +15,13 @@
   "column_break_flwy",
   "oral_exam",
   "section_break_swuv",
-  "get_preachers",
-  "column_break_ocfd",
   "count_to_exam",
+  "column_break_ocfd",
   "count_waes_exam",
   "section_break_iglw",
-  "waed_info_to_exam"
+  "get_preachers",
+  "waed_info_to_exam",
+  "amended_from"
  ],
  "fields": [
   {
@@ -113,12 +114,23 @@
    "fieldtype": "Data",
    "label": "\u0627\u0644\u0641\u062a\u0631\u0629",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "exam_group_date",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-07-05 18:38:00.730754",
+ "modified": "2026-07-30 16:41:02.208681",
  "modified_by": "Administrator",
  "module": "taqafia",
  "name": "exam_group_date",

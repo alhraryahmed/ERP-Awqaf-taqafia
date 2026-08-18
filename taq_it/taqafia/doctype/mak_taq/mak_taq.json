@@ -10,6 +10,7 @@
   "en_mak",
   "ja_mak",
   "la",
+  "preacher_suggestions",
   "da",
   "daa",
   "ma",
@@ -79,12 +80,19 @@
    "fieldname": "waed",
    "fieldtype": "Button",
    "label": "\u062a\u0643\u0644\u064a\u0641 \u0648\u0627\u0639\u0638 "
+  },
+  {
+   "fieldname": "preacher_suggestions",
+   "fieldtype": "Table",
+   "label": "Preacher Suggestions",
+   "options": "Active Taq Preachers",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-14 16:43:04.774751",
+ "modified": "2026-08-03 14:13:07.170945",
  "modified_by": "a.alhrary@awqaf.gov.ly",
  "module": "taqafia",
  "name": "mak_taq",

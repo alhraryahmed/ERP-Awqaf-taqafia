@@ -261,107 +261,6 @@
   "name": "Expense Claims"
  },
  {
-  "cards": [
-   {
-    "card": "Total Employees",
-    "parent": "Human Resource",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "New Hires (This Year)",
-    "parent": "Human Resource",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Employee Exits (This Year)",
-    "parent": "Human Resource",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Employees Joining (This Quarter)",
-    "parent": "Human Resource",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Employees Relieving (This Quarter)",
-    "parent": "Human Resource",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   }
-  ],
-  "chart_options": null,
-  "charts": [
-   {
-    "chart": "Hiring vs Attrition Count",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Full"
-   },
-   {
-    "chart": "Employees by Age",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Full"
-   },
-   {
-    "chart": "Gender Diversity Ratio",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Employees by Type",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Employees by Grade",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Employees by Branch",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Designation Wise Employee Count",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Department Wise Employee Count",
-    "parent": "Human Resource",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   }
-  ],
-  "dashboard_name": "Human Resource",
-  "docstatus": 0,
-  "doctype": "Dashboard",
-  "is_default": 0,
-  "is_standard": 1,
-  "modified": "2024-01-08 14:06:32.104261",
-  "module": "HR",
-  "name": "Human Resource"
- },
- {
   "cards": [],
   "chart_options": null,
   "charts": [
@@ -784,132 +683,6 @@
  {
   "cards": [
    {
-    "card": "Job Openings",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Total Applicants (This month)",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Accepted Job Applicants",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Rejected Job Applicants",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Job Offers (This Month)",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Applicant-to-Hire Percentage",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Job Offer Acceptance Rate",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   },
-   {
-    "card": "Time to Fill",
-    "parent": "Recruitment",
-    "parentfield": "cards",
-    "parenttype": "Dashboard"
-   }
-  ],
-  "chart_options": null,
-  "charts": [
-   {
-    "chart": "Job Applicant Pipeline",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Job Applicant Source",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Job Applicants by Country",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Job Application Status",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Job Offer Status",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Interview Status",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Job Application Frequency",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Full"
-   },
-   {
-    "chart": "Department Wise Openings",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   },
-   {
-    "chart": "Designation Wise Openings",
-    "parent": "Recruitment",
-    "parentfield": "charts",
-    "parenttype": "Dashboard",
-    "width": "Half"
-   }
-  ],
-  "dashboard_name": "Recruitment",
-  "docstatus": 0,
-  "doctype": "Dashboard",
-  "is_default": 0,
-  "is_standard": 1,
-  "modified": "2022-08-29 23:28:26.765572",
-  "module": "HR",
-  "name": "Recruitment"
- },
- {
-  "cards": [
-   {
     "card": "New Lead (Last 1 Month)",
     "parent": "CRM",
     "parentfield": "cards",
@@ -1117,5 +890,232 @@
   "modified": "2026-07-05 17:17:53.653497",
   "module": "taqafia",
   "name": "الاحصائيات والتقارير"
+ },
+ {
+  "cards": [
+   {
+    "card": "Total Employees",
+    "parent": "Human Resource",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "New Hires (This Year)",
+    "parent": "Human Resource",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Employee Exits (This Year)",
+    "parent": "Human Resource",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Employees Joining (This Quarter)",
+    "parent": "Human Resource",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Employees Relieving (This Quarter)",
+    "parent": "Human Resource",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   }
+  ],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": "Hiring vs Attrition Count",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Full"
+   },
+   {
+    "chart": "Employees by Age",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Full"
+   },
+   {
+    "chart": "Gender Diversity Ratio",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Employees by Type",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Employees by Grade",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Employees by Branch",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Designation Wise Employee Count",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Department Wise Employee Count",
+    "parent": "Human Resource",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   }
+  ],
+  "dashboard_name": "Human Resource",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 1,
+  "modified": "2024-01-08 14:06:32.104261",
+  "module": "HR",
+  "name": "Human Resource"
+ },
+ {
+  "cards": [
+   {
+    "card": "Job Openings",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Total Applicants (This month)",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Accepted Job Applicants",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Rejected Job Applicants",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Job Offers (This Month)",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Applicant-to-Hire Percentage",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Job Offer Acceptance Rate",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Time to Fill",
+    "parent": "Recruitment",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   }
+  ],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": "Job Applicant Pipeline",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Job Applicant Source",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Job Applicants by Country",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Job Application Status",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Job Offer Status",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Interview Status",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Job Application Frequency",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Full"
+   },
+   {
+    "chart": "Department Wise Openings",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   },
+   {
+    "chart": "Designation Wise Openings",
+    "parent": "Recruitment",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Half"
+   }
+  ],
+  "dashboard_name": "Recruitment",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 1,
+  "modified": "2022-08-29 23:28:26.765572",
+  "module": "HR",
+  "name": "Recruitment"
  }
 ]

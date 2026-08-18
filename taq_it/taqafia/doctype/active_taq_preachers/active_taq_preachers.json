@@ -6,7 +6,9 @@
  "engine": "InnoDB",
  "field_order": [
   "preacher",
-  "title"
+  "title",
+  "lecture_time",
+  "lecture_duration"
  ],
  "fields": [
   {
@@ -23,14 +25,31 @@
    "in_list_view": 1,
    "label": "Title",
    "options": "enac_taq"
+  },
+  {
+   "fieldname": "lecture_time",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Lecture Time",
+   "options": "\u0627\u0644\u0641\u062c\u0631\n\u0627\u0644\u0638\u0647\u0631 \u0627\u0644\u0649 \u0627\u0644\u0639\u0635\u0631\n\u0627\u0644\u0639\u0635\u0631 \u0627\u0644\u0649 \u0627\u0644\u0645\u063a\u0631\u0628\n\u0627\u0644\u0645\u063a\u0631\u0628 \u0627\u0644\u0649 \u0627\u0644\u0639\u0634\u0627\u0621\n\u0627\u0644\u0639\u0635\u0631 \u0627\u0644\u0649 \u0627\u0644\u0639\u0634\u0627\u0621"
+  },
+  {
+   "fieldname": "lecture_duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Lecture Duration"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-07-01 20:27:36.985763",
- "modified_by": "Administrator",
+ "modified": "2026-07-30 16:50:59.588055",
+ "modified_by": "a.alhrary@awqaf.gov.ly",
  "module": "taqafia",
  "name": "Active Taq Preachers",
  "owner": "Administrator",

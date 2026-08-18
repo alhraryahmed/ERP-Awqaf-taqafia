@@ -6,10 +6,26 @@ from frappe.model.document import Document
 
 
 class exam_form(Document):
+
     def validate(self):
         self.validate_program_aspects()
         self.validate_exam_limits()
         self.validate_aspect_totals()
+        self.validate_duplicate_aspects()
+
+    def validate_duplicate_aspects(self):
+        aspects = []
+
+        for row in self.aspects:
+            if not row.aspect:
+                continue
+
+            if row.aspect in aspects:
+                frappe.throw(
+                    f"Aspect {row.aspect} مضاف مسبقاً"
+                )
+
+            aspects.append(row.aspect)
 
     def validate_program_aspects(self):
         if not self.program:

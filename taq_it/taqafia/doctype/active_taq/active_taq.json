@@ -20,7 +20,8 @@
   "significant_event",
   "are_you",
   "are_you_counts",
-  "counts_display"
+  "counts_display",
+  "live_stream_url"
  ],
  "fields": [
   {
@@ -129,14 +130,20 @@
    "fieldname": "counts_display",
    "fieldtype": "HTML",
    "label": "Total Interest Responses"
+  },
+  {
+   "fieldname": "live_stream_url",
+   "fieldtype": "Data",
+   "label": "live stream url",
+   "options": "URL"
   }
  ],
  "grid_page_length": 50,
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-05 19:10:50.983619",
- "modified_by": "alhraryahmed110@gmail.com",
+ "modified": "2026-08-03 12:27:15.975371",
+ "modified_by": "a.alhrary@awqaf.gov.ly",
  "module": "taqafia",
  "name": "active_taq",
  "owner": "Administrator",
