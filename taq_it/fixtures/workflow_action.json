@@ -1,5 +1,236 @@
 [
  {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-20 19:28:25.565882",
+  "name": "f1v4am3nef",
+  "permitted_roles": [
+   {
+    "parent": "f1v4am3nef",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "موظفي الثقافية بالديوان"
+   }
+  ],
+  "reference_doctype": "mak_taq",
+  "reference_name": "مكتب أوقاف طرابلس - AQ-الصلاة-0466",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "طلب نشاط"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:25.271127",
+  "name": "6l4uaqn6b9",
+  "permitted_roles": [
+   {
+    "parent": "6l4uaqn6b9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-1-مكتب-المنشية-الجميل-0462",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:26.729227",
+  "name": "6ljo1mku9p",
+  "permitted_roles": [
+   {
+    "parent": "6ljo1mku9p",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-1-مكتب-المنشية-الجميل-0462",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Failed Written"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:34.190866",
+  "name": "6ntkl61m94",
+  "permitted_roles": [
+   {
+    "parent": "6ntkl61m94",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:34.917513",
+  "name": "6o5v2dp5b8",
+  "permitted_roles": [
+   {
+    "parent": "6o5v2dp5b8",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:36.749561",
+  "name": "6on5j96l8c",
+  "permitted_roles": [
+   {
+    "parent": "6on5j96l8c",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:38.068409",
+  "name": "6p401kclqc",
+  "permitted_roles": [
+   {
+    "parent": "6p401kclqc",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Failed Oral"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:44.224915",
+  "name": "6r2qbr93b2",
+  "permitted_roles": [
+   {
+    "parent": "6r2qbr93b2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-3-مكتب-المنشية-الجميل-0464",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 14:15:45.207616",
+  "name": "6rci2jrunk",
+  "permitted_roles": [
+   {
+    "parent": "6rci2jrunk",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-3-مكتب-المنشية-الجميل-0464",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Failed Written"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 15:35:04.055877",
+  "name": "lag0d1adoi",
+  "permitted_roles": [
+   {
+    "parent": "lag0d1adoi",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-28-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-24 15:35:07.098103",
+  "name": "lbfemabrdp",
+  "permitted_roles": [
+   {
+    "parent": "lbfemabrdp",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-28-01",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
   "completed_by": "Administrator",
   "completed_by_role": "موظفي الثقافية بالديوان",
   "docstatus": 0,
@@ -14818,5 +15049,824 @@
   "status": "Open",
   "user": null,
   "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:00:04.116762",
+  "name": "gr90f8fdip",
+  "permitted_roles": [
+   {
+    "parent": "gr90f8fdip",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:00:10.940685",
+  "name": "gtd5mi47r7",
+  "permitted_roles": [
+   {
+    "parent": "gtd5mi47r7",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:00:17.613800",
+  "name": "gvghc8r8f3",
+  "permitted_roles": [
+   {
+    "parent": "gvghc8r8f3",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-3-مكتب-الرياينة-0461",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:00:21.112167",
+  "name": "h0jorfbcu1",
+  "permitted_roles": [
+   {
+    "parent": "h0jorfbcu1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-3-مكتب-الرياينة-0461",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:01:15.409623",
+  "name": "hhishb2m4p",
+  "permitted_roles": [
+   {
+    "parent": "hhishb2m4p",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:01:19.762546",
+  "name": "hitsskmh9q",
+  "permitted_roles": [
+   {
+    "parent": "hitsskmh9q",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:16:11.990238",
+  "name": "q9nbv20fa1",
+  "permitted_roles": [
+   {
+    "parent": "q9nbv20fa1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-3-مكتب-الرياينة-0461",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:16:12.275910",
+  "name": "q9qaj5jse9",
+  "permitted_roles": [
+   {
+    "parent": "q9qaj5jse9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:16:12.337680",
+  "name": "q9r9q81nkj",
+  "permitted_roles": [
+   {
+    "parent": "q9r9q81nkj",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:16:12.358650",
+  "name": "q9rniilu5e",
+  "permitted_roles": [
+   {
+    "parent": "q9rniilu5e",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-31-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:16:16.768361",
+  "name": "qb7tmc641u",
+  "permitted_roles": [
+   {
+    "parent": "qb7tmc641u",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-31-01",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:28:32.338986",
+  "name": "1h3j1oiqdd",
+  "permitted_roles": [
+   {
+    "parent": "1h3j1oiqdd",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-3-مكتب-الرياينة-0461",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:28:32.575599",
+  "name": "1h54jie7nv",
+  "permitted_roles": [
+   {
+    "parent": "1h54jie7nv",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 12:28:32.699883",
+  "name": "1h7oa8p0qp",
+  "permitted_roles": [
+   {
+    "parent": "1h7oa8p0qp",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:04:02.570411",
+  "name": "vpp2mcv8eo",
+  "permitted_roles": [
+   {
+    "parent": "vpp2mcv8eo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-3-مكتب-الرياينة-0461",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Failed Written"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:04:03.025163",
+  "name": "vpupv79m4n",
+  "permitted_roles": [
+   {
+    "parent": "vpupv79m4n",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:04:03.074198",
+  "name": "vpu1a0a4q0",
+  "permitted_roles": [
+   {
+    "parent": "vpu1a0a4q0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:04:03.155145",
+  "name": "vpvogi9qpg",
+  "permitted_roles": [
+   {
+    "parent": "vpvogi9qpg",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:04:03.199153",
+  "name": "vpvp8rd8k5",
+  "permitted_roles": [
+   {
+    "parent": "vpvp8rd8k5",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:06:18.995947",
+  "name": "14eqggbis0",
+  "permitted_roles": [
+   {
+    "parent": "14eqggbis0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-2-مكتب-الرياينة-0460",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:06:19.158712",
+  "name": "14f98k7k9e",
+  "permitted_roles": [
+   {
+    "parent": "14f98k7k9e",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "اختبار-مكتب-الرياينة-0459",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Approved"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:54:13.112574",
+  "name": "t6jthd7ifl",
+  "permitted_roles": [
+   {
+    "parent": "t6jthd7ifl",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-1-مكتب-المنشية-الجميل-0462",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:54:21.941602",
+  "name": "t9bbd6cjoo",
+  "permitted_roles": [
+   {
+    "parent": "t9bbd6cjoo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:54:27.996482",
+  "name": "tb8ftqo2hs",
+  "permitted_roles": [
+   {
+    "parent": "tb8ftqo2hs",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-3-مكتب-المنشية-الجميل-0464",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:54:33.317922",
+  "name": "tcttk5btee",
+  "permitted_roles": [
+   {
+    "parent": "tcttk5btee",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-3-مكتب-المنشية-الجميل-0464",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:54:49.831401",
+  "name": "ti29o3eogl",
+  "permitted_roles": [
+   {
+    "parent": "ti29o3eogl",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:54:54.514564",
+  "name": "tjhbun9vqd",
+  "permitted_roles": [
+   {
+    "parent": "tjhbun9vqd",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-1-مكتب-المنشية-الجميل-0462",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:55:27.831878",
+  "name": "ttujn8ocki",
+  "permitted_roles": [
+   {
+    "parent": "ttujn8ocki",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-3-مكتب-المنشية-الجميل-0464",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:55:27.895003",
+  "name": "ttupm2nlkn",
+  "permitted_roles": [
+   {
+    "parent": "ttupm2nlkn",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-2-مكتب-المنشية-الجميل-0463",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:55:27.943636",
+  "name": "ttv3jfaoga",
+  "permitted_roles": [
+   {
+    "parent": "ttv3jfaoga",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-1-مكتب-المنشية-الجميل-0462",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 16:55:27.962118",
+  "name": "ttvrnhf70s",
+  "permitted_roles": [
+   {
+    "parent": "ttvrnhf70s",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "ttvrnhf70s",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-29-01",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 17:40:05.336958",
+  "name": "o2l7c69686",
+  "permitted_roles": [
+   {
+    "parent": "o2l7c69686",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "o2l7c69686",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-10-مكتب-المنشية-الجميل-0465",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "New"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 17:40:11.796613",
+  "name": "o4mkhlbjmr",
+  "permitted_roles": [
+   {
+    "parent": "o4mkhlbjmr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "o4mkhlbjmr",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-10-مكتب-المنشية-الجميل-0465",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduling an appointment"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 17:41:44.780299",
+  "name": "p1ngihtkdo",
+  "permitted_roles": [
+   {
+    "parent": "p1ngihtkdo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "p1ngihtkdo",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-10-مكتب-المنشية-الجميل-0465",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-18 17:41:44.813020",
+  "name": "p1omvsj2e5",
+  "permitted_roles": [
+   {
+    "parent": "p1omvsj2e5",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "p1omvsj2e5",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-31-02",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-20 17:33:49.247176",
+  "name": "bt43nu9762",
+  "permitted_roles": [
+   {
+    "parent": "bt43nu9762",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "bt43nu9762",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-08-31-02",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-08-20 17:38:24.477787",
+  "name": "ej4ueiiqd0",
+  "permitted_roles": [
+   {
+    "parent": "ej4ueiiqd0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   },
+   {
+    "parent": "ej4ueiiqd0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "test-10-مكتب-المنشية-الجميل-0465",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "in the written exam"
  }
 ]

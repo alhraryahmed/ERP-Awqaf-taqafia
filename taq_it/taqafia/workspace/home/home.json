@@ -206,7 +206,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-08-17 12:24:35.771811",
+ "modified": "2026-08-19 13:57:49.596942",
  "modified_by": "Administrator",
  "module": "taqafia",
  "name": "home",
@@ -224,7 +224,7 @@
    "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u0645\u0646\u0627\u0637\u0642"
   }
  ],
- "sequence_id": 33.0,
+ "sequence_id": 1.0,
  "shortcuts": [],
  "title": "home"
 }

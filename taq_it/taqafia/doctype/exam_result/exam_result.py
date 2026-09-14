@@ -19,11 +19,18 @@ STAGE_NOT_REQUIRED = "Not Required"
 STAGE_NOT_GRADED = "Not Graded"
 STAGE_GRADED = "Graded"
 STAGE_APPROVED = "Approved"
+STAGE_EXCUSED_ABSENT = "Excused Absent"
+STAGE_UNEXCUSED_ABSENT = "Unexcused Absent"
 
 PASS_PENDING = "Pending"
 PASS_PASSED = "Passed"
 PASS_FAILED = "Failed"
+PASS_DEFERRED = "Deferred"
 PASS_NOT_REQUIRED = "Not Required"
+
+ATTENDANCE_PRESENT = "Present"
+ATTENDANCE_EXCUSED_ABSENT = "Excused Absent"
+ATTENDANCE_UNEXCUSED_ABSENT = "Unexcused Absent"
 
 FINAL_FAILED_WRITTEN = "Failed Written"
 FINAL_FAILED_ORAL = "Failed Oral"
@@ -123,6 +130,14 @@ class exam_result(Document):
         return sum(row.max_grade or 0 for row in rows)
 
     def set_final_status(self):
+        if getattr(self, "attendance_status", None) == ATTENDANCE_EXCUSED_ABSENT:
+            self.pass_status = STAGE_EXCUSED_ABSENT
+            return
+
+        if getattr(self, "attendance_status", None) == ATTENDANCE_UNEXCUSED_ABSENT:
+            self.pass_status = FINAL_FAILED_WRITTEN if self.oral_status == STAGE_NOT_REQUIRED else FINAL_FAILED_ORAL
+            return
+
         if self.written_status == STAGE_APPROVED and self.written_pass_status == PASS_FAILED:
             self.pass_status = FINAL_FAILED_WRITTEN
             return
@@ -170,6 +185,22 @@ class exam_result(Document):
         self.save()
 
     def approve_written(self):
+        if getattr(self, "attendance_status", None) == ATTENDANCE_EXCUSED_ABSENT:
+            self.written_status = STAGE_EXCUSED_ABSENT
+            self.written_pass_status = PASS_DEFERRED
+            self.status = STAGE_EXCUSED_ABSENT
+            self.oral_status = STAGE_NOT_REQUIRED
+            self.oral_pass_status = PASS_NOT_REQUIRED
+            return
+
+        if getattr(self, "attendance_status", None) == ATTENDANCE_UNEXCUSED_ABSENT:
+            self.written_status = STAGE_UNEXCUSED_ABSENT
+            self.written_pass_status = PASS_FAILED
+            self.status = STATUS_WRITTEN_APPROVED
+            self.oral_status = STAGE_NOT_REQUIRED
+            self.oral_pass_status = PASS_NOT_REQUIRED
+            return
+
         if self.written_status != STAGE_GRADED:
             frappe.throw("Written grades must be saved before approval.")
 
@@ -185,6 +216,18 @@ class exam_result(Document):
             self.oral_pass_status = PASS_NOT_REQUIRED
 
     def approve_oral(self):
+        if getattr(self, "attendance_status", None) == ATTENDANCE_EXCUSED_ABSENT:
+            self.oral_status = STAGE_EXCUSED_ABSENT
+            self.oral_pass_status = PASS_DEFERRED
+            self.status = STAGE_EXCUSED_ABSENT
+            return
+
+        if getattr(self, "attendance_status", None) == ATTENDANCE_UNEXCUSED_ABSENT:
+            self.oral_status = STAGE_UNEXCUSED_ABSENT
+            self.oral_pass_status = PASS_FAILED
+            self.status = STATUS_FINAL_APPROVED
+            return
+
         if self.written_status != STAGE_APPROVED:
             frappe.throw("Written grades must be approved before oral approval.")
 

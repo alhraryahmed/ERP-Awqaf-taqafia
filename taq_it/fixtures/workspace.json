@@ -1,15 +1,8 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"g7w4yCelQP\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيرد الانشطة\",\"col\":12}},{\"id\":\"kO--IjS1Kk\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"active\",\"col\":12}}]",
+  "content": "[{\"id\":\"kO--IjS1Kk\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"active\",\"col\":12}}]",
   "custom_blocks": [
-   {
-    "custom_block_name": "هيرد الانشطة",
-    "label": "هيرد الانشطة",
-    "parent": "قسم الانشطة",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   },
    {
     "custom_block_name": "active",
     "label": "active",
@@ -27,7 +20,7 @@
   "is_hidden": 0,
   "label": "قسم الانشطة",
   "links": [],
-  "modified": "2026-08-16 17:13:25.039064",
+  "modified": "2026-08-24 16:23:40.577831",
   "module": "taqafia",
   "name": "قسم الانشطة",
   "number_cards": [],
@@ -49,7 +42,7 @@
     "role": "موظفي الثقافية بالمناطق"
    }
   ],
-  "sequence_id": 35.0,
+  "sequence_id": 36.0,
   "shortcuts": [],
   "title": "قسم الانشطة"
  },
@@ -66,7 +59,7 @@
   "is_hidden": 1,
   "label": "Education",
   "links": [],
-  "modified": "2026-08-16 17:01:35.836109",
+  "modified": "2026-08-19 13:57:52.021032",
   "module": "IT_support",
   "name": "Education",
   "number_cards": [],
@@ -75,7 +68,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 27.0,
+  "sequence_id": 29.0,
   "shortcuts": [],
   "title": "Education"
  },
@@ -115,7 +108,7 @@
   "is_hidden": 0,
   "label": "لجنة رفع كفائة",
   "links": [],
-  "modified": "2026-08-16 17:01:37.454057",
+  "modified": "2026-08-19 13:57:53.050462",
   "module": "Lagna-waqf",
   "name": "لجنة رفع كفائة",
   "number_cards": [
@@ -146,7 +139,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 42.0,
+  "sequence_id": 43.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -406,7 +399,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:37.516824",
+  "modified": "2026-08-19 13:57:53.132077",
   "module": "Lagna-waqf",
   "name": "الايرادات الوقفية",
   "number_cards": [],
@@ -415,7 +408,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 43.0,
+  "sequence_id": 44.0,
   "shortcuts": [
    {
     "color": "Blue",
@@ -595,7 +588,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:37.584990",
+  "modified": "2026-08-19 13:57:53.190645",
   "module": "Lagna-waqf",
   "name": "تقنية المعلومات",
   "number_cards": [],
@@ -604,7 +597,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 44.0,
+  "sequence_id": 45.0,
   "shortcuts": [],
   "title": "تقنية المعلومات"
  },
@@ -694,7 +687,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:37.637786",
+  "modified": "2026-08-19 13:57:53.257676",
   "module": "Lagna-waqf",
   "name": "القرآنية والمساجد",
   "number_cards": [],
@@ -703,7 +696,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 45.0,
+  "sequence_id": 46.0,
   "shortcuts": [
    {
     "color": "Blue",
@@ -897,7 +890,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:37.764211",
+  "modified": "2026-08-19 13:57:53.326504",
   "module": "Lagna-waqf",
   "name": "الدورات التدريبية",
   "number_cards": [],
@@ -906,7 +899,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 46.0,
+  "sequence_id": 47.0,
   "shortcuts": [
    {
     "color": "Cyan",
@@ -1376,7 +1369,7 @@
   "is_hidden": 0,
   "label": "مكتب المعلومات والتوثيق",
   "links": [],
-  "modified": "2026-08-16 17:01:37.346377",
+  "modified": "2026-08-19 13:57:52.916568",
   "module": null,
   "name": "مكتب المعلومات والتوثيق",
   "number_cards": [],
@@ -1385,21 +1378,14 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 40.0,
+  "sequence_id": 41.0,
   "shortcuts": [],
   "title": "مكتب المعلومات والتوثيق"
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"rKJHTZVQDs\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"header\",\"col\":12}},{\"id\":\"mZW4AbzyF9\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"waedblock\",\"col\":12}}]",
+  "content": "[{\"id\":\"mZW4AbzyF9\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"waedblock\",\"col\":12}}]",
   "custom_blocks": [
-   {
-    "custom_block_name": "header",
-    "label": "header",
-    "parent": "قسم الوعاظ",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   },
    {
     "custom_block_name": "waedblock",
     "label": "waedblock",
@@ -1417,7 +1403,7 @@
   "is_hidden": 0,
   "label": "قسم الوعاظ",
   "links": [],
-  "modified": "2026-08-16 17:01:37.133715",
+  "modified": "2026-08-24 16:23:52.233648",
   "module": "taqafia",
   "name": "قسم الوعاظ",
   "number_cards": [],
@@ -1439,7 +1425,7 @@
     "role": "موظفي الثقافية بالديوان"
    }
   ],
-  "sequence_id": 36.0,
+  "sequence_id": 37.0,
   "shortcuts": [],
   "title": "قسم الوعاظ"
  },
@@ -2131,7 +2117,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:03:02.329895",
+  "modified": "2026-08-19 13:57:50.796839",
   "module": "HR",
   "name": "HR",
   "number_cards": [],
@@ -2140,7 +2126,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 11.0,
+  "sequence_id": 13.0,
   "shortcuts": [
    {
     "color": null,
@@ -2800,7 +2786,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.782700",
+  "modified": "2026-08-19 13:57:51.309834",
   "module": "Manufacturing",
   "name": "Manufacturing",
   "number_cards": [],
@@ -2809,7 +2795,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 18.0,
+  "sequence_id": 20.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -3096,7 +3082,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:35.355307",
+  "modified": "2026-08-19 13:57:51.732447",
   "module": "Payroll",
   "name": "Payroll",
   "number_cards": [],
@@ -3105,7 +3091,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 24.0,
+  "sequence_id": 26.0,
   "shortcuts": [
    {
     "color": null,
@@ -3518,7 +3504,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:36.824147",
+  "modified": "2026-08-19 13:57:52.505953",
   "module": "ERPNext Integrations",
   "name": "ERPNext Integrations",
   "number_cards": [],
@@ -3527,7 +3513,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 32.0,
+  "sequence_id": 34.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -4301,7 +4287,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:36.463031",
+  "modified": "2026-08-19 13:57:52.362701",
   "module": "Setup",
   "name": "ERPNext Settings",
   "number_cards": [],
@@ -4310,7 +4296,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 30.0,
+  "sequence_id": 32.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -4762,7 +4748,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.257616",
+  "modified": "2026-08-19 13:57:50.888271",
   "module": "HR",
   "name": "Recruitment",
   "number_cards": [],
@@ -4780,7 +4766,7 @@
   ],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 12.0,
+  "sequence_id": 14.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -5389,7 +5375,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.360400",
+  "modified": "2026-08-19 13:57:50.959333",
   "module": "HR",
   "name": "Employee Lifecycle",
   "number_cards": [],
@@ -5423,7 +5409,7 @@
   ],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 13.0,
+  "sequence_id": 15.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -5914,7 +5900,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.529894",
+  "modified": "2026-08-19 13:57:51.104665",
   "module": "HR",
   "name": "Shift & Attendance",
   "number_cards": [],
@@ -5923,7 +5909,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 15.0,
+  "sequence_id": 17.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -6351,7 +6337,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.719345",
+  "modified": "2026-08-19 13:57:51.244227",
   "module": "HR",
   "name": "Leaves",
   "number_cards": [],
@@ -6360,7 +6346,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 17.0,
+  "sequence_id": 19.0,
   "shortcuts": [
    {
     "color": "Orange",
@@ -6719,7 +6705,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.459111",
+  "modified": "2026-08-19 13:57:51.039619",
   "module": "HR",
   "name": "Performance",
   "number_cards": [],
@@ -6728,7 +6714,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 14.0,
+  "sequence_id": 16.0,
   "shortcuts": [
    {
     "color": "Orange",
@@ -7256,7 +7242,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.634496",
+  "modified": "2026-08-19 13:57:51.174645",
   "module": "HR",
   "name": "Expense Claims",
   "number_cards": [],
@@ -7265,7 +7251,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 16.0,
+  "sequence_id": 18.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -8001,7 +7987,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:35.455902",
+  "modified": "2026-08-19 13:57:51.800310",
   "module": "Payroll",
   "name": "Salary Payout",
   "number_cards": [],
@@ -8010,7 +7996,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 25.0,
+  "sequence_id": 27.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -8314,7 +8300,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:35.682221",
+  "modified": "2026-08-19 13:57:51.925324",
   "module": "Payroll",
   "name": "Tax & Benefits",
   "number_cards": [],
@@ -8323,7 +8309,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 26.0,
+  "sequence_id": 28.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -8707,7 +8693,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-17 12:24:35.771811",
+  "modified": "2026-08-19 13:57:49.596942",
   "module": "taqafia",
   "name": "home",
   "number_cards": [],
@@ -8729,7 +8715,7 @@
     "role": "موظفي الثقافية بالمناطق"
    }
   ],
-  "sequence_id": 33.0,
+  "sequence_id": 1.0,
   "shortcuts": [],
   "title": "home"
  },
@@ -9439,7 +9425,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:36.011884",
+  "modified": "2026-08-19 13:57:52.112794",
   "module": "CRM",
   "name": "CRM",
   "number_cards": [],
@@ -9448,7 +9434,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 28.0,
+  "sequence_id": 30.0,
   "shortcuts": [
    {
     "color": "Blue",
@@ -10172,7 +10158,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:33.494532",
+  "modified": "2026-08-19 13:57:50.427010",
   "module": "Selling",
   "name": "Selling",
   "number_cards": [],
@@ -10181,7 +10167,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 8.0,
+  "sequence_id": 10.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -11156,7 +11142,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:33.308843",
+  "modified": "2026-08-19 13:57:50.299782",
   "module": "Buying",
   "name": "Buying",
   "number_cards": [],
@@ -11165,7 +11151,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 7.0,
+  "sequence_id": 9.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -11663,7 +11649,7 @@
     "type": "Card Break"
    }
   ],
-  "modified": "2026-08-16 17:01:35.256982",
+  "modified": "2026-08-19 13:57:51.660360",
   "module": "Website",
   "name": "Website",
   "number_cards": [],
@@ -11672,7 +11658,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 23.0,
+  "sequence_id": 25.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -12247,7 +12233,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:32.711287",
+  "modified": "2026-08-19 13:57:49.809450",
   "module": "Automation",
   "name": "Tools",
   "number_cards": [],
@@ -12256,7 +12242,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 2.0,
+  "sequence_id": 4.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -12595,7 +12581,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:35.160830",
+  "modified": "2026-08-19 13:57:51.600201",
   "module": "Core",
   "name": "Users",
   "number_cards": [],
@@ -12604,7 +12590,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 22.0,
+  "sequence_id": 24.0,
   "shortcuts": [
    {
     "color": null,
@@ -12944,7 +12930,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:36.715487",
+  "modified": "2026-08-19 13:57:52.443922",
   "module": "Integrations",
   "name": "Integrations",
   "number_cards": [],
@@ -12953,7 +12939,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 31.0,
+  "sequence_id": 33.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -13986,7 +13972,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:32.793132",
+  "modified": "2026-08-19 13:57:49.893823",
   "module": "Accounts",
   "name": "Accounting",
   "number_cards": [
@@ -14024,7 +14010,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 3.0,
+  "sequence_id": 5.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -15517,7 +15503,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:33.686478",
+  "modified": "2026-08-19 13:57:50.543990",
   "module": "Stock",
   "name": "Stock",
   "number_cards": [
@@ -15548,7 +15534,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 9.0,
+  "sequence_id": 11.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -16034,7 +16020,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.017833",
+  "modified": "2026-08-19 13:57:50.696669",
   "module": "Assets",
   "name": "Assets",
   "number_cards": [],
@@ -16043,7 +16029,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 10.0,
+  "sequence_id": 12.0,
   "shortcuts": [
    {
     "color": null,
@@ -16444,7 +16430,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.922007",
+  "modified": "2026-08-19 13:57:51.467805",
   "module": "Projects",
   "name": "Projects",
   "number_cards": [],
@@ -16453,7 +16439,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 20.0,
+  "sequence_id": 22.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -16862,7 +16848,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:35.071614",
+  "modified": "2026-08-19 13:57:51.536136",
   "module": "Support",
   "name": "Support",
   "number_cards": [],
@@ -16871,7 +16857,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 21.0,
+  "sequence_id": 23.0,
   "shortcuts": [
    {
     "color": "Yellow",
@@ -17175,7 +17161,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:34.857699",
+  "modified": "2026-08-19 13:57:51.400540",
   "module": "Quality Management",
   "name": "Quality",
   "number_cards": [],
@@ -17184,7 +17170,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 19.0,
+  "sequence_id": 21.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -18025,7 +18011,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:36.226776",
+  "modified": "2026-08-19 13:57:52.247019",
   "module": "Setup",
   "name": "Settings",
   "number_cards": [],
@@ -18034,7 +18020,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 29.0,
+  "sequence_id": 31.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -18442,7 +18428,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:32.983079",
+  "modified": "2026-08-19 13:57:49.999755",
   "module": "Accounts",
   "name": "Payables",
   "number_cards": [],
@@ -18451,7 +18437,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 4.0,
+  "sequence_id": 6.0,
   "shortcuts": [
    {
     "color": null,
@@ -18862,7 +18848,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:33.099556",
+  "modified": "2026-08-19 13:57:50.114014",
   "module": "Accounts",
   "name": "Receivables",
   "number_cards": [],
@@ -18871,7 +18857,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 5.0,
+  "sequence_id": 7.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -19406,7 +19392,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:33.215139",
+  "modified": "2026-08-19 13:57:50.189768",
   "module": "Accounts",
   "name": "Financial Reports",
   "number_cards": [],
@@ -19415,7 +19401,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 6.0,
+  "sequence_id": 8.0,
   "shortcuts": [],
   "title": "Financial Reports"
  },
@@ -19440,7 +19426,7 @@
   "is_hidden": 0,
   "label": "إدارة الشؤون الثقافية والدعوية",
   "links": [],
-  "modified": "2026-08-16 17:02:08.568463",
+  "modified": "2026-08-19 13:57:52.572398",
   "module": "taqafia",
   "name": "إدارة الشؤون الثقافية والدعوية",
   "number_cards": [],
@@ -19456,7 +19442,7 @@
     "role": "موظفي الثقافية بالديوان"
    }
   ],
-  "sequence_id": 34.0,
+  "sequence_id": 35.0,
   "shortcuts": [],
   "title": "إدارة الشؤون الثقافية والدعوية"
  },
@@ -19996,7 +19982,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:32.615976",
+  "modified": "2026-08-19 13:57:49.737465",
   "module": "Core",
   "name": "Build",
   "number_cards": [],
@@ -20005,7 +19991,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 1.0,
+  "sequence_id": 3.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -20072,18 +20058,11 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\":\"Vh148H0_rD\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam header\",\"col\":12}},{\"id\":\"ZivjbRcDVn\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam\",\"col\":12}}]",
+  "content": "[{\"id\":\"ZivjbRcDVn\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"exam\",\"col\":12}}]",
   "custom_blocks": [
    {
     "custom_block_name": "exam",
     "label": "exam",
-    "parent": "قسم الامتحانات",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   },
-   {
-    "custom_block_name": "exam header",
-    "label": "exam header",
     "parent": "قسم الامتحانات",
     "parentfield": "custom_blocks",
     "parenttype": "Workspace"
@@ -20098,7 +20077,7 @@
   "is_hidden": 0,
   "label": "قسم الامتحانات",
   "links": [],
-  "modified": "2026-08-16 17:01:37.190169",
+  "modified": "2026-08-24 16:24:24.929514",
   "module": "taqafia",
   "name": "قسم الامتحانات",
   "number_cards": [],
@@ -20114,9 +20093,111 @@
     "role": "موظفي الثقافية بالديوان"
    }
   ],
-  "sequence_id": 37.0,
+  "sequence_id": 38.0,
   "shortcuts": [],
   "title": "قسم الامتحانات"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"4ySOFMkQry\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"الواعظات\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "الواعظات",
+    "label": "الواعظات",
+    "parent": "قسم الواعظات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "share-people",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "قسم الواعظات",
+  "links": [],
+  "modified": "2026-08-24 16:24:17.449784",
+  "module": "taqafia",
+  "name": "قسم الواعظات",
+  "number_cards": [],
+  "parent_page": "إدارة الشؤون الثقافية والدعوية",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 39.0,
+  "shortcuts": [],
+  "title": "قسم الواعظات"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"tTyqlmErF6\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"امتحان الواعظات\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "امتحان الواعظات",
+    "label": "امتحان الواعظات",
+    "parent": "قسم امتحان الواعظات",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "calendar",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "قسم امتحان الواعظات",
+  "links": [],
+  "modified": "2026-08-24 16:24:09.572415",
+  "module": "taqafia",
+  "name": "قسم امتحان الواعظات",
+  "number_cards": [],
+  "parent_page": "إدارة الشؤون الثقافية والدعوية",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 40.0,
+  "shortcuts": [],
+  "title": "قسم امتحان الواعظات"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\": \"kpi_block\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"\\u0628\\u0644\\u0648\\u0643 \\u0625\\u062d\\u0635\\u0627\\u0626\\u064a\\u0627\\u062a \\u0627\\u0644\\u062d\\u062c \\u0648\\u0627\\u0644\\u0639\\u0645\\u0631\\u0629\", \"col\": 12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "بلوك إحصائيات الحج والعمرة",
+    "label": null,
+    "parent": "Hajj and Umrah",
+    "parentfield": "custom_blocks",
+    "parenttype": "Workspace"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": null,
+  "hide_custom": 0,
+  "icon": "travel",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Hajj and Umrah",
+  "links": [],
+  "modified": "2026-08-19 13:57:49.685594",
+  "module": "Helpdesk",
+  "name": "Hajj and Umrah",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 2.0,
+  "shortcuts": [],
+  "title": "Hajj and Umrah"
  },
  {
   "charts": [],
@@ -20410,7 +20491,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-08-16 17:01:37.387532",
+  "modified": "2026-08-19 13:57:52.976110",
   "module": "Helpdesk",
   "name": "Helpdesk",
   "number_cards": [],
@@ -20419,7 +20500,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 41.0,
+  "sequence_id": 42.0,
   "shortcuts": [
    {
     "color": "Red",
@@ -20440,87 +20521,5 @@
    }
   ],
   "title": "Helpdesk"
- },
- {
-  "charts": [],
-  "content": "[{\"id\":\"k42SAPMeW2\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر واعظات\",\"col\":12}},{\"id\":\"4ySOFMkQry\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"الواعظات\",\"col\":12}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "هيدر واعظات",
-    "label": "هيدر واعظات",
-    "parent": "قسم الواعظات",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   },
-   {
-    "custom_block_name": "الواعظات",
-    "label": "الواعظات",
-    "parent": "قسم الواعظات",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "share-people",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "قسم الواعظات",
-  "links": [],
-  "modified": "2026-08-16 17:01:37.243758",
-  "module": "taqafia",
-  "name": "قسم الواعظات",
-  "number_cards": [],
-  "parent_page": "إدارة الشؤون الثقافية والدعوية",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 38.0,
-  "shortcuts": [],
-  "title": "قسم الواعظات"
- },
- {
-  "charts": [],
-  "content": "[{\"id\":\"WpVTi-ROhH\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"هيدر قسم امتحان واعظات\",\"col\":12}},{\"id\":\"tTyqlmErF6\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"امتحان الواعظات\",\"col\":12}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "هيدر قسم امتحان واعظات",
-    "label": "هيدر قسم امتحان واعظات",
-    "parent": "قسم امتحان الواعظات",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   },
-   {
-    "custom_block_name": "امتحان الواعظات",
-    "label": "امتحان الواعظات",
-    "parent": "قسم امتحان الواعظات",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "calendar",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "قسم امتحان الواعظات",
-  "links": [],
-  "modified": "2026-08-16 17:01:37.299935",
-  "module": "taqafia",
-  "name": "قسم امتحان الواعظات",
-  "number_cards": [],
-  "parent_page": "إدارة الشؤون الثقافية والدعوية",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 39.0,
-  "shortcuts": [],
-  "title": "قسم امتحان الواعظات"
  }
 ]

@@ -68,6 +68,8 @@ doc_events = {
         "on_update": "taq_it.workflow_hooks.sync_active_to_maktab"
     }
 }
+
+after_migrate = "taq_it.setup_roles.setup_custom_roles"
 # Apps
 # ------------------
 

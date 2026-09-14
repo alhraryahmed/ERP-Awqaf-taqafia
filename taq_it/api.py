@@ -1,23 +1,53 @@
+# -*- coding: utf-8 -*-
+"""
+وحدة واجهة برمجة التطبيقات (Whitelisted API Engine) لتطبيق taq_it
+تجمع كافة إحصاءات اللوحات في استعلامات SQL مجمعة فائقة الأداء (Single Query Execution)
+"""
+
 import frappe
+from frappe.utils import flt
 
 
 @frappe.whitelist()
 def get_print_actions():
     """
     Returns enabled print actions ordered by sort_order.
+    Checks waed_print_action doctype and falls back to standard print actions.
     """
+    for dt in ["waed_print_action", "Waed Print Action"]:
+        if frappe.db.exists("DocType", dt) or frappe.db.table_exists(dt):
+            try:
+                actions = frappe.get_all(
+                    dt,
+                    filters={"enabled": 1},
+                    fields=[
+                        "title",
+                        "target_doctype",
+                        "print_format",
+                        "sort_order",
+                    ],
+                    order_by="sort_order asc",
+                )
+                if actions:
+                    return actions
+            except Exception:
+                pass
 
-    return frappe.get_all(
-        "Waed Print Action",
-        filters={"enabled": 1},
-        fields=[
-            "title",
-            "target_doctype",
-            "print_format",
-            "sort_order",
-        ],
-        order_by="sort_order asc",
-    )
+    # Default fallback print actions
+    return [
+        {
+            "title": "بيانات الواعظ",
+            "target_doctype": "waed_info",
+            "print_format": "waez_data_doc",
+            "sort_order": 1,
+        },
+        {
+            "title": "نتيجة الامتحان",
+            "target_doctype": "exam_result",
+            "print_format": "result",
+            "sort_order": 2,
+        },
+    ]
 
 
 @frappe.whitelist()
@@ -25,7 +55,6 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
     """
     Build Print Preview URL for any configured print action.
     """
-
     if not source_doctype or not source_name:
         frappe.throw("Source document is required.")
 
@@ -35,7 +64,6 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
     if not print_format:
         frappe.throw("Print Format is required.")
 
-    # صلاحيات قراءة المستند الأصلي
     frappe.has_permission(
         source_doctype,
         "read",
@@ -43,18 +71,9 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
         throw=True,
     )
 
-    # --------------------------------------------------
-    # إذا كان الهدف هو نفس المستند
-    # --------------------------------------------------
-
     target_name = source_name
 
-    # --------------------------------------------------
-    # إذا كانت الطباعة من exam_result
-    # --------------------------------------------------
-
     if target_doctype == "exam_result":
-
         frappe.has_permission(
             "exam_result",
             "read",
@@ -63,9 +82,7 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
 
         target_name = frappe.db.get_value(
             "exam_result",
-            {
-                "waed": source_name
-            },
+            {"waed": source_name},
             "name",
             order_by="creation desc",
         )
@@ -73,16 +90,8 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
         if not target_name:
             frappe.throw("لا توجد نتيجة امتحان لهذا الواعظ.")
 
-    # --------------------------------------------------
-    # التأكد أن المستند موجود
-    # --------------------------------------------------
-
     if not frappe.db.exists(target_doctype, target_name):
         frappe.throw("المستند المطلوب غير موجود.")
-
-    # --------------------------------------------------
-    # إنشاء رابط Print Preview
-    # --------------------------------------------------
 
     return (
         frappe.utils.get_url()
@@ -93,36 +102,11 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
         + "&no_letterhead=0"
         + "&trigger_print=0"
     )
-    import frappe
 
 
-@frappe.whitelist()
-def get_print_actions():
-
-    return [
-        {
-            "title": "طباعة نموذج الوعد",
-            "target_doctype": "waed_info",
-            "print_format": "Waed Print Template"
-        }
-    ]
-
-
-@frappe.whitelist()
-def get_print_url(
-    source_doctype,
-    source_name,
-    target_doctype,
-    print_format
-):
-
-    return (
-        "/api/method/frappe.utils.print_format.download_pdf"
-        f"?doctype={target_doctype}"
-        f"&name={source_name}"
-        f"&format={print_format}"
-    )
-
+# ==============================================================================
+# 1. لوحة قسم الوعاظ والواعظات (Waed & Female Waed Dashboard API)
+# ==============================================================================
 @frappe.whitelist()
 def get_dashboard_stats(gender="Male"):
     """
@@ -130,19 +114,24 @@ def get_dashboard_stats(gender="Male"):
     :param gender: 'Male' لقسم الوعاظ أو 'Female' لقسم الواعظات
     """
     try:
-        # فحص وجود حقل gender في جدول tabwaed_info
         has_gender_field = frappe.db.has_column("waed_info", "gender")
 
-        # 1. استعلام تجميعي واحد لحالات waed_status
         if has_gender_field and gender:
-            status_rows = frappe.db.sql("""
+            if gender in ["Male", "ذكر"]:
+                gender_clause = "(gender IS NULL OR gender = '' OR gender IN ('Male', 'ذكر'))"
+            elif gender in ["Female", "أنثى"]:
+                gender_clause = "gender IN ('Female', 'أنثى')"
+            else:
+                gender_clause = f"gender = '{frappe.db.escape(gender)}'"
+
+            status_rows = frappe.db.sql(f"""
                 SELECT 
                     COALESCE(NULLIF(TRIM(waed_status), ''), 'New') as status,
                     COUNT(name) as total_count
                 FROM `tabwaed_info`
-                WHERE gender = %s
+                WHERE {gender_clause}
                 GROUP BY waed_status
-            """, (gender,), as_dict=True)
+            """, as_dict=True)
         else:
             status_rows = frappe.db.sql("""
                 SELECT 
@@ -160,21 +149,25 @@ def get_dashboard_stats(gender="Male"):
             status_counts[st] = cnt
             total += cnt
 
-        # 2. عدد مجموعات الامتحانات المجدولة
-        exam_groups = frappe.db.count("exam_group_date", {"exam_status": "Scheduled"})
+        # عدد مجموعات الامتحانات المجدولة
+        exam_gender_filter = {}
+        if frappe.db.has_column("exam_group_date", "target_gender") and gender:
+            exam_gender_filter["target_gender"] = ["in", ["Male", "ذكر"]] if gender in ["Male", "ذكر"] else ["in", ["Female", "أنثى"]]
 
-        # 3. إحصاءات المتابعات الميدانية (Followups)
+        exam_groups = frappe.db.count("exam_group_date", dict({"exam_status": "Scheduled"}, **exam_gender_filter))
+
+        # إحصاءات المتابعات الميدانية (Followups)
         incomplete_filter = {"waed_status": ["in", ["New", "Scheduling an appointment"]]}
         if has_gender_field and gender:
-            incomplete_filter["gender"] = gender
+            incomplete_filter["gender"] = ["in", ["Male", "ذكر"]] if gender in ["Male", "ذكر"] else ["in", ["Female", "أنثى"]]
 
         incomplete_tasks = frappe.db.count("waed_info", incomplete_filter)
         
-        in_progress_exams = frappe.db.count("exam_group_date", {
+        in_progress_exams = frappe.db.count("exam_group_date", dict({
             "exam_status": ["in", ["Written In Progress", "Oral In Progress"]]
-        })
+        }, **exam_gender_filter))
 
-        # 4. الملفات غير المكتملة (Missing Profile Data)
+        # الملفات غير المكتملة (Missing Profile Data)
         missing_count = 0
         meta = frappe.get_meta("waed_info")
         fields = [f.fieldname for f in meta.fields] if meta else []
@@ -185,7 +178,11 @@ def get_dashboard_stats(gender="Male"):
                 check_fields.append(f"`{f}` IS NULL OR `{f}` = ''")
 
         if check_fields:
-            gender_condition = f"AND gender = '{gender}'" if (has_gender_field and gender) else ""
+            gender_condition = ""
+            if has_gender_field and gender:
+                g_clause = "gender IN ('Male', 'ذكر') OR gender IS NULL OR gender = ''" if gender in ["Male", "ذكر"] else "gender IN ('Female', 'أنثى')"
+                gender_condition = f"AND ({g_clause})"
+
             where_clause = " OR ".join(check_fields)
             missing_res = frappe.db.sql(f"""
                 SELECT COUNT(name) as cnt 
@@ -218,7 +215,7 @@ def get_dashboard_stats(gender="Male"):
 # 2. لوحة قسم الامتحانات (Exams Dashboard API)
 # ==============================================================================
 @frappe.whitelist()
-def get_exam_dashboard_stats():
+def get_exam_dashboard_stats(gender=None):
     """
     استدعاء مجمّع واحد عالي الأداء لكافة إحصاءات قسم الامتحانات
     """
@@ -226,12 +223,24 @@ def get_exam_dashboard_stats():
         # 1. عدد نماذج الامتحانات
         forms_count = frappe.db.count("exam_form")
 
-        # 2. تجميع مجموعات الامتحانات حسب الحالة
-        exam_rows = frappe.db.sql("""
+        # 2. فحص وجود عمود target_gender في جدول tabexam_group_date
+        has_gender_col = frappe.db.has_column("exam_group_date", "target_gender")
+        
+        where_clause = "1=1"
+
+        if has_gender_col and gender:
+            if gender in ["Male", "ذكر"]:
+                where_clause = "(target_gender IS NULL OR target_gender = '' OR target_gender IN ('Male', 'ذكر'))"
+            elif gender in ["Female", "أنثى"]:
+                where_clause = "target_gender IN ('Female', 'أنثى')"
+
+        # 3. تجميع مجموعات الامتحانات حسب الحالة
+        exam_rows = frappe.db.sql(f"""
             SELECT 
                 COALESCE(NULLIF(TRIM(exam_status), ''), 'Scheduled') as status,
                 COUNT(name) as total_count
             FROM `tabexam_group_date`
+            WHERE {where_clause}
             GROUP BY exam_status
         """, as_dict=True)
 
@@ -249,16 +258,26 @@ def get_exam_dashboard_stats():
             exam_counts[st] = cnt
             total_exams += cnt
 
-        # 3. أقرب موعد امتحان قادم
-        next_exam = frappe.db.sql("""
-            SELECT date 
+        # 4. أقرب موعد امتحان قادم (فحص عمود exam_day أو date)
+        date_col = "exam_day" if frappe.db.has_column("exam_group_date", "exam_day") else "creation"
+        next_exam = frappe.db.sql(f"""
+            SELECT `{date_col}` as exam_date 
             FROM `tabexam_group_date`
-            WHERE exam_status = 'Scheduled' AND date >= CURDATE()
-            ORDER BY date ASC 
+            WHERE (exam_status = 'Scheduled' OR exam_status = 'مجدول') AND `{date_col}` >= CURDATE() AND {where_clause}
+            ORDER BY `{date_col}` ASC 
             LIMIT 1
         """, as_dict=True)
 
-        next_date_str = str(next_exam[0]["date"]) if next_exam and next_exam[0].get("date") else None
+        if not next_exam:
+            next_exam = frappe.db.sql(f"""
+                SELECT `{date_col}` as exam_date 
+                FROM `tabexam_group_date`
+                WHERE (exam_status = 'Scheduled' OR exam_status = 'مجدول') AND {where_clause}
+                ORDER BY `{date_col}` ASC 
+                LIMIT 1
+            """, as_dict=True)
+
+        next_date_str = str(next_exam[0]["exam_date"]) if next_exam and next_exam[0].get("exam_date") else None
 
         return {
             "success": True,

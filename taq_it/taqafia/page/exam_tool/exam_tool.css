@@ -1,0 +1,1426 @@
+/* ==========================================================================
+   EXAM GRADING & ASSESSMENT SYSTEM (EXAM TOOL)
+   Strictly Scoped inside .eg-app to prevent any leakage into Frappe Desk / Navbar
+   Typography: 'GE SS Two' (Arabic Text) + 'Poppins' (Digits & Codes)
+   ========================================================================== */
+
+.eg-app {
+    /* Brand Color Palette */
+    --eg-primary: #0E4A86;
+    --eg-primary-hover: #145AA6;
+    --eg-primary-light: #EBF3FC;
+    --eg-primary-dark: #0A3663;
+
+    --eg-accent: #0284C7;
+    --eg-accent-light: #F0F9FF;
+    --eg-accent-glow: rgba(2, 132, 199, 0.22);
+
+    --eg-slate-950: #020617;
+    --eg-slate-900: #0F172A;
+    --eg-slate-800: #1E293B;
+    --eg-slate-700: #334155;
+    --eg-slate-600: #475569;
+    --eg-slate-500: #64748B;
+    --eg-slate-400: #94A3B8;
+    --eg-slate-300: #CBD5E1;
+    --eg-slate-200: #E2E8F0;
+    --eg-slate-100: #F1F5F9;
+    --eg-slate-50:  #F8FAFC;
+
+    --eg-success: #059669;
+    --eg-success-hover: #047857;
+    --eg-success-light: #ECFDF5;
+    --eg-success-border: #A7F3D0;
+    --eg-success-glow: rgba(5, 150, 105, 0.25);
+
+    --eg-warning: #D97706;
+    --eg-warning-light: #FFFBEB;
+    --eg-warning-border: #FDE68A;
+
+    --eg-danger: #DC2626;
+    --eg-danger-light: #FEF2F2;
+    --eg-danger-border: #FECACA;
+
+    /* Luxury Shadows & Elevations */
+    --eg-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+    --eg-shadow-sm: 0 2px 4px -1px rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+    --eg-shadow-md: 0 6px 16px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    --eg-shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.1), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+    --eg-shadow-glow: 0 0 20px rgba(14, 74, 134, 0.16);
+
+    /* Radii */
+    --eg-radius-sm: 8px;
+    --eg-radius-md: 12px;
+    --eg-radius-lg: 16px;
+    --eg-radius-xl: 20px;
+    --eg-radius-pill: 9999px;
+
+    /* Universal Fonts */
+    --eg-font-main: 'Poppins', 'GE SS Two', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --eg-font-arabic: 'Poppins', 'GE SS Two', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --eg-font-digits: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    font-family: var(--eg-font-main);
+    color: var(--eg-slate-800);
+    direction: rtl;
+    text-align: right;
+    padding: 24px 28px 48px;
+    max-width: 1700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-feature-settings: "locl" 0, "numr" 0;
+}
+
+.eg-app,
+.eg-app * {
+    box-sizing: border-box;
+    font-feature-settings: "locl" 0, "numr" 0 !important;
+}
+
+/* Force English Digits on All Numeric Selectors inside .eg-app */
+.eg-app .eg-num,
+.eg-app .q-num,
+.eg-app .q-max,
+.eg-app .eg-aspect-badge,
+.eg-app .grading-score,
+.eg-app .cell-total-val,
+.eg-app .cell-max-val,
+.eg-app .cell-percent-val,
+.eg-app .col-seq,
+.eg-app .cell-score-pill,
+.eg-app .cell-percent-pill,
+.eg-app .eg-pill-counter,
+.eg-app .eg-cand-code,
+.eg-app .eg-session-meta-val,
+.eg-app .stat-val,
+.eg-app .stat-sub,
+.eg-app .eg-kpi-value,
+.eg-app .eg-kpi-num,
+.eg-app .eg-badge-count,
+.eg-app .eg-bento-large-num,
+.eg-app input[type="number"] {
+    font-family: var(--eg-font-digits) !important;
+    font-variant-numeric: tabular-nums lining-nums !important;
+    font-feature-settings: "locl" 0, "numr" 0, "tnum" 1, "lnum" 1 !important;
+}
+
+/* ==========================================================================
+   1. TOP EXECUTIVE HEADER
+   ========================================================================== */
+.eg-app .eg-topbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 28px;
+    background: #FFFFFF;
+    border: 1px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-xl);
+    box-shadow: var(--eg-shadow-sm);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.eg-app .eg-topbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0E4A86 0%, #0284C7 50%, #059669 100%);
+}
+
+.eg-app .eg-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.eg-app .eg-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.eg-app .eg-badge-primary {
+    background: var(--eg-primary-light);
+    color: var(--eg-primary);
+    border: 1px solid rgba(14, 74, 134, 0.18);
+}
+
+.eg-app .eg-dot-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10B981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+    animation: egPulse 2s infinite ease-in-out;
+}
+
+@keyframes egPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.eg-app .eg-badge-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--eg-slate-500);
+}
+
+.eg-app .eg-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.02em;
+}
+
+.eg-app .eg-lead {
+    font-size: 13px;
+    color: var(--eg-slate-600);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.eg-app .eg-topbar-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eg-app .eg-info-card {
+    background: var(--eg-slate-50);
+    border: 1px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-md);
+    padding: 10px 16px;
+    text-align: center;
+    min-width: 140px;
+}
+
+.eg-app .eg-info-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--eg-slate-500);
+    margin-bottom: 3px;
+}
+
+.eg-app .eg-info-value {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--eg-primary);
+}
+
+/* ==========================================================================
+   2. GENDER CADRE FILTER BAR
+   ========================================================================== */
+.eg-app .eg-gender-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+    background: #FFFFFF;
+    border: 1px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-lg);
+    box-shadow: var(--eg-shadow-xs);
+    margin-bottom: 24px;
+}
+
+.eg-app .eg-gender-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--eg-slate-700);
+    white-space: nowrap;
+}
+
+.eg-app .eg-gender-pills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.eg-app .eg-gender-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: var(--eg-radius-pill);
+    border: 1.5px solid transparent;
+    background: var(--eg-slate-100);
+    color: var(--eg-slate-700);
+    font-size: 12.5px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.eg-app .eg-gender-pill:hover {
+    background: var(--eg-slate-200);
+    color: var(--eg-slate-900);
+}
+
+.eg-app .eg-gender-pill.is-active {
+    background: var(--eg-primary);
+    color: #FFFFFF;
+    border-color: var(--eg-primary-dark);
+    box-shadow: 0 4px 12px rgba(14, 74, 134, 0.28);
+}
+
+/* ==========================================================================
+   3. SESSIONS PICKER HERO & STATUS TABS
+   ========================================================================== */
+.eg-app .eg-section-hero-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.eg-app .eg-section-hero-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    margin: 0 0 4px 0;
+}
+
+.eg-app .eg-section-hero-desc {
+    font-size: 12.5px;
+    color: var(--eg-slate-500);
+    margin: 0;
+}
+
+.eg-app .eg-session-search-wrap {
+    width: 320px;
+}
+
+.eg-app .eg-session-search-input {
+    width: 100%;
+    height: 42px;
+    border-radius: var(--eg-radius-pill);
+    border: 1.5px solid var(--eg-slate-200);
+    padding: 0 18px;
+    font-size: 13px;
+    background: #FFFFFF;
+    box-shadow: var(--eg-shadow-xs);
+    transition: all 0.15s ease;
+}
+
+.eg-app .eg-session-search-input:focus {
+    border-color: var(--eg-accent);
+    outline: none;
+    box-shadow: 0 0 0 3.5px var(--eg-accent-glow);
+}
+
+/* Status Filter Segmented Control */
+.eg-app .eg-session-status-filter-bar {
+    margin-bottom: 20px;
+}
+
+.eg-app .eg-session-status-pills {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    background: #EEF2F6;
+    border-radius: var(--eg-radius-pill);
+    border: 1px solid var(--eg-slate-200);
+}
+
+.eg-app .eg-session-filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: var(--eg-radius-pill);
+    border: none;
+    background: transparent;
+    color: var(--eg-slate-600);
+    font-size: 12.5px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.eg-app .eg-session-filter-pill:hover {
+    color: var(--eg-slate-900);
+}
+
+.eg-app .eg-session-filter-pill.is-active {
+    background: #FFFFFF;
+    color: var(--eg-primary);
+    box-shadow: var(--eg-shadow-sm);
+}
+
+.eg-app .eg-pill-counter {
+    padding: 2px 8px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 11px;
+    font-weight: 800;
+    background: var(--eg-slate-200);
+    color: var(--eg-slate-700);
+}
+
+.eg-app .eg-session-filter-pill.is-active .eg-pill-counter.is-open-count {
+    background: var(--eg-primary-light);
+    color: var(--eg-primary);
+}
+
+.eg-app .eg-session-filter-pill.is-active .eg-pill-counter.is-completed-count {
+    background: var(--eg-success-light);
+    color: var(--eg-success);
+}
+
+/* ==========================================================================
+   4. SESSIONS BENTO GRID & CARDS
+   ========================================================================== */
+.eg-app .eg-sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.eg-app .eg-session-bento-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-lg);
+    box-shadow: var(--eg-shadow-sm);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.eg-app .eg-session-bento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--eg-shadow-lg);
+    border-color: var(--eg-accent);
+}
+
+.eg-app .eg-session-bento-card.is-open-card {
+    border-top: 4px solid var(--eg-accent);
+}
+
+.eg-app .eg-session-bento-card.is-completed-card {
+    border-top: 4px solid var(--eg-success);
+    background: #FAFCFE;
+}
+
+.eg-app .eg-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.eg-app .eg-session-code-badge {
+    font-family: var(--eg-font-digits);
+    font-size: 13.5px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    background: var(--eg-slate-100);
+    padding: 4px 10px;
+    border-radius: var(--eg-radius-sm);
+    border: 1px solid var(--eg-slate-200);
+}
+
+.eg-app .eg-card-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 11.5px;
+    font-weight: 800;
+}
+
+.eg-app .eg-status-open {
+    background: var(--eg-primary-light);
+    color: var(--eg-primary);
+    border: 1px solid rgba(14, 74, 134, 0.2);
+}
+
+.eg-app .eg-status-completed {
+    background: var(--eg-success-light);
+    color: var(--eg-success);
+    border: 1px solid var(--eg-success-border);
+}
+
+.eg-app .eg-card-meta-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding: 12px;
+    background: var(--eg-slate-50);
+    border-radius: var(--eg-radius-md);
+    border: 1px solid var(--eg-slate-100);
+}
+
+.eg-app .eg-card-meta-item {
+    font-size: 12px;
+    color: var(--eg-slate-600);
+}
+
+.eg-app .eg-card-meta-item strong {
+    color: var(--eg-slate-900);
+}
+
+.eg-app .eg-card-progress-wrap {
+    margin-bottom: 18px;
+}
+
+.eg-app .eg-card-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--eg-slate-600);
+    margin-bottom: 6px;
+}
+
+.eg-app .eg-card-progress-track {
+    height: 7px;
+    background: var(--eg-slate-200);
+    border-radius: var(--eg-radius-pill);
+    overflow: hidden;
+}
+
+.eg-app .eg-card-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0E4A86, #0284C7);
+    border-radius: var(--eg-radius-pill);
+    transition: width 0.4s ease;
+}
+
+.eg-app .eg-card-progress-bar.is-100 {
+    background: linear-gradient(90deg, #059669, #10B981);
+}
+
+.eg-app .eg-card-btn {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: var(--eg-radius-md);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    transition: all 0.18s ease;
+}
+
+.eg-app .eg-card-btn-primary {
+    background: var(--eg-primary);
+    color: #FFFFFF;
+}
+
+.eg-app .eg-card-btn-primary:hover {
+    background: var(--eg-primary-hover);
+    box-shadow: 0 4px 14px rgba(14, 74, 134, 0.32);
+}
+
+.eg-app .eg-card-btn-outline {
+    background: #FFFFFF;
+    color: var(--eg-slate-700);
+    border: 1.5px solid var(--eg-slate-300);
+}
+
+.eg-app .eg-card-btn-outline:hover {
+    background: var(--eg-slate-50);
+    border-color: var(--eg-slate-400);
+    color: var(--eg-slate-900);
+}
+
+/* ==========================================================================
+   5. ACTIVE SESSION WORKSPACE & ROYAL BANNER
+   ========================================================================== */
+.eg-app .eg-active-session-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #0A3663 0%, #0E4A86 50%, #16569A 100%);
+    border-radius: var(--eg-radius-xl);
+    box-shadow: 0 8px 24px -4px rgba(14, 74, 134, 0.28);
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.eg-app .eg-active-session-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.eg-app .eg-active-tag {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.eg-app .eg-active-code {
+    font-family: var(--eg-font-digits);
+    font-size: 14.5px;
+    font-weight: 900;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 4px 12px;
+    border-radius: var(--eg-radius-pill);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.5px;
+}
+
+.eg-app .eg-active-sep {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+}
+
+.eg-app .eg-active-meta-item {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: var(--eg-radius-pill);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.eg-app .eg-switch-session-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: var(--eg-radius-md);
+    background: rgba(255, 255, 255, 0.18);
+    color: #FFFFFF;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    font-size: 12.5px;
+    font-weight: 800;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.18s ease;
+}
+
+.eg-app .eg-switch-session-btn:hover {
+    background: #FFFFFF;
+    color: var(--eg-primary-dark);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   6. 3-STAGE WORKFLOW BENTO TABS
+   ========================================================================== */
+.eg-app .eg-stage-tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.eg-app .eg-stage-tab {
+    background: #FFFFFF;
+    border: 2px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-lg);
+    padding: 16px 20px;
+    cursor: pointer;
+    text-align: right;
+    box-shadow: var(--eg-shadow-xs);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.eg-app .eg-stage-tab:hover:not(:disabled) {
+    border-color: var(--eg-slate-300);
+    box-shadow: var(--eg-shadow-md);
+}
+
+.eg-app .eg-stage-tab.is-active {
+    border-color: var(--eg-accent);
+    box-shadow: 0 8px 24px -4px var(--eg-accent-glow);
+    background: #FFFFFF;
+}
+
+.eg-app .eg-stage-tab.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--eg-accent);
+}
+
+.eg-app .eg-stage-tab-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.eg-app .eg-stage-step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--eg-slate-100);
+    color: var(--eg-slate-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--eg-font-digits);
+    font-size: 16px;
+    font-weight: 900;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.eg-app .eg-stage-tab.is-active .eg-stage-step-num {
+    background: var(--eg-accent);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px var(--eg-accent-glow);
+}
+
+.eg-app .eg-stage-tab.is-completed .eg-stage-step-num {
+    background: var(--eg-success);
+    color: #FFFFFF;
+}
+
+.eg-app .eg-stage-tab-content {
+    flex: 1;
+}
+
+.eg-app .eg-stage-tab-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--eg-slate-400);
+    margin-bottom: 2px;
+}
+
+.eg-app .eg-stage-tab-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+}
+
+.eg-app .eg-stage-status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: var(--eg-radius-sm);
+    font-size: 11px;
+    font-weight: 800;
+    background: var(--eg-slate-100);
+    color: var(--eg-slate-600);
+}
+
+.eg-app .eg-stage-tab.is-active .eg-stage-status-badge {
+    background: var(--eg-primary-light);
+    color: var(--eg-primary);
+}
+
+.eg-app .eg-stage-tab.is-completed .eg-stage-status-badge {
+    background: var(--eg-success-light);
+    color: var(--eg-success);
+}
+
+/* Stage Guidance Banner */
+.eg-app .eg-stage-guidance-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: #FFFFFF;
+    border: 1px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-lg);
+    box-shadow: var(--eg-shadow-xs);
+    margin-bottom: 20px;
+}
+
+.eg-app .eg-guidance-icon {
+    font-size: 22px;
+}
+
+.eg-app .eg-guidance-text strong {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    margin-bottom: 2px;
+}
+
+.eg-app .eg-guidance-text p {
+    font-size: 12px;
+    color: var(--eg-slate-600);
+    margin: 0;
+}
+
+/* ==========================================================================
+   7. LIVE BENTO KPIS GRID
+   ========================================================================== */
+.eg-app .eg-stage-kpis-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.eg-app .eg-kpi-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-lg);
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: var(--eg-shadow-xs);
+    transition: all 0.18s ease;
+}
+
+.eg-app .eg-kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--eg-shadow-md);
+}
+
+.eg-app .eg-kpi-label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 800;
+    color: var(--eg-slate-500);
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.eg-app .eg-kpi-value {
+    display: block;
+    font-family: var(--eg-font-digits);
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    line-height: 1.1;
+}
+
+.eg-app .eg-kpi-present .eg-kpi-value { color: var(--eg-success); }
+.eg-app .eg-kpi-excused .eg-kpi-value { color: var(--eg-warning); }
+.eg-app .eg-kpi-unexcused .eg-kpi-value { color: var(--eg-danger); }
+.eg-app .eg-kpi-passed .eg-kpi-value { color: #0284C7; }
+.eg-app .eg-kpi-failed .eg-kpi-value { color: #BE123C; }
+
+/* ==========================================================================
+   8. ULTRA-MODERN GRADING TABLE PANEL
+   ========================================================================== */
+.eg-app .eg-panel {
+    background: #FFFFFF;
+    border: 1.5px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-xl);
+    box-shadow: var(--eg-shadow-md);
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.eg-app .eg-table-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 24px;
+    border-bottom: 1.5px solid var(--eg-slate-200);
+    background: #FFFFFF;
+    flex-wrap: wrap;
+}
+
+.eg-app .eg-table-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eg-app .eg-table-heading {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    margin: 0;
+}
+
+.eg-app .eg-save-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.eg-app .eg-save-status-badge.is-ready {
+    background: var(--eg-success-light);
+    color: var(--eg-success);
+    border: 1px solid var(--eg-success-border);
+}
+
+.eg-app .eg-save-status-badge.is-dirty {
+    background: var(--eg-warning-light);
+    color: var(--eg-warning);
+    border: 1px solid var(--eg-warning-border);
+}
+
+.eg-app .eg-save-status-badge.is-saving {
+    background: var(--eg-primary-light);
+    color: var(--eg-primary);
+    border: 1px solid rgba(14, 74, 134, 0.2);
+}
+
+.eg-app .eg-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.eg-app .eg-table-bar-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.eg-app .eg-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #EEF2F6;
+    padding: 4px;
+    border-radius: var(--eg-radius-pill);
+}
+
+.eg-app .eg-filter-pill {
+    border: none;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--eg-slate-600);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.eg-app .eg-filter-pill.is-active {
+    background: #FFFFFF;
+    color: var(--eg-primary);
+    box-shadow: var(--eg-shadow-xs);
+}
+
+.eg-app .eg-filter-input {
+    height: 38px;
+    border-radius: var(--eg-radius-pill);
+    border: 1.5px solid var(--eg-slate-200);
+    padding: 0 14px;
+    font-size: 12.5px;
+    width: 200px;
+    transition: all 0.15s ease;
+}
+
+.eg-app .eg-filter-input:focus {
+    border-color: var(--eg-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--eg-accent-glow);
+}
+
+/* ==========================================================================
+   9. TABLE VIEWPORT & 2-TIER STICKY GRID
+   ========================================================================== */
+.eg-app .eg-table-viewport {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: visible;
+    width: 100%;
+}
+
+.eg-app .eg-grid-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.eg-app .eg-grid-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #F8FAFC;
+    border-bottom: 1.5px solid var(--eg-slate-200);
+    border-left: 1px solid var(--eg-slate-200);
+    padding: 8px 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 2-Tier Super Header */
+.eg-app .tr-super-header th.th-aspect-group {
+    padding: 8px 12px;
+}
+
+.eg-app .eg-aspect-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.eg-app .eg-aspect-icon {
+    font-size: 15px;
+}
+
+.eg-app .eg-aspect-title {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.eg-app .eg-aspect-badge {
+    padding: 2px 8px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* Sub-Header Question Cells */
+.eg-app .th-question {
+    background: #FFFFFF !important;
+    min-width: 72px;
+}
+
+.eg-app .q-cell-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.eg-app .q-num {
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+}
+
+.eg-app .q-max {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--eg-slate-400);
+}
+
+/* Table Body Rows */
+.eg-app .eg-grid-table tbody tr {
+    transition: background-color 0.12s ease;
+}
+
+.eg-app .eg-grid-table tbody tr:hover {
+    background-color: #F8FAFC;
+}
+
+.eg-app .eg-grid-table tbody td {
+    padding: 8px 6px;
+    border-bottom: 1px solid var(--eg-slate-200);
+    border-left: 1px solid var(--eg-slate-100);
+    vertical-align: middle;
+}
+
+/* Sticky Sequence Column */
+.eg-app .eg-grid-table .col-seq {
+    position: sticky;
+    right: 0;
+    z-index: 5;
+    background: #FFFFFF;
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 12px;
+    color: var(--eg-slate-400);
+    border-left: 1px solid var(--eg-slate-200) !important;
+}
+
+/* Sticky Candidate Column */
+.eg-app .eg-grid-table .col-candidate {
+    position: sticky;
+    right: 44px;
+    z-index: 5;
+    background: #FFFFFF;
+    min-width: 220px;
+    max-width: 260px;
+    border-left: 1.5px solid var(--eg-slate-300) !important;
+    box-shadow: -4px 0 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+.eg-app .eg-cand-cell-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 4px;
+}
+
+.eg-app .eg-cand-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0E4A86, #0284C7);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(14, 74, 134, 0.2);
+}
+
+.eg-app .eg-cand-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.eg-app .eg-cand-name {
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eg-app .eg-cand-code {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--eg-slate-500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Attendance Buttons */
+.eg-app .eg-grid-table .col-attendance {
+    min-width: 170px;
+    text-align: center;
+}
+
+.eg-app .eg-att-pills-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #EEF2F6;
+    padding: 3px;
+    border-radius: var(--eg-radius-pill);
+}
+
+.eg-app .eg-att-pill-btn {
+    border: none;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: var(--eg-radius-pill);
+    font-size: 11.5px;
+    font-weight: 800;
+    color: var(--eg-slate-600);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.eg-app .eg-att-pill-btn.is-active {
+    background: var(--eg-success);
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px var(--eg-success-glow);
+}
+
+.eg-app .eg-att-pill-btn.is-active.is-excused {
+    background: var(--eg-warning);
+    box-shadow: 0 2px 6px rgba(217, 119, 6, 0.3);
+}
+
+.eg-app .eg-att-pill-btn.is-active.is-absent {
+    background: var(--eg-danger);
+    box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
+}
+
+/* Question Cells & Grade Inputs */
+.eg-app .cell-question {
+    text-align: center;
+    padding: 6px 4px !important;
+}
+
+.eg-app .grading-score {
+    width: 60px;
+    height: 36px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2px 4px;
+    border: 1.5px solid var(--eg-slate-300);
+    border-radius: var(--eg-radius-sm);
+    font-family: var(--eg-font-digits) !important;
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--eg-slate-900);
+    background: #F8FAFC;
+    transition: all 0.14s ease;
+    display: block;
+}
+
+.eg-app .grading-score:hover:not(:disabled) {
+    border-color: var(--eg-slate-400);
+    background: #FFFFFF;
+}
+
+.eg-app .grading-score:focus {
+    outline: none;
+    border-color: var(--eg-accent);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3.5px var(--eg-accent-glow);
+}
+
+.eg-app .grading-score.is-invalid {
+    border-color: var(--eg-danger) !important;
+    background: var(--eg-danger-light) !important;
+    color: var(--eg-danger) !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.18) !important;
+}
+
+.eg-app .grading-score:disabled {
+    background: var(--eg-slate-100);
+    color: var(--eg-slate-400);
+    border-color: var(--eg-slate-200);
+    cursor: not-allowed;
+}
+
+/* Sticky Results Columns (Left Side in RTL) */
+.eg-app .col-sticky-result {
+    position: sticky;
+    z-index: 5;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.eg-app .cell-total {
+    left: 170px;
+    min-width: 90px;
+    border-right: 1.5px solid var(--eg-slate-300) !important;
+    box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+.eg-app .cell-score-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: var(--eg-accent-light);
+    border: 1px solid #BAE6FD;
+    border-radius: var(--eg-radius-sm);
+    font-family: var(--eg-font-digits);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.eg-app .cell-total-val { color: #0284C7; font-weight: 900; }
+.eg-app .cell-score-sep { color: var(--eg-slate-400); font-weight: 600; }
+.eg-app .cell-max-val { color: var(--eg-slate-500); font-weight: 700; font-size: 11.5px; }
+
+.eg-app .cell-percent {
+    left: 85px;
+    min-width: 85px;
+}
+
+.eg-app .cell-percent-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: var(--eg-radius-sm);
+    font-family: var(--eg-font-digits);
+    font-size: 12.5px;
+    font-weight: 900;
+}
+
+.eg-app .cell-percent-pill.is-pass {
+    background: var(--eg-success-light);
+    color: var(--eg-success);
+    border: 1px solid var(--eg-success-border);
+}
+
+.eg-app .cell-percent-pill.is-fail {
+    background: var(--eg-danger-light);
+    color: var(--eg-danger);
+    border: 1px solid var(--eg-danger-border);
+}
+
+.eg-app .cell-status {
+    left: 0;
+    min-width: 85px;
+}
+
+/* Status Chips */
+.eg-app .eg-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: var(--eg-radius-sm);
+    font-size: 11.5px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.eg-app .eg-chip-success { background: var(--eg-success-light); color: var(--eg-success); border: 1px solid var(--eg-success-border); }
+.eg-app .eg-chip-warning { background: var(--eg-warning-light); color: var(--eg-warning); border: 1px solid var(--eg-warning-border); }
+.eg-app .eg-chip-danger  { background: var(--eg-danger-light); color: var(--eg-danger); border: 1px solid var(--eg-danger-border); }
+.eg-app .eg-chip-info    { background: var(--eg-primary-light); color: var(--eg-primary); border: 1px solid #BAE6FD; }
+
+/* Focus Row Highlighting */
+.eg-app .eg-grid-table tbody tr.is-focused-row td {
+    background-color: #F0F6FD !important;
+}
+
+.eg-app .eg-grid-table tbody tr.is-focused-row td.col-candidate,
+.eg-app .eg-grid-table tbody tr.is-focused-row td.col-sticky-result {
+    background-color: #EBF3FC !important;
+}
+
+/* ==========================================================================
+   10. FLOATING ACTION FOOTER
+   ========================================================================== */
+.eg-app .eg-action-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 28px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    border: 1.5px solid var(--eg-slate-200);
+    border-radius: var(--eg-radius-xl);
+    box-shadow: var(--eg-shadow-lg);
+    position: sticky;
+    bottom: 20px;
+    z-index: 100;
+}
+
+.eg-app .eg-action-guide {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eg-app .eg-guide-icon {
+    font-size: 20px;
+}
+
+.eg-app .eg-guide-text strong {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 900;
+    color: var(--eg-slate-900);
+}
+
+.eg-app .eg-guide-text span {
+    font-size: 11.5px;
+    color: var(--eg-slate-600);
+}
+
+.eg-app .eg-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eg-app .eg-footer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: var(--eg-radius-md);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    transition: all 0.18s ease;
+}
+
+.eg-app .eg-btn-save {
+    background: var(--eg-slate-100);
+    color: var(--eg-slate-800);
+    border: 1.5px solid var(--eg-slate-300);
+}
+
+.eg-app .eg-btn-save:hover {
+    background: var(--eg-slate-200);
+    color: var(--eg-slate-950);
+}
+
+.eg-app .eg-btn-approve {
+    background: var(--eg-success);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px var(--eg-success-glow);
+}
+
+.eg-app .eg-btn-approve:hover {
+    background: var(--eg-success-hover);
+    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Loading & Empty States */
+.eg-app .eg-loading-state,
+.eg-app .eg-blank-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: var(--eg-slate-500);
+    gap: 14px;
+}
+
+.eg-app .eg-spinner {
+    width: 34px;
+    height: 34px;
+    border: 3.5px solid var(--eg-slate-200);
+    border-top-color: var(--eg-primary);
+    border-radius: 50%;
+    animation: egSpin 0.8s linear infinite;
+}
+
+@keyframes egSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+    .eg-app .eg-stage-tabs-nav { grid-template-columns: 1fr; }
+    .eg-app .eg-stage-kpis-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .eg-app { padding: 14px 12px 36px; }
+    .eg-app .eg-topbar { flex-direction: column; }
+    .eg-app .eg-stage-kpis-grid { grid-template-columns: 1fr 1fr; }
+    .eg-app .eg-section-hero-bar { flex-direction: column; align-items: stretch; }
+    .eg-app .eg-session-search-wrap { width: 100%; }
+    .eg-app .eg-sessions-grid { grid-template-columns: 1fr; }
+    .eg-app .eg-active-session-bar { flex-direction: column; align-items: flex-start; }
+    .eg-app .eg-table-bar { flex-direction: column; align-items: stretch; }
+    .eg-app .eg-filter-input { width: 100%; }
+    .eg-app .eg-action-footer { flex-direction: column; align-items: stretch; }
+    .eg-app .eg-action-buttons { width: 100%; }
+    .eg-app .eg-footer-btn { flex: 1; }
+}

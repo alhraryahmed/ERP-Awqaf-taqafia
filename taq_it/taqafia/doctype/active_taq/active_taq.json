@@ -12,6 +12,8 @@
   "preachers",
   "en",
   "ty",
+  "target_audience",
+  "over_view",
   "mak",
   "\u0645\u0648\u0639\u062f_\u0648\u0645\u0643\u0627\u0646_\u0627\u0644\u0646\u0634\u0627\u0637_column",
   "da",
@@ -136,13 +138,30 @@
    "fieldtype": "Data",
    "label": "live stream url",
    "options": "URL"
+  },
+  {
+   "fetch_from": "en.target_audience",
+   "fieldname": "target_audience",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Audience",
+   "options": "tyac_taq",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "en.over_view",
+   "fieldname": "over_view",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Overview",
+   "options": "tyac_taq"
   }
  ],
  "grid_page_length": 50,
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-03 12:27:15.975371",
+ "modified": "2026-08-20 19:13:46.525862",
  "modified_by": "a.alhrary@awqaf.gov.ly",
  "module": "taqafia",
  "name": "active_taq",
@@ -157,52 +176,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u0645\u0646\u0627\u0637\u0642",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u062f\u064a\u0648\u0627\u0646",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "\u0631\u0624\u0633\u0627\u0621 \u0627\u0644\u0627\u0642\u0633\u0627\u0645 \u0648\u0627\u0644\u0648\u062d\u062f\u0627\u062a \u0628\u0627\u0644\u062b\u0627\u0641\u064a\u0629 \u0641\u064a \u0627\u0644\u062f\u064a\u0648\u0627\u0646",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "\u0645\u062f\u064a\u0631 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062f\u0639\u0648\u064a\u0629",
    "share": 1,
    "write": 1
   }

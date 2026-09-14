@@ -25,8 +25,18 @@ from taq_it.taqafia.doctype.exam_result.exam_result import (
 )
 
 
-GRADING_ROLE = "مشرف رصد الامتحانات"
-APPROVAL_ROLE = "معتمد نتائج الامتحانات"
+GRADING_ROLES = {
+    "مشرف رصد الامتحانات",
+    "مشرف رصد امتحانات الوعاظ",
+    "مشرفة رصد امتحانات الواعظات",
+    "رئيس قسم التقويم والقياس",
+    "مدير إدارة الشؤون الثقافية",
+}
+APPROVAL_ROLES = {
+    "معتمد نتائج الامتحانات",
+    "رئيس قسم التقويم والقياس",
+    "مدير إدارة الشؤون الثقافية",
+}
 SYSTEM_MANAGER_ROLE = "System Manager"
 
 
@@ -34,19 +44,19 @@ class exam_grading_tool(Document):
     pass
 
 
-def has_role(role):
-    roles = frappe.get_roles()
-    return SYSTEM_MANAGER_ROLE in roles or role in roles
+def has_any_role(roles_set):
+    user_roles = set(frappe.get_roles())
+    return bool(user_roles.intersection(roles_set | {SYSTEM_MANAGER_ROLE}))
 
 
 def require_grading_role():
-    if not has_role(GRADING_ROLE):
-        frappe.throw("You are not allowed to grade exam results.")
+    if not has_any_role(GRADING_ROLES):
+        frappe.throw("ليست لديك صلاحية رصد نتائج الامتحانات.")
 
 
 def require_approval_role():
-    if not has_role(APPROVAL_ROLE):
-        frappe.throw("You are not allowed to approve exam results.")
+    if not has_any_role(APPROVAL_ROLES):
+        frappe.throw("ليست لديك صلاحية اعتماد نتائج الامتحانات.")
 
 
 def normalize_stage(stage):
@@ -126,6 +136,8 @@ def load_preachers(exam_group_date, grading_stage):
                 "exam_result": result.name if result else "",
                 "waed": waed,
                 "waed_name": waed_name,
+                "attendance_status": getattr(result, "attendance_status", "Present") if result else "Present",
+                "absence_reason": getattr(result, "absence_reason", "") if result else "",
                 "stage_status": result.get(get_stage_status_field(stage)) if result else STAGE_NOT_GRADED,
                 "result_status": result.status if result else "Not Created",
                 "final_pass_status": result.pass_status if result else "Pending",
@@ -152,20 +164,21 @@ def get_written_candidate_rows(group, exam_form):
     rows = []
 
     for candidate in group.waed_info_to_exam:
-        if not candidate.waed_info:
+        waed = getattr(candidate, "full_name", None) or getattr(candidate, "waed_info", None)
+        if not waed:
             continue
 
         result_name = frappe.db.exists(
             "exam_result",
             {
                 "exam_group_date": group.name,
-                "waed": candidate.waed_info,
+                "waed": waed,
             },
         )
         result = frappe.get_doc("exam_result", result_name) if result_name else None
         rows.append(
             {
-                "waed": candidate.waed_info,
+                "waed": waed,
                 "result": result,
                 "questions": result.written_questions if result else form.questions,
             }
@@ -251,6 +264,26 @@ def save_grades(exam_group_date, grading_stage, rows):
     updated = []
     for row in rows or []:
         result = get_or_create_editable_result(row, group, stage)
+        attendance = row.get("attendance_status") or "Present"
+        result.attendance_status = attendance
+        result.absence_reason = row.get("absence_reason") or ""
+
+        if attendance in {"Excused Absent", "Unexcused Absent"}:
+            stage_status_field = get_stage_status_field(stage)
+            result.set(stage_status_field, attendance)
+            if stage == WRITTEN_STAGE:
+                result.written_pass_status = "Deferred" if attendance == "Excused Absent" else "Failed"
+                result.oral_status = "Not Required"
+                result.oral_pass_status = "Not Required"
+                result.status = "Excused Absent" if attendance == "Excused Absent" else STATUS_WRITTEN_GRADED
+            else:
+                result.oral_pass_status = "Deferred" if attendance == "Excused Absent" else "Failed"
+                result.status = "Excused Absent" if attendance == "Excused Absent" else STATUS_ORAL_GRADED
+            result.calculate_all_totals()
+            result.save()
+            updated.append(result.name)
+            continue
+
         scores = row.get("scores") or {}
 
         table_field = get_stage_table_field(stage)
@@ -354,12 +387,12 @@ def approve_stage(exam_group_date, grading_stage):
     not_ready = [
         result.name
         for result in results
-        if result.get(status_field) not in {STAGE_GRADED, STAGE_APPROVED}
+        if result.get(status_field) not in {STAGE_GRADED, STAGE_APPROVED, "Excused Absent", "Unexcused Absent"}
     ]
 
     if not_ready:
         frappe.throw(
-            "Cannot approve before grading all candidates. Pending results: {0}".format(
+            "لا يمكن اعتماد المرحلة قبل رصد وحفظ درجات جميع الوعاظ أولاً. الوعاظ الذين لم يتم رصد درجاتهم بعد: {0}".format(
                 ", ".join(not_ready)
             )
         )
@@ -386,22 +419,40 @@ def approve_stage(exam_group_date, grading_stage):
 def update_preacher_workflow_after_stage(result, stage):
     preacher = frappe.get_doc("waed_info", result.waed)
 
+    # If candidate was excused/absent with excuse, revert workflow to Scheduling an appointment
+    if getattr(result, "attendance_status", None) == "Excused Absent" or result.get(get_stage_status_field(stage)) == "Excused Absent":
+        try:
+            frappe.db.set_value("waed_info", preacher.name, "waed_status", "Scheduling an appointment")
+            frappe.db.set_value("waed_info", preacher.name, "workflow_state", "Scheduling an appointment")
+        except Exception as e:
+            frappe.log_error(f"Failed to revert excused preacher {preacher.name}: {e}")
+        return
+
+    def try_apply(doc, *actions):
+        for act in actions:
+            try:
+                apply_workflow(doc, act)
+                return True
+            except Exception:
+                continue
+        return False
+
     if stage == WRITTEN_STAGE:
         if result.written_pass_status == PASS_PASSED:
-            apply_workflow(preacher, "Pass written")
+            try_apply(preacher, "Pass written")
             if result.oral_exam_form:
-                apply_workflow(preacher, "Transfer to the oral exam")
+                try_apply(preacher, "Transfer to the oral exam")
             else:
-                apply_workflow(preacher, "accepted")
+                try_apply(preacher, "Approve Candidate", "accepted")
         else:
-            apply_workflow(preacher, "faild in written")
+            try_apply(preacher, "Fail Written Exam", "faild in written")
         return
 
     if stage == ORAL_STAGE and result.status == STATUS_FINAL_APPROVED:
         if result.oral_pass_status == PASS_PASSED:
-            apply_workflow(preacher, "accepted")
+            try_apply(preacher, "Approve Candidate", "accepted")
         else:
-            apply_workflow(preacher, "faild in oral")
+            try_apply(preacher, "Fail Oral Exam", "faild in oral")
 
 
 def update_group_status_after_save(exam_group_date, stage):
@@ -416,5 +467,139 @@ def update_group_status_after_approval(exam_group_date, stage):
     if not frappe.db.has_column("exam_group_date", "exam_status"):
         return
 
-    next_status = "Written Approved" if stage == WRITTEN_STAGE else "Oral Approved"
+    group = frappe.get_doc("exam_group_date", exam_group_date)
+
+    if stage == ORAL_STAGE:
+        next_status = "Completed"
+    elif not group.oral_exam:
+        next_status = "Completed"
+    else:
+        has_oral_candidates = frappe.db.exists(
+            "exam_result",
+            {
+                "exam_group_date": exam_group_date,
+                "written_pass_status": PASS_PASSED,
+            },
+        )
+        next_status = "Written Approved" if has_oral_candidates else "Completed"
+
     frappe.db.set_value("exam_group_date", exam_group_date, "exam_status", next_status)
+
+
+@frappe.whitelist()
+def get_sessions_overview(gender=None):
+    """
+    استعلام ذكي لجلب بطاقات الجلسات مع إحصائيات الرصد والاعتماد ومؤشر المرحلة الحالية
+    """
+    frappe.has_permission("exam_group_date", "read", throw=True)
+
+    has_gender_col = frappe.db.has_column("exam_group_date", "target_gender")
+    where_clause = "exam_status NOT IN ('Cancelled', 'ملغي')"
+
+    if has_gender_col and gender:
+        if gender in ["Male", "ذكر"]:
+            where_clause += " AND (target_gender IS NULL OR target_gender = '' OR target_gender IN ('Male', 'ذكر'))"
+        elif gender in ["Female", "أنثى"]:
+            where_clause += " AND target_gender IN ('Female', 'أنثى')"
+
+    date_col = "exam_day" if frappe.db.has_column("exam_group_date", "exam_day") else "creation"
+
+    sessions = frappe.db.sql(f"""
+        SELECT 
+            name,
+            `{date_col}` as exam_day,
+            exam_status,
+            written_exam,
+            oral_exam,
+            {"target_gender" if has_gender_col else "'Male' as target_gender"}
+        FROM `tabexam_group_date`
+        WHERE {where_clause}
+        ORDER BY `{date_col}` DESC, creation DESC
+    """, as_dict=True)
+
+    result = []
+    for sess in sessions:
+        group_name = sess["name"]
+        
+        total_candidates = frappe.db.count(
+            "exam-group-data-child",
+            {"parent": group_name, "parenttype": "exam_group_date"}
+        )
+        if not total_candidates:
+            total_candidates = frappe.db.count(
+                "exam_result",
+                {"exam_group_date": group_name}
+            )
+
+        res_rows = frappe.get_all(
+            "exam_result",
+            filters={"exam_group_date": group_name},
+            fields=[
+                "name",
+                "written_status",
+                "written_pass_status",
+                "oral_status",
+                "oral_pass_status",
+                "status",
+                "attendance_status"
+            ]
+        )
+
+        written_graded = sum(1 for r in res_rows if r.written_status in [STAGE_GRADED, STAGE_APPROVED, "Excused Absent", "Unexcused Absent"])
+        written_approved = sum(1 for r in res_rows if r.written_status == STAGE_APPROVED)
+        written_passed = sum(1 for r in res_rows if r.written_status == STAGE_APPROVED and r.written_pass_status == PASS_PASSED)
+        
+        oral_graded = sum(1 for r in res_rows if r.oral_status in [STAGE_GRADED, STAGE_APPROVED, "Excused Absent", "Unexcused Absent"])
+        oral_approved = sum(1 for r in res_rows if r.oral_status == STAGE_APPROVED)
+        final_approved = sum(1 for r in res_rows if r.status == STATUS_FINAL_APPROVED)
+
+        has_oral = bool(sess.get("oral_exam"))
+        
+        if final_approved >= total_candidates and total_candidates > 0:
+            step = "completed"
+            step_label = "مكتمل ومعتمد نهائياً"
+            step_badge = "success"
+        elif has_oral and written_approved >= total_candidates and oral_approved >= written_passed and total_candidates > 0:
+            step = "completed"
+            step_label = "مكتمل ومعتمد نهائياً"
+            step_badge = "success"
+        elif has_oral and written_approved >= total_candidates and oral_graded >= written_passed and written_passed > 0:
+            step = "ready_oral_approval"
+            step_label = "جاهز لاعتماد الشفوي"
+            step_badge = "warning"
+        elif has_oral and written_approved >= total_candidates and written_passed > 0:
+            step = "ready_oral_grading"
+            step_label = "جاهز لرصد الشفوي"
+            step_badge = "info"
+        elif written_approved >= total_candidates and total_candidates > 0:
+            step = "completed"
+            step_label = "مكتمل ومعتمد نهائياً"
+            step_badge = "success"
+        elif written_graded >= total_candidates and total_candidates > 0:
+            step = "ready_written_approval"
+            step_label = "جاهز لاعتماد التحريري"
+            step_badge = "warning"
+        else:
+            step = "ready_written_grading"
+            step_label = "جاهز لرصد التحريري"
+            step_badge = "neutral"
+
+        result.append({
+            "name": group_name,
+            "exam_day": sess.get("exam_day"),
+            "target_gender": sess.get("target_gender") or ("Female" if gender in ["Female", "أنثى"] else "Male"),
+            "exam_status": sess.get("exam_status") or "Scheduled",
+            "has_oral": has_oral,
+            "total_candidates": total_candidates,
+            "written_graded": written_graded,
+            "written_approved": written_approved,
+            "written_passed": written_passed,
+            "oral_graded": oral_graded,
+            "oral_approved": oral_approved,
+            "final_approved": final_approved,
+            "step": step,
+            "step_label": step_label,
+            "step_badge": step_badge
+        })
+
+    return result

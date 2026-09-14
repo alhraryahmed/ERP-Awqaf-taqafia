@@ -31,24 +31,32 @@ frappe.ui.form.on("exam-group-data-child", {
 
 });
 frappe.ui.form.on("exam_group_date", {
-
     refresh(frm) {
+        frm.trigger("set_preacher_filter");
+    },
 
-        frm.set_query("full_name", "waed_info_to_exam", function() {
+    target_gender(frm) {
+        frm.trigger("set_preacher_filter");
+    },
 
+    set_preacher_filter(frm) {
+        frm.set_query("full_name", "waed_info_to_exam", function () {
             let selected_waeds = (frm.doc.waed_info_to_exam || [])
                 .map(row => row.full_name)
                 .filter(Boolean);
 
-            return {
-                filters: {
-                    waed_status: "Scheduling an appointment",
-                    name: ["not in", selected_waeds]
-                }
+            let filters = {
+                waed_status: "Scheduling an appointment",
+                name: ["not in", selected_waeds]
             };
 
+            if (frm.doc.target_gender) {
+                filters.gender = frm.doc.target_gender;
+            }
+
+            return {
+                filters: filters
+            };
         });
-
     }
-
 });

@@ -8,6 +8,8 @@
  "field_order": [
   "exam_group_date",
   "waed",
+  "attendance_status",
+  "absence_reason",
   "column_break_identity",
   "written_exam_form",
   "oral_exam_form",
@@ -62,6 +64,21 @@
    "reqd": 1
   },
   {
+   "default": "Present",
+   "fieldname": "attendance_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "حالة الحضور",
+   "options": "Present\nExcused Absent\nUnexcused Absent"
+  },
+  {
+   "depends_on": "eval:doc.attendance_status != 'Present'",
+   "fieldname": "absence_reason",
+   "fieldtype": "Small Text",
+   "label": "سبب الغياب / العذر"
+  },
+  {
    "fieldname": "column_break_identity",
    "fieldtype": "Column Break"
   },
@@ -89,7 +106,7 @@
    "fieldname": "written_status",
    "fieldtype": "Select",
    "label": "Written Status",
-   "options": "Not Graded\nGraded\nApproved",
+   "options": "Not Graded\nGraded\nApproved\nExcused Absent\nUnexcused Absent",
    "read_only": 1
   },
   {
@@ -97,7 +114,7 @@
    "fieldname": "written_pass_status",
    "fieldtype": "Select",
    "label": "Written Pass Status",
-   "options": "Pending\nPassed\nFailed",
+   "options": "Pending\nPassed\nFailed\nDeferred\nNot Required",
    "read_only": 1
   },
   {
@@ -147,7 +164,7 @@
    "fieldname": "oral_status",
    "fieldtype": "Select",
    "label": "Oral Status",
-   "options": "Not Required\nNot Graded\nGraded\nApproved",
+   "options": "Not Required\nNot Graded\nGraded\nApproved\nExcused Absent\nUnexcused Absent",
    "read_only": 1
   },
   {
@@ -155,7 +172,7 @@
    "fieldname": "oral_pass_status",
    "fieldtype": "Select",
    "label": "Oral Pass Status",
-   "options": "Pending\nPassed\nFailed\nNot Required",
+   "options": "Pending\nPassed\nFailed\nDeferred\nNot Required",
    "read_only": 1
   },
   {
@@ -206,7 +223,7 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Result Status",
-   "options": "Draft\nWritten Graded\nWritten Approved\nOral Graded\nFinal Approved",
+   "options": "Draft\nWritten Graded\nWritten Approved\nOral Graded\nFinal Approved\nExcused Absent",
    "read_only": 1
   },
   {
@@ -214,7 +231,7 @@
    "fieldname": "pass_status",
    "fieldtype": "Select",
    "label": "Final Pass Status",
-   "options": "Pending\nFailed Written\nFailed Oral\nPassed",
+   "options": "Pending\nFailed Written\nFailed Oral\nPassed\nDeferred\nExcused Absent",
    "read_only": 1
   },
   {

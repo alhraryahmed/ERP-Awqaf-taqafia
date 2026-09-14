@@ -21,6 +21,7 @@ class exam_group_date(Document):
         self.set_exam_period()
         self.validate_exam_forms()
         self.validate_candidate_limit()
+        self.validate_target_gender()
         full_names = []
 
         for row in self.waed_info_to_exam:
@@ -31,15 +32,34 @@ class exam_group_date(Document):
 
             full_names.append(row.full_name)
 
+    def validate_target_gender(self):
+        if not getattr(self, "target_gender", None):
+            return
+
+        for row in self.waed_info_to_exam:
+            waed = getattr(row, "full_name", None) or getattr(row, "waed_info", None)
+            if not waed:
+                continue
+
+            waed_gender = frappe.db.get_value("waed_info", waed, "gender")
+            if waed_gender and waed_gender != self.target_gender:
+                frappe.throw(
+                    f"المترشح ({waed}) لا يطابق الفئة المحددة لهذه الجلسة ({self.target_gender})."
+                )
+
     @frappe.whitelist()
     def get_preachers(self):
         limit = cint(self.count_to_exam or 0)
         if limit <= 0 or limit > 30:
             frappe.throw("Count to exam must be between 1 and 30.")
 
+        filters = {"waed_status": WAED_STATUS_READY_FOR_APPOINTMENT}
+        if getattr(self, "target_gender", None):
+            filters["gender"] = self.target_gender
+
         preachers = frappe.get_all(
             "waed_info",
-            filters={"waed_status": WAED_STATUS_READY_FOR_APPOINTMENT},
+            filters=filters,
             fields=["name", "namee", "phoone", "office", "place", "residence_place"],
             limit=limit,
         )
@@ -50,8 +70,7 @@ class exam_group_date(Document):
             self.append(
                 "waed_info_to_exam",
                 {
-                    "waed_info": preacher.name,
-                    "full_name": preacher.get("namee") or "",
+                    "full_name": preacher.name,
                     "phone": preacher.get("phoone") or preacher.get("phone") or "",
                     "office": preacher.get("office") or "",
                     "address": preacher.get("place") or preacher.get("residence_place") or "",
@@ -91,7 +110,7 @@ class exam_group_date(Document):
         self.name = f"{prefix}-{str(new_no).zfill(2)}"
 
     def after_insert(self):
-        self.update_preachers_workflow("Appointment")
+        self.update_preachers_workflow("Schedule Appointment")
 
     def set_exam_period(self):
         if not self.exam_day:
@@ -136,12 +155,13 @@ class exam_group_date(Document):
 
         exam_form = frappe.get_doc("exam_form", self.written_exam)
         for row in self.waed_info_to_exam:
-            if not row.waed_info:
+            waed = getattr(row, "full_name", None) or getattr(row, "waed_info", None)
+            if not waed:
                 continue
 
-            result_name, created = self.create_exam_result(row.waed_info, exam_form)
+            result_name, created = self.create_exam_result(waed, exam_form)
             if created:
-                self.update_waed_workflow(row.waed_info, "Grading")
+                self.update_waed_workflow(waed, "Grading")
 
     def create_exam_result(self, waed, written_exam_form):
         existing_result = frappe.db.exists(
@@ -210,12 +230,31 @@ class exam_group_date(Document):
 
     def update_preachers_workflow(self, action):
         for row in self.waed_info_to_exam:
-            if row.waed_info:
-                self.update_waed_workflow(row.waed_info, action)
+            waed = getattr(row, "full_name", None) or getattr(row, "waed_info", None)
+            if waed:
+                self.update_waed_workflow(waed, action)
 
     def update_waed_workflow(self, waed, action):
         doc = frappe.get_doc("waed_info", waed)
-        apply_workflow(doc, action)
+        action_map = {
+            "Appointment": "Schedule Appointment",
+            "Schedule Appointment": "Schedule Appointment",
+            "Grading": "Grading",
+            "accepted": "Approve Candidate",
+            "Approve Candidate": "Approve Candidate",
+            "faild in written": "Fail Written Exam",
+            "Fail Written Exam": "Fail Written Exam",
+            "faild in oral": "Fail Oral Exam",
+            "Fail Oral Exam": "Fail Oral Exam",
+        }
+        resolved_action = action_map.get(action, action)
+        try:
+            apply_workflow(doc, resolved_action)
+        except Exception:
+            try:
+                apply_workflow(doc, action)
+            except Exception as e:
+                frappe.log_error(f"Workflow transition '{action}' on waed_info {waed} failed: {e}")
 
 
 @frappe.whitelist()
