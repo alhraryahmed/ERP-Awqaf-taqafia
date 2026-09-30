@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"lbqNUIZ6zG\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home Awqaf\",\"col\":12}}]",
- "creation": "2026-07-26 17:18:31.657023",
+ "creation": "2026-09-28 19:06:52.449757",
  "custom_blocks": [
   {
    "custom_block_name": "Home Awqaf",
@@ -206,8 +206,8 @@
    "type": "Link"
   }
  ],
- "modified": "2026-08-19 13:57:49.596942",
- "modified_by": "Administrator",
+ "modified": "2026-09-29 03:48:23.092461",
+ "modified_by": "a.alhrary@awqaf.gov.ly",
  "module": "taqafia",
  "name": "home",
  "number_cards": [],
@@ -222,6 +222,9 @@
   },
   {
    "role": "\u0645\u0648\u0638\u0641\u064a \u0627\u0644\u062b\u0642\u0627\u0641\u064a\u0629 \u0628\u0627\u0644\u0645\u0646\u0627\u0637\u0642"
+  },
+  {
+   "role": "\u0645\u0633\u062a\u062e\u062f\u0645 \u0645\u0646\u0635\u0629 \u0627\u0644\u0628\u0631"
   }
  ],
  "sequence_id": 1.0,

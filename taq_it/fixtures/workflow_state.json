@@ -317,15 +317,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "ok-sign",
-  "modified": "2025-09-21 18:26:18.574559",
-  "name": "Approved",
-  "style": "Success",
-  "workflow_state_name": "Approved"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "",
   "modified": "2026-07-05 15:29:49.960545",
   "name": "Passed the Written Exam",
@@ -403,5 +394,14 @@
   "name": "In the oral exam",
   "style": "Info",
   "workflow_state_name": "In the oral exam"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2025-09-21 18:26:18.574559",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
  }
 ]

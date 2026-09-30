@@ -20167,40 +20167,6 @@
  },
  {
   "charts": [],
-  "content": "[{\"id\": \"kpi_block\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"\\u0628\\u0644\\u0648\\u0643 \\u0625\\u062d\\u0635\\u0627\\u0626\\u064a\\u0627\\u062a \\u0627\\u0644\\u062d\\u062c \\u0648\\u0627\\u0644\\u0639\\u0645\\u0631\\u0629\", \"col\": 12}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "بلوك إحصائيات الحج والعمرة",
-    "label": null,
-    "parent": "Hajj and Umrah",
-    "parentfield": "custom_blocks",
-    "parenttype": "Workspace"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": null,
-  "hide_custom": 0,
-  "icon": "travel",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "Hajj and Umrah",
-  "links": [],
-  "modified": "2026-08-19 13:57:49.685594",
-  "module": "Helpdesk",
-  "name": "Hajj and Umrah",
-  "number_cards": [],
-  "parent_page": "",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 2.0,
-  "shortcuts": [],
-  "title": "Hajj and Umrah"
- },
- {
-  "charts": [],
   "content": "[{\"id\":\"y9CBMS0tSK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GonNu_YCF8\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Home IT\",\"col\":12}},{\"id\":\"QUdjtP25_s\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"G2SSdGovG5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0Ba1DGfXdF\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Helpdesk Configuration<br></span>\",\"col\":12}},{\"id\":\"4Cur7UEKlr\",\"type\":\"card\",\"data\":{\"card_name\":\"Ticket Configuration\",\"col\":4}},{\"id\":\"RIoumS4GVJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"البلاغات\",\"col\":3}},{\"id\":\"V-VW49rKWO\",\"type\":\"card\",\"data\":{\"card_name\":\"Agent Configuration\",\"col\":4}},{\"id\":\"qDBh4PMZ4G\",\"type\":\"card\",\"data\":{\"card_name\":\"Helpdesk Reports\",\"col\":4}},{\"id\":\"w6w3Py-aJl\",\"type\":\"card\",\"data\":{\"card_name\":\"Automation\",\"col\":4}},{\"id\":\"7dtPv1hrKB\",\"type\":\"card\",\"data\":{\"card_name\":\"Channels\",\"col\":4}}]",
   "custom_blocks": [
    {

@@ -5,6 +5,7 @@
 """
 
 import frappe
+from urllib.parse import quote
 from frappe.utils import flt
 
 
@@ -80,15 +81,16 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
             throw=True,
         )
 
-        target_name = frappe.db.get_value(
-            "exam_result",
-            {"waed": source_name},
-            "name",
-            order_by="creation desc",
-        )
+        if source_doctype == "waed_info":
+            target_name = frappe.db.get_value(
+                "exam_result",
+                {"waed": source_name, "docstatus": ["!=", 2]},
+                "name",
+                order_by="creation desc",
+            )
 
-        if not target_name:
-            frappe.throw("لا توجد نتيجة امتحان لهذا الواعظ.")
+            if not target_name:
+                frappe.throw("لا توجد نتيجة امتحان لهذا الواعظ.")
 
     if not frappe.db.exists(target_doctype, target_name):
         frappe.throw("المستند المطلوب غير موجود.")
@@ -96,9 +98,9 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
     return (
         frappe.utils.get_url()
         + "/printview?"
-        + f"doctype={target_doctype}"
-        + f"&name={target_name}"
-        + f"&format={print_format}"
+        + f"doctype={quote(str(target_doctype))}"
+        + f"&name={quote(str(target_name))}"
+        + f"&format={quote(str(print_format))}"
         + "&no_letterhead=0"
         + "&trigger_print=0"
     )
@@ -146,7 +148,7 @@ def get_dashboard_stats(gender="Male"):
         for row in status_rows:
             st = row["status"]
             cnt = int(row["total_count"] or 0)
-            status_counts[st] = cnt
+            status_counts[st] = status_counts.get(st, 0) + cnt
             total += cnt
 
         # عدد مجموعات الامتحانات المجدولة
@@ -204,7 +206,7 @@ def get_dashboard_stats(gender="Male"):
             }
         }
     except Exception as e:
-        frappe.log_error(f"Error in taq_it.api.get_dashboard_stats: {str(e)}", "taq_it API Error")
+        frappe.log_error(title="taq_it API Error: get_dashboard_stats", message=str(e))
         return {
             "success": False,
             "error": str(e)
@@ -291,7 +293,7 @@ def get_exam_dashboard_stats(gender=None):
             "next_exam_date": next_date_str
         }
     except Exception as e:
-        frappe.log_error(f"Error in taq_it.api.get_exam_dashboard_stats: {str(e)}", "taq_it API Error")
+        frappe.log_error(title="taq_it API Error: get_exam_dashboard_stats", message=str(e))
         return {
             "success": False,
             "error": str(e)
@@ -309,7 +311,11 @@ def get_active_dashboard_stats():
     try:
         completed = frappe.db.count("active_taq")
         offices = frappe.db.count("mak_taq")
-        preachers = frappe.db.count("active_taq")
+        preachers_res = frappe.db.sql(
+            "SELECT COUNT(DISTINCT naa) as cnt FROM `tabactive_taq` WHERE naa IS NOT NULL AND naa != ''",
+            as_dict=True
+        )
+        preachers = int(preachers_res[0]["cnt"]) if (preachers_res and preachers_res[0].get("cnt")) else frappe.db.count("waed_info")
 
         # توزيع أعلى المكاتب نشاطاً
         offices_chart = frappe.db.sql("""
@@ -346,7 +352,7 @@ def get_active_dashboard_stats():
             }
         }
     except Exception as e:
-        frappe.log_error(f"Error in taq_it.api.get_active_dashboard_stats: {str(e)}", "taq_it API Error")
+        frappe.log_error(title="taq_it API Error: get_active_dashboard_stats", message=str(e))
         return {
             "success": False,
             "error": str(e)

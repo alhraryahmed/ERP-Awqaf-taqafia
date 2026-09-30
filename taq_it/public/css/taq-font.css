@@ -1,0 +1,221 @@
+/* ==========================================================================
+   TAQ UI — Noto Kufi Arabic Typography (Pure & Unified with test22)
+   ========================================================================== */
+
+/* 1. Global Font Definitions */
+@font-face {
+    font-family: "Noto Kufi Arabic";
+    src: url("/assets/taq_it/fonts/noto_kufi_arabic/NotoKufiArabic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Kufi Arabic";
+    src: url("/assets/taq_it/fonts/noto_kufi_arabic/NotoKufiArabic-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Kufi Arabic";
+    src: url("/assets/taq_it/fonts/noto_kufi_arabic/NotoKufiArabic-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Kufi Arabic";
+    src: url("/assets/taq_it/fonts/noto_kufi_arabic/NotoKufiArabic-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Kufi Arabic";
+    src: url("/assets/taq_it/fonts/noto_kufi_arabic/NotoKufiArabic-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 2. Global Frappe Variables & Anti-aliasing */
+:root {
+    --font-stack: "Noto Kufi Arabic", sans-serif;
+    --font-family-sans-serif: "Noto Kufi Arabic", sans-serif;
+    --weight-regular: 500;
+    --weight-medium: 600;
+    --weight-semibold: 700;
+    --weight-bold: 800;
+}
+
+html,
+body {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    letter-spacing: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* 3. Sidebar (Strictly styled like test22: SemiBold, no letter-spacing, crisp rendering) */
+.desk-sidebar,
+.desk-sidebar *,
+.standard-sidebar,
+.standard-sidebar *,
+.standard-sidebar-section,
+.standard-sidebar-section *,
+.standard-sidebar-item,
+.standard-sidebar-item *,
+.sidebar-item-container,
+.sidebar-item-label,
+.item-anchor,
+.item-anchor span {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    letter-spacing: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.standard-sidebar-item .sidebar-item-label,
+.item-anchor .sidebar-item-label {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    letter-spacing: normal !important;
+}
+
+.standard-sidebar-label,
+.standard-sidebar-label span {
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+/* 4. Headings & Titles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page-head,
+.page-title,
+.title-text,
+.section-head,
+.form-section .section-head,
+.modal-title,
+.workspace-title {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    letter-spacing: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/* 5. Buttons & Interactive Controls */
+button:not([class*="octicon"]):not([class*="fa"]),
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-default,
+.dropdown-toggle,
+.navbar button {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/* 6. Forms & Inputs */
+.form-control:not(.ace_editor):not(.codemirror):not(.text-monospace),
+.control-input,
+.control-label,
+.help-box,
+input:not([type="checkbox"]):not([type="radio"]):not(.text-monospace),
+textarea:not(.ace_editor):not(.text-monospace),
+select,
+option {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    letter-spacing: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/* 7. Navbar, Menus, Modals & Lists */
+.navbar,
+.navbar-nav,
+.dropdown-menu,
+.dropdown-item,
+.modal,
+.modal-content,
+.popover,
+.tooltip,
+.list-row,
+.grid-row,
+.grid-heading-row,
+.data-row {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    letter-spacing: normal !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/* 8. Frappe Controls */
+.frappe-control:not([data-fieldtype="Code"]) {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+}
+
+/* ==========================================================================
+   Protected Elements: Do NOT Override Fonts for Code & Icons
+   ========================================================================== */
+
+/* A. Code, Script & Monospace Editors */
+pre,
+code,
+kbd,
+samp,
+.ace_editor,
+.ace_editor *,
+.ace_text-layer,
+.monaco-editor,
+.monaco-editor *,
+.codemirror,
+.codemirror *,
+.text-monospace,
+.text-monospace *,
+.code-editor,
+.code-editor *,
+[data-fieldtype="Code"] textarea,
+[data-fieldtype="Code"] .form-control {
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* B. Icon Fonts & SVGs */
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+[class^="fa-"],
+[class*=" fa-"] {
+    font-family: "FontAwesome" !important;
+}
+
+.octicon,
+[class^="octicon-"],
+[class*=" octicon-"] {
+    font-family: "octicons" !important;
+}
+
+.es-icon,
+.icon,
+.icon-sm,
+.icon-md,
+.icon-lg,
+.icon-xl,
+.symbol,
+svg,
+svg * {
+    font-family: inherit;
+}

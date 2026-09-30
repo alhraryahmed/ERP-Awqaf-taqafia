@@ -9,21 +9,18 @@ app_license = "mit"
 #    "/assets/taq_it/js/app.js",
 #]
 #
-#app_include_css = [
-   #"/assets/taq_it/css/website.css",
-#]
-
 app_include_css = [
-#    "/assets/taq_it/css/variables.css",
- #   "/assets/taq_it/css/design_system.css",
-  #  "/assets/taq_it/css/layout.css",
-   # "/assets/taq_it/css/cards.css",
-    #"/assets/taq_it/css/forms.css",
-    #"/assets/taq_it/css/list.css",
-    #"/assets/taq_it/css/workspace.css",
-    #"/assets/taq_it/css/navbar.css",
-    #"/assets/taq_it/css/sidebar.css",
-    #"/assets/taq_it/css/reports.css",
+    "/assets/taq_it/css/taq-font.css",
+    # "/assets/taq_it/css/variables.css",
+    # "/assets/taq_it/css/design_system.css",
+    # "/assets/taq_it/css/layout.css",
+    # "/assets/taq_it/css/cards.css",
+    # "/assets/taq_it/css/forms.css",
+    # "/assets/taq_it/css/list.css",
+    # "/assets/taq_it/css/workspace.css",
+    # "/assets/taq_it/css/navbar.css",
+    # "/assets/taq_it/css/sidebar.css",
+    # "/assets/taq_it/css/reports.css",
 ]
 
 #app_include_js = [
@@ -57,7 +54,6 @@ fixtures = [
     {"doctype": "Role"},
     {"doctype": "Role Permission for Page and Report"},
     {"doctype": "System Settings"},
-    {"doctype": "Property Setter"},
 ]
 
 doc_events = {
@@ -69,7 +65,7 @@ doc_events = {
     }
 }
 
-after_migrate = "taq_it.setup_roles.setup_custom_roles"
+#after_migrate = "taq_it.setup_roles.setup_custom_roles"
 # Apps
 # ------------------
 
@@ -94,7 +90,7 @@ after_migrate = "taq_it.setup_roles.setup_custom_roles"
 #app_include_css = ["taqfia_global.css"]
 
 # include js, css files in header of web template
-# web_include_css = "/assets/taq_it/css/taq_it.css"
+web_include_css = "/assets/taq_it/css/taq-font.css"
 # web_include_js = "/assets/taq_it/js/taq_it.js"
 
 # include custom scss in every website theme (without file extension ".scss")

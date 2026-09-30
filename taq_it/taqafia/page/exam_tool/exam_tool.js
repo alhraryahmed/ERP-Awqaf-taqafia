@@ -57,6 +57,7 @@ const APPROVAL_ROLE = "معتمد نتائج الامتحانات";
 function init_exam_tool_page(wrapper) {
     const page = frappe.ui.make_app_page({
         parent: wrapper,
+        title: "منظومة رصد درجات الامتحانات",
         single_column: true
     });
 
@@ -1202,27 +1203,36 @@ class ExamGradingToolPage {
 
         this.set_save_status("saving");
 
-        const grades_payload = [];
-        (this.grading_data.rows || []).forEach(row => {
-            (row.questions || []).forEach(q => {
-                if (q.score !== null && q.score !== undefined && !isNaN(q.score)) {
-                    grades_payload.push({
-                        waed: row.waed,
-                        aspect: q.aspect,
-                        question_number: q.question_number,
-                        score: q.score,
-                        attendance_status: row.attendance_status || "Present"
-                    });
+        const rows_payload = (this.grading_data.rows || []).map(row => {
+            const scores = {};
+            (row.questions || []).forEach(question => {
+                const score = question.score;
+                if (
+                    question.row_name &&
+                    score !== null &&
+                    score !== undefined &&
+                    score !== "" &&
+                    !isNaN(score)
+                ) {
+                    scores[question.row_name] = score;
                 }
             });
+
+            return {
+                exam_result: row.exam_result,
+                waed: row.waed,
+                attendance_status: row.attendance_status || "Present",
+                absence_reason: row.absence_reason || "",
+                scores
+            };
         });
 
         frappe.call({
-            method: "taq_it.taqafia.doctype.exam_grading_tool.exam_grading_tool.save_draft_grades",
+            method: "taq_it.taqafia.doctype.exam_grading_tool.exam_grading_tool.save_grades",
             args: {
                 exam_group_date: this.active_session,
                 grading_stage: this.current_stage,
-                grades: JSON.stringify(grades_payload)
+                rows: JSON.stringify(rows_payload)
             },
             callback: (r) => {
                 this.has_unsaved_changes = false;
@@ -1244,7 +1254,7 @@ class ExamGradingToolPage {
         const stageName = this.current_stage === "Written" ? "الاختبار التحريري" : "المقابلة الشفوية";
         frappe.confirm(`هل أنت متأكد من اعتماد نتائج ${stageName} نهائياً؟ بعد الاعتماد سيتم قفل إدخال الدرجات لهذه المرحلة.`, () => {
             frappe.call({
-                method: "taq_it.taqafia.doctype.exam_grading_tool.exam_grading_tool.approve_stage_results",
+                method: "taq_it.taqafia.doctype.exam_grading_tool.exam_grading_tool.approve_stage",
                 args: {
                     exam_group_date: this.active_session,
                     grading_stage: this.current_stage

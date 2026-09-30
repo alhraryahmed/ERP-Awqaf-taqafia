@@ -494,7 +494,7 @@ def get_sessions_overview(gender=None):
     frappe.has_permission("exam_group_date", "read", throw=True)
 
     has_gender_col = frappe.db.has_column("exam_group_date", "target_gender")
-    where_clause = "exam_status NOT IN ('Cancelled', 'ملغي')"
+    where_clause = "exam_status NOT IN ('Cancelled', 'ملغي', 'Scheduled', 'من المقرر', 'مجدول')"
 
     if has_gender_col and gender:
         if gender in ["Male", "ذكر"]:
