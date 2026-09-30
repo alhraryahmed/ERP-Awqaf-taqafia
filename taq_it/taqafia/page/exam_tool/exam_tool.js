@@ -51,13 +51,22 @@
 
 // For license information, please see license.txt
 
-const GRADING_ROLE = "مشرف رصد الامتحانات";
-const APPROVAL_ROLE = "معتمد نتائج الامتحانات";
+const GRADING_ROLES = [
+    "مشرف رصد الامتحانات",
+    "مشرف رصد امتحانات الوعاظ",
+    "مشرفة رصد امتحانات الواعظات",
+    "رئيس قسم التقويم والقياس",
+    "مدير إدارة الشؤون الثقافية"
+];
+const APPROVAL_ROLES = [
+    "معتمد نتائج الامتحانات",
+    "رئيس قسم التقويم والقياس",
+    "مدير إدارة الشؤون الثقافية"
+];
 
 function init_exam_tool_page(wrapper) {
     const page = frappe.ui.make_app_page({
         parent: wrapper,
-        title: "منظومة رصد درجات الامتحانات",
         single_column: true
     });
 
@@ -114,18 +123,36 @@ class ExamGradingToolPage {
 
     can_grade() {
         if (this.is_session_completed()) return false;
-        return this.user_roles.includes(GRADING_ROLE) || this.user_roles.includes("System Manager") || this.user_roles.includes("Administrator");
+        return this.user_roles.includes("Administrator") || this.user_roles.includes("System Manager") || GRADING_ROLES.some(role => this.user_roles.includes(role));
     }
 
     can_approve() {
         if (this.is_session_completed()) return false;
-        return this.user_roles.includes(APPROVAL_ROLE) || this.user_roles.includes("System Manager") || this.user_roles.includes("Administrator");
+        return this.user_roles.includes("Administrator") || this.user_roles.includes("System Manager") || APPROVAL_ROLES.some(role => this.user_roles.includes(role));
     }
 
     is_session_completed() {
         if (!this.active_session_data) return false;
         const sess = this.active_session_data;
-        return sess.step === "completed" || sess.is_completed === true || (sess.written_approved >= sess.total_candidates && sess.total_candidates > 0 && (!sess.has_oral || sess.oral_approved >= (sess.written_passed || 0)));
+        return sess.step === "completed" || sess.is_completed === true || (sess.exam_status === "Completed" && sess.written_decided >= sess.total_candidates && sess.total_candidates > 0 && (!sess.has_oral || sess.oral_approved >= (sess.written_passed || 0)));
+    }
+
+    is_stage_approved(stage) {
+        const sess = this.active_session_data;
+        if (!sess || !sess.total_candidates) return false;
+
+        if (stage === "Written") {
+            return ["Written Approved", "Completed"].includes(sess.exam_status) &&
+                (sess.written_decided || 0) >= sess.total_candidates;
+        }
+
+        if (stage === "Oral") {
+            const writtenPassed = sess.written_passed || 0;
+            return Boolean(sess.has_oral) && writtenPassed > 0 &&
+                (sess.oral_approved || 0) >= writtenPassed;
+        }
+
+        return false;
     }
 
     init_events() {
@@ -166,7 +193,7 @@ class ExamGradingToolPage {
         // Stage workflow tab clicks (Written / Oral / Final)
         this.wrapper.on("click", ".eg-stage-tab", (e) => {
             const tab = $(e.currentTarget);
-            if (tab.hasClass("is-locked") && !this.is_session_completed()) {
+            if (tab.hasClass("is-locked")) {
                 frappe.show_alert({
                     message: "هذه المرحلة مقفلة حالياً حتى يتم رصد واعتماد المرحلة السابقة.",
                     indicator: "orange"
@@ -267,7 +294,7 @@ class ExamGradingToolPage {
             this.handle_keyboard_navigation(e);
         });
 
-        // Save Draft Button
+        // Save graded results
         this.wrapper.on("click", "#btn-footer-save", () => {
             this.save_grades();
         });
@@ -366,7 +393,7 @@ class ExamGradingToolPage {
         this.load_sessions();
     }
 
-    load_sessions() {
+    load_sessions(onLoaded) {
         const container = this.wrapper.find("#eg-sessions-cards-container");
         container.html(`
             <div class="eg-loading-state">
@@ -383,6 +410,7 @@ class ExamGradingToolPage {
             callback: (r) => {
                 this.sessions_list = r.message || [];
                 this.render_session_cards(this.sessions_list);
+                if (typeof onLoaded === "function") onLoaded(this.sessions_list);
             },
             error: () => {
                 container.html(`
@@ -416,7 +444,7 @@ class ExamGradingToolPage {
         let cardsHtml = "";
 
         sessions.forEach(sess => {
-            const isCompleted = sess.step === "completed" || sess.is_completed === true || (sess.written_approved >= sess.total_candidates && sess.total_candidates > 0 && (!sess.has_oral || sess.oral_approved >= (sess.written_passed || 0)));
+            const isCompleted = sess.step === "completed" || sess.is_completed === true || (sess.exam_status === "Completed" && sess.written_decided >= sess.total_candidates && sess.total_candidates > 0 && (!sess.has_oral || sess.oral_approved >= (sess.written_passed || 0)));
             if (isCompleted) {
                 completedCount++;
             } else {
@@ -606,8 +634,8 @@ class ExamGradingToolPage {
         const sess = this.active_session_data;
         const isCompleted = this.is_session_completed();
 
-        const writtenApproved = sess ? (sess.written_approved >= sess.total_candidates && sess.total_candidates > 0) : false;
-        const oralApproved = sess ? (sess.oral_approved >= (sess.written_passed || 0) && (sess.written_passed || 0) > 0) : false;
+        const writtenApproved = this.is_stage_approved("Written");
+        const oralApproved = this.is_stage_approved("Oral");
         const hasOral = sess ? sess.has_oral : true;
 
         // Stage 1: Written
@@ -624,7 +652,10 @@ class ExamGradingToolPage {
         if (!hasOral) {
             oralTab.addClass("is-locked");
             this.wrapper.find("[data-oral-badge]").text("غير مطلوب لهذه الجلسة");
-        } else if (!writtenApproved && !isCompleted) {
+        } else if (writtenApproved && !(sess.written_passed || 0)) {
+            oralTab.addClass("is-locked");
+            this.wrapper.find("[data-oral-badge]").text("لا يوجد ناجحون للانتقال إلى الشفوي");
+        } else if (!writtenApproved) {
             oralTab.addClass("is-locked");
             this.wrapper.find("[data-oral-badge]").text("🔒 مقفل (يلزم اعتماد التحريري)");
         } else {
@@ -640,9 +671,15 @@ class ExamGradingToolPage {
 
         // Stage 3: Final
         const finalTab = this.wrapper.find('.eg-stage-tab[data-stage="Final"]');
-        finalTab.removeClass("is-locked");
+        const finalReady = isCompleted || oralApproved ||
+            (writtenApproved && (!hasOral || !(sess.written_passed || 0)));
+        finalTab.toggleClass("is-locked", !finalReady);
         if (isCompleted) {
             this.wrapper.find("[data-final-badge]").text("معتمد ونهائي 🏆").css("color", "var(--eg-success)");
+        } else if (finalReady) {
+            this.wrapper.find("[data-final-badge]").text("جاهز للعرض النهائي");
+        } else {
+            this.wrapper.find("[data-final-badge]").text("🔒 يفتح بعد اعتماد الشفوي");
         }
 
         // Set Active Tab
@@ -658,6 +695,12 @@ class ExamGradingToolPage {
         const actionBtn = this.wrapper.find("[data-approve-btn-text]");
         const isCompleted = this.is_session_completed();
 
+        if (this.current_stage !== "Final" && this.is_stage_approved(this.current_stage)) {
+            titleEl.text("هذه المرحلة معتمدة 🔒 (وضع القراءة فقط)");
+            descEl.text("يمكنك استعراض نتائج المرحلة المعتمدة والتنقل بين المراحل. أزرار الحفظ والاعتماد مخفية لهذه المرحلة.");
+            return;
+        }
+
         if (isCompleted) {
             titleEl.text("جلسة معتمدة ومكتملة نهائياً 🔒 (وضع العرض فقط)");
             descEl.text("تم اعتماد نتائج هذه الجلسة رسمياً. يمكنك استعراض درجات كافة المراحل وطباعة الكشوفات الرسمية.");
@@ -666,7 +709,7 @@ class ExamGradingToolPage {
 
         if (this.current_stage === "Written") {
             titleEl.text("المرحلة الأولى: رصد واعتماد الاختبار التحريري");
-            descEl.text("أدخل درجات الأسئلة التحريرية لكل مترشح. احفظ المسودة أولاً، وعند اكتمال الدرجات اضغط على زر الاعتماد لترشيح الناجحين للشفوي.");
+            descEl.text("أدخل درجات الأسئلة التحريرية لكل مترشح واحفظها لتسجيل المرحلة كمرصودة. بعد اكتمال الرصد، يعتمد المسؤول المرحلة لترشيح الناجحين للشفوي.");
             actionBtn.text("✅ اعتماد نتائج التحريري وترشيح الناجحين");
         } else if (this.current_stage === "Oral") {
             titleEl.text("المرحلة الثانية: رصد واعتماد المقابلة الشفوية");
@@ -712,15 +755,18 @@ class ExamGradingToolPage {
             return;
         }
 
-        // Configure footer actions according to session status
+        // Keep approved stages readable while hiding their mutation actions.
         if (this.is_session_completed()) {
             this.configure_footer_for_completed();
+        } else if (this.is_stage_approved(this.current_stage)) {
+            this.configure_footer_for_approved_stage();
         } else {
             this.wrapper.find(".eg-action-footer").show();
             this.wrapper.find("#btn-footer-save").show();
             this.wrapper.find("#btn-footer-approve").show();
             this.wrapper.find("#btn-footer-print").hide();
             this.wrapper.find(".eg-completed-lock-badge").remove();
+            this.wrapper.find(".eg-stage-readonly-badge").remove();
         }
 
         frappe.call({
@@ -749,6 +795,7 @@ class ExamGradingToolPage {
     configure_footer_for_completed() {
         const footer = this.wrapper.find(".eg-action-footer");
         footer.show();
+        footer.find(".eg-stage-readonly-badge").remove();
         // HIDE Save and Approve buttons in completed / read-only sessions
         footer.find("#btn-footer-save").hide();
         footer.find("#btn-footer-approve").hide();
@@ -762,6 +809,23 @@ class ExamGradingToolPage {
                 <button type="button" class="btn btn-default eg-footer-btn" id="btn-footer-print" style="background: #0E4A86; color: #FFFFFF; font-weight: 800;">
                     🖨️ طباعة الكشف الرسمي
                 </button>
+            `);
+        }
+    }
+
+    configure_footer_for_approved_stage() {
+        const footer = this.wrapper.find(".eg-action-footer");
+        footer.show();
+        footer.find("#btn-footer-save").hide();
+        footer.find("#btn-footer-approve").hide();
+        footer.find("#btn-footer-print").hide();
+        footer.find(".eg-completed-lock-badge").remove();
+
+        if (footer.find(".eg-stage-readonly-badge").length === 0) {
+            footer.find(".eg-action-buttons").prepend(`
+                <span class="eg-stage-readonly-badge" style="padding: 8px 16px; border-radius: 8px; background: var(--eg-success-light); color: var(--eg-success); font-weight: 800; font-size: 13px; border: 1px solid var(--eg-success-border);">
+                    🔒 المرحلة معتمدة — قراءة فقط
+                </span>
             `);
         }
     }
@@ -873,7 +937,8 @@ class ExamGradingToolPage {
 
             const candName = row.waed_name || row.waed || "مترشح";
             const initialLetter = candName.trim().charAt(0) || "م";
-            const isPassed = (row.percentage || 0) >= 50;
+            const isPassed = row.attendance_status === "Present" &&
+                Number(row.percentage || 0) >= Number(this.grading_data.success_rate || 0);
             const attDisabled = isApproved ? "disabled style='pointer-events: none; opacity: 0.85;'" : "";
 
             tbodyHtml += `
@@ -960,7 +1025,7 @@ class ExamGradingToolPage {
             let rowsHtml = "";
             results.forEach((r, idx) => {
                 const att = r.attendance_status || "Present";
-                const isPassed = (r.pass_status === "Passed" || (att === "Present" && flt(r.percentage) >= 50));
+                const isPassed = r.pass_status === "Passed" && att === "Present";
 
                 if (att === "Present") {
                     present++;
@@ -1043,7 +1108,7 @@ class ExamGradingToolPage {
         if (isNaN(val) || valStr === "") {
             input.removeClass("is-invalid");
             val = 0;
-        } else if (val < 0 || val > maxVal) {
+        } else if (!Number.isFinite(val) || val < 0 || val > maxVal) {
             input.addClass("is-invalid");
             frappe.show_alert({
                 message: `الدرجة المدخلة (${val}) تتجاوز الحد الأقصى للسؤال (${maxVal}).`,
@@ -1093,13 +1158,15 @@ class ExamGradingToolPage {
             rowObj.total_score = totalScore;
             rowObj.max_total = maxTotal;
             rowObj.percentage = pct;
+            rowObj.stage_pass_status = att === "Present" &&
+                pct >= Number(this.grading_data.success_rate || 0) ? "Passed" : "Failed";
         }
 
         tr.find(".cell-total-val").text(totalScore);
         tr.find(".cell-max-val").text(maxTotal);
         tr.find(".cell-percent-val").text(pct.toFixed(1) + "%");
 
-        const isPassed = (pct >= 50 && att === "Present");
+        const isPassed = (pct >= Number(this.grading_data.success_rate || 0) && att === "Present");
         const pill = tr.find(".cell-percent-pill");
         pill.removeClass("is-pass is-fail");
         pill.addClass(isPassed ? "is-pass" : "is-fail");
@@ -1112,7 +1179,7 @@ class ExamGradingToolPage {
 
         rows.forEach(r => {
             const att = r.attendance_status || "Present";
-            const isPassed = (r.percentage || 0) >= 50 && att === "Present";
+            const isPassed = Number(r.percentage || 0) >= Number(this.grading_data.success_rate || 0) && att === "Present";
 
             if (att === "Present") {
                 present++;
@@ -1199,7 +1266,19 @@ class ExamGradingToolPage {
     }
 
     save_grades() {
-        if (!this.can_grade() || this.is_session_completed()) return;
+        if (!this.can_grade() || this.is_session_completed() || this.is_stage_approved(this.current_stage)) return;
+
+        const invalidScores = this.wrapper.find(".grading-score.is-invalid");
+        if (invalidScores.length) {
+            frappe.show_alert({ message: "راجع الدرجات المحددة باللون الأحمر قبل الحفظ.", indicator: "red" });
+            invalidScores.first().trigger("focus");
+            return;
+        }
+
+        if (!this.grading_data.rows || !this.grading_data.rows.length) {
+            frappe.show_alert({ message: "لا يوجد مترشحون لحفظ درجاتهم.", indicator: "orange" });
+            return;
+        }
 
         this.set_save_status("saving");
 
@@ -1207,15 +1286,10 @@ class ExamGradingToolPage {
             const scores = {};
             (row.questions || []).forEach(question => {
                 const score = question.score;
-                if (
-                    question.row_name &&
-                    score !== null &&
-                    score !== undefined &&
-                    score !== "" &&
-                    !isNaN(score)
-                ) {
-                    scores[question.row_name] = score;
-                }
+                // Child row IDs differ for candidates whose result is created on first save.
+                // Include the stable aspect/question key as a fallback for those rows.
+                if (row.exam_result && question.row_name) scores[question.row_name] = score;
+                if (question.key) scores[question.key] = score;
             });
 
             return {
@@ -1238,7 +1312,7 @@ class ExamGradingToolPage {
                 this.has_unsaved_changes = false;
                 this.set_save_status("ready");
                 frappe.show_alert({
-                    message: "تم حفظ مسودة الدرجات بنجاح.",
+                    message: "تم حفظ الدرجات بنجاح، وأصبحت المرحلة جاهزة للاعتماد.",
                     indicator: "green"
                 });
             },
@@ -1249,7 +1323,12 @@ class ExamGradingToolPage {
     }
 
     approve_stage() {
-        if (!this.can_approve() || this.is_session_completed()) return;
+        if (!this.can_approve() || this.is_session_completed() || this.is_stage_approved(this.current_stage)) return;
+
+        if (this.has_unsaved_changes) {
+            frappe.show_alert({ message: "احفظ التعديلات قبل اعتماد المرحلة.", indicator: "orange" });
+            return;
+        }
 
         const stageName = this.current_stage === "Written" ? "الاختبار التحريري" : "المقابلة الشفوية";
         frappe.confirm(`هل أنت متأكد من اعتماد نتائج ${stageName} نهائياً؟ بعد الاعتماد سيتم قفل إدخال الدرجات لهذه المرحلة.`, () => {
@@ -1265,8 +1344,8 @@ class ExamGradingToolPage {
                         indicator: "green"
                     });
                     this.has_unsaved_changes = false;
-                    this.load_sessions();
-                    this.select_session(this.active_session);
+                    const approvedSession = this.active_session;
+                    this.load_sessions(() => this.select_session(approvedSession));
                 }
             });
         });

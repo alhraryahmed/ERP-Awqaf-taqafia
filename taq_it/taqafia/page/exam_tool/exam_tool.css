@@ -6,14 +6,14 @@
 
 .eg-app {
     /* Brand Color Palette */
-    --eg-primary: #0E4A86;
-    --eg-primary-hover: #145AA6;
-    --eg-primary-light: #EBF3FC;
-    --eg-primary-dark: #0A3663;
+    --eg-primary: #062E3F;
+    --eg-primary-hover: #083B4E;
+    --eg-primary-light: #EAF7FA;
+    --eg-primary-dark: #041D28;
 
-    --eg-accent: #0284C7;
-    --eg-accent-light: #F0F9FF;
-    --eg-accent-glow: rgba(2, 132, 199, 0.22);
+    --eg-accent: #22A3CC;
+    --eg-accent-light: #EAF7FA;
+    --eg-accent-glow: rgba(34, 163, 204, 0.22);
 
     --eg-slate-950: #020617;
     --eg-slate-900: #0F172A;
@@ -56,9 +56,9 @@
     --eg-radius-pill: 9999px;
 
     /* Universal Fonts */
-    --eg-font-main: 'Poppins', 'GE SS Two', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --eg-font-arabic: 'Poppins', 'GE SS Two', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --eg-font-digits: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --eg-font-main: 'Noto Kufi Arabic', sans-serif;
+    --eg-font-arabic: 'Noto Kufi Arabic', sans-serif;
+    --eg-font-digits: 'Noto Kufi Arabic', sans-serif;
 
     font-family: var(--eg-font-main);
     color: var(--eg-slate-800);
@@ -1423,4 +1423,158 @@
     .eg-app .eg-action-footer { flex-direction: column; align-items: stretch; }
     .eg-app .eg-action-buttons { width: 100%; }
     .eg-app .eg-footer-btn { flex: 1; }
+}
+
+/* Visual identity follows the waed copy HTML block, scoped to this page. */
+.eg-app {
+    --eg-slate-950: #041D28;
+    --eg-slate-900: #062E3F;
+    --eg-slate-800: #083B4E;
+    --eg-slate-700: #1A4658;
+    --eg-slate-600: #365968;
+    --eg-slate-500: #64748B;
+    --eg-slate-400: #94A3B8;
+    --eg-slate-300: #CBD5E1;
+    --eg-slate-200: #E2E8F0;
+    --eg-slate-100: #F1F5F9;
+    --eg-slate-50: #F8FAFC;
+    --eg-success: #059669;
+    --eg-success-hover: #047857;
+    --eg-success-light: #EFFAF6;
+    --eg-success-border: #C3E7D8;
+    --eg-warning: #D97706;
+    --eg-warning-light: #FFFAF0;
+    --eg-warning-border: #F1DFB5;
+    --eg-radius-lg: 20px;
+    --eg-radius-xl: 24px;
+    --eg-shadow-sm: 0 2px 8px -2px rgba(6, 46, 63, .06);
+    --eg-shadow-md: 0 10px 26px -6px rgba(6, 46, 63, .12);
+    --eg-shadow-lg: 0 12px 30px -6px rgba(6, 46, 63, .10);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    padding: clamp(14px, 2.2vw, 28px);
+    background-color: #F8FAFC;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23062E3F' stroke-width='.75' stroke-opacity='.055'%3E%3Cpath d='M60 0 78 18h24v24l18 18-18 18v24H78l-18 18-18-18H18V78L0 60l18-18V18h24z'/%3E%3Cpath d='m60 20 28 28-28 28-28-28zM0 0l120 120M120 0 0 120M60 0v120M0 60h120'/%3E%3Ccircle cx='60' cy='60' r='24'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    isolation: isolate;
+}
+
+.eg-app .eg-topbar,
+.eg-app .eg-active-session-bar {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #052735 0%, #063143 55%, #083D53 100%);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 26px;
+    box-shadow: 0 12px 30px -4px rgba(4, 29, 40, .30);
+}
+
+.eg-app .eg-topbar { padding: 26px 30px; }
+
+.eg-app .eg-topbar::before,
+.eg-app .eg-topbar::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.eg-app .eg-topbar::before {
+    top: auto;
+    left: auto;
+    right: auto;
+    inset-block-start: -140px;
+    inset-inline-start: -70px;
+    width: 230px;
+    height: 230px;
+    background: radial-gradient(circle, rgba(34, 163, 204, .24), transparent 70%);
+}
+
+.eg-app .eg-topbar::after {
+    inset-block-end: -170px;
+    inset-inline-end: 18%;
+    background: radial-gradient(circle, rgba(217, 119, 6, .14), transparent 70%);
+}
+
+.eg-app .eg-topbar-main,
+.eg-app .eg-topbar-meta { position: relative; z-index: 1; }
+.eg-app .eg-title { color: #FFFFFF; font-size: clamp(20px, 2.3vw, 27px); }
+.eg-app .eg-lead,
+.eg-app .eg-badge-text { color: #D2E2E8; }
+
+.eg-app .eg-badge-primary {
+    color: #7DD3FC;
+    background: rgba(34, 163, 204, .15);
+    border-color: rgba(34, 163, 204, .35);
+}
+
+.eg-app .eg-dot-pulse {
+    background: #22A3CC;
+    box-shadow: 0 0 0 2px rgba(34, 163, 204, .25);
+}
+
+.eg-app .eg-info-card {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .2);
+}
+
+.eg-app .eg-info-label { color: #D2E2E8; }
+.eg-app .eg-info-value { color: #FFFFFF; }
+
+.eg-app .eg-session-status-pills {
+    background: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+.eg-app .eg-session-filter-pill.is-active {
+    color: #062E3F;
+    box-shadow: 0 2px 8px -2px rgba(6, 46, 63, .12);
+}
+
+.eg-app .eg-session-bento-card,
+.eg-app .eg-kpi-card,
+.eg-app .eg-stage-tab,
+.eg-app .eg-panel,
+.eg-app .eg-table-bar,
+.eg-app .eg-action-footer {
+    border-color: #E2E8F0;
+    box-shadow: var(--eg-shadow-sm);
+}
+
+.eg-app .eg-session-bento-card:hover,
+.eg-app .eg-kpi-card:hover {
+    border-color: rgba(6, 46, 63, .24);
+    box-shadow: 0 12px 30px -6px rgba(6, 46, 63, .10);
+}
+
+.eg-app .eg-active-session-bar { padding: 18px 24px; }
+.eg-app .eg-active-session-info,
+.eg-app .eg-active-session-bar > * { position: relative; z-index: 1; }
+.eg-app .eg-stage-tab { border-width: 1px; }
+.eg-app .eg-stage-tab.is-active { border-color: #22A3CC; }
+.eg-app .eg-stage-tab.is-active::after { background: #22A3CC; height: 3px; }
+.eg-app .eg-stage-tab.is-locked { background: #F1F5F9; box-shadow: none; }
+.eg-app .eg-stage-guidance-banner { background: #EAF7FA; border-color: #B8E2EC; }
+.eg-app .eg-btn-approve { background: #062E3F; box-shadow: 0 4px 14px rgba(6, 46, 63, .18); }
+.eg-app .eg-btn-approve:hover { background: #083B4E; }
+
+@media (prefers-reduced-motion: reduce) {
+    .eg-app *, .eg-app *::before, .eg-app *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
 }

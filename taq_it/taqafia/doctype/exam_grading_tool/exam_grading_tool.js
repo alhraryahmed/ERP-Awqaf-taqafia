@@ -1,5 +1,15 @@
-const GRADING_ROLE = "مشرف رصد الامتحانات";
-const APPROVAL_ROLE = "معتمد نتائج الامتحانات";
+const GRADING_ROLES = [
+    "مشرف رصد الامتحانات",
+    "مشرف رصد امتحانات الوعاظ",
+    "مشرفة رصد امتحانات الواعظات",
+    "رئيس قسم التقويم والقياس",
+    "مدير إدارة الشؤون الثقافية"
+];
+const APPROVAL_ROLES = [
+    "معتمد نتائج الامتحانات",
+    "رئيس قسم التقويم والقياس",
+    "مدير إدارة الشؤون الثقافية"
+];
 
 frappe.ui.form.on("exam_grading_tool", {
     refresh(frm) {
@@ -38,7 +48,7 @@ frappe.ui.form.on("exam_grading_tool", {
     },
 
     approve_stage(frm) {
-        approve_stage(frm); s
+        approve_stage(frm);
     }
 });
 
@@ -48,11 +58,11 @@ function setup_role_actions(frm) {
 }
 
 function can_grade() {
-    return frappe.user.has_role("System Manager") || frappe.user.has_role(GRADING_ROLE);
+    return frappe.user.has_role("System Manager") || GRADING_ROLES.some(role => frappe.user.has_role(role));
 }
 
 function can_approve() {
-    return frappe.user.has_role("System Manager") || frappe.user.has_role(APPROVAL_ROLE);
+    return frappe.user.has_role("System Manager") || APPROVAL_ROLES.some(role => frappe.user.has_role(role));
 }
 
 function get_stage(frm) {

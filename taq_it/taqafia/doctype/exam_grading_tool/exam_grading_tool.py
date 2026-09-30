@@ -1,6 +1,8 @@
 # Copyright (c) 2026, ahmeed and contributors
 # For license information, please see license.txt
 
+import math
+
 import frappe
 from frappe.model.workflow import apply_workflow
 from frappe.model.document import Document
@@ -82,9 +84,6 @@ def ensure_stage_is_available(group, stage):
     if not exam_form:
         frappe.throw("{0} Exam Form is not configured on the selected group.".format(stage))
 
-    if stage == ORAL_STAGE:
-        group.prepare_oral_results()
-
     return exam_form
 
 
@@ -92,6 +91,7 @@ def ensure_stage_is_available(group, stage):
 def load_preachers(exam_group_date, grading_stage):
     stage = normalize_stage(grading_stage)
     group = get_group(exam_group_date)
+    frappe.has_permission("exam_group_date", "read", doc=group.name, throw=True)
     exam_form = ensure_stage_is_available(group, stage)
 
     frappe.has_permission("exam_result", "read", throw=True)
@@ -153,6 +153,7 @@ def load_preachers(exam_group_date, grading_stage):
 
     return {
         "exam_form": exam_form,
+        "success_rate": flt(frappe.db.get_value("exam_form", exam_form, "success_rate") or 0),
         "stage": stage,
         "columns": columns,
         "rows": rows,
@@ -163,11 +164,7 @@ def get_written_candidate_rows(group, exam_form):
     form = frappe.get_doc("exam_form", exam_form)
     rows = []
 
-    for candidate in group.waed_info_to_exam:
-        waed = getattr(candidate, "full_name", None) or getattr(candidate, "waed_info", None)
-        if not waed:
-            continue
-
+    for waed in get_group_candidate_names(group):
         result_name = frappe.db.exists(
             "exam_result",
             {
@@ -185,6 +182,15 @@ def get_written_candidate_rows(group, exam_form):
         )
 
     return rows
+
+
+def get_group_candidate_names(group):
+    names = []
+    for candidate in group.waed_info_to_exam or []:
+        waed = getattr(candidate, "full_name", None) or getattr(candidate, "waed_info", None)
+        if waed and waed not in names:
+            names.append(waed)
+    return names
 
 
 def get_question_score(question):
@@ -254,17 +260,31 @@ def save_grades(exam_group_date, grading_stage, rows):
 
     stage = normalize_stage(grading_stage)
     group = get_group(exam_group_date)
+    frappe.has_permission("exam_group_date", "read", doc=group.name, throw=True)
     ensure_stage_is_available(group, stage)
 
     frappe.has_permission("exam_result", "write", throw=True)
 
     if isinstance(rows, str):
         rows = frappe.parse_json(rows)
+    if not isinstance(rows, list):
+        frappe.throw("Grades must be provided as a list of candidate rows.")
+    if not rows:
+        frappe.throw("No candidate grades were provided.")
 
     updated = []
+    seen_candidates = set()
     for row in rows or []:
+        if not isinstance(row, dict):
+            frappe.throw("Each grading row must be an object.")
+
         result = get_or_create_editable_result(row, group, stage)
+        if result.waed in seen_candidates:
+            frappe.throw("A candidate can only be included once in a grading request.")
+        seen_candidates.add(result.waed)
         attendance = row.get("attendance_status") or "Present"
+        if attendance not in {"Present", "Excused Absent", "Unexcused Absent"}:
+            frappe.throw("Invalid attendance status.")
         result.attendance_status = attendance
         result.absence_reason = row.get("absence_reason") or ""
 
@@ -285,14 +305,45 @@ def save_grades(exam_group_date, grading_stage, rows):
             continue
 
         scores = row.get("scores") or {}
+        if not isinstance(scores, dict):
+            frappe.throw("Candidate scores must be provided as an object.")
 
         table_field = get_stage_table_field(stage)
-        for question in result.get(table_field) or []:
+        question_rows = result.get(table_field) or []
+        accepted_score_keys = set()
+        for question in question_rows:
+            question_key = "{0}::{1}".format(question.aspect, question.question_number)
+            accepted_score_keys.update((question.name, question_key))
+
+        unknown_score_keys = set(scores) - accepted_score_keys
+        if unknown_score_keys:
+            frappe.throw("One or more submitted grades do not match this exam form.")
+
+        for question in question_rows:
             question_key = "{0}::{1}".format(question.aspect, question.question_number)
             if question.name in scores:
-                question.score = flt(scores.get(question.name))
+                score = scores.get(question.name)
             elif question_key in scores:
-                question.score = flt(scores.get(question_key))
+                score = scores.get(question_key)
+            else:
+                continue
+
+            if score in (None, ""):
+                question.score = 0
+                continue
+
+            try:
+                score_value = float(score)
+            except (TypeError, ValueError, OverflowError):
+                frappe.throw("Each grade must be a valid number.")
+
+            if not math.isfinite(score_value) or score_value < 0 or score_value > flt(question.max_grade):
+                frappe.throw(
+                    "Score for question {0} must be between zero and {1}.".format(
+                        question.question_number, question.max_grade
+                    )
+                )
+            question.score = score_value
 
         result.set(get_stage_status_field(stage), STAGE_GRADED)
         result.calculate_all_totals()
@@ -302,7 +353,6 @@ def save_grades(exam_group_date, grading_stage, rows):
         updated.append(result.name)
 
     update_group_status_after_save(group.name, stage)
-    frappe.db.commit()
     return {"updated": updated}
 
 
@@ -325,18 +375,21 @@ def get_or_create_editable_result(row, group, stage):
         waed = row.get("waed")
         if not waed:
             frappe.throw("Preacher is required.")
+        if waed not in set(get_group_candidate_names(group)):
+            frappe.throw("This preacher is not assigned to the selected exam session.")
 
         written_form = frappe.get_doc("exam_form", group.written_exam)
         result_name, created = group.create_exam_result(waed, written_form)
         if created:
             group.update_waed_workflow(waed, "Grading")
-            frappe.db.commit()
     elif not result_name:
         frappe.throw("Exam Result is required.")
 
     result = frappe.get_doc("exam_result", result_name)
     if result.exam_group_date != group.name:
         frappe.throw("Exam Result {0} does not belong to this session.".format(result_name))
+    if result.waed not in set(get_group_candidate_names(group)):
+        frappe.throw("This preacher is not assigned to the selected exam session.")
 
     if result.status == STATUS_FINAL_APPROVED or result.docstatus == 1:
         frappe.throw("Final approved result {0} cannot be modified.".format(result.name))
@@ -358,6 +411,7 @@ def approve_stage(exam_group_date, grading_stage):
 
     stage = normalize_stage(grading_stage)
     group = get_group(exam_group_date)
+    frappe.has_permission("exam_group_date", "read", doc=group.name, throw=True)
     ensure_stage_is_available(group, stage)
 
     frappe.has_permission("exam_result", "write", throw=True)
@@ -412,47 +466,77 @@ def approve_stage(exam_group_date, grading_stage):
 
     update_group_status_after_approval(group.name, stage)
 
-    frappe.db.commit()
     return {"approved": approved, "submitted": submitted}
 
 
 def update_preacher_workflow_after_stage(result, stage):
     preacher = frappe.get_doc("waed_info", result.waed)
 
-    # If candidate was excused/absent with excuse, revert workflow to Scheduling an appointment
-    if getattr(result, "attendance_status", None) == "Excused Absent" or result.get(get_stage_status_field(stage)) == "Excused Absent":
-        try:
-            frappe.db.set_value("waed_info", preacher.name, "waed_status", "Scheduling an appointment")
-            frappe.db.set_value("waed_info", preacher.name, "workflow_state", "Scheduling an appointment")
-        except Exception as e:
-            frappe.log_error(f"Failed to revert excused preacher {preacher.name}: {e}")
-        return
-
     def try_apply(doc, *actions):
         for act in actions:
             try:
                 apply_workflow(doc, act)
+                doc.reload()
                 return True
             except Exception:
                 continue
         return False
 
+    def move_to(target_state, *actions):
+        if try_apply(preacher, *actions):
+            return
+        # Workflow field for WAED_DATA is waed_status. This fallback also
+        # handles legacy records whose current state has no matching transition.
+        if frappe.db.has_column("waed_info", "waed_status"):
+            frappe.db.set_value("waed_info", preacher.name, "waed_status", target_state)
+        else:
+            frappe.log_error(
+                "WAED_DATA has no waed_status field",
+                "Failed to update exam workflow for {0}".format(preacher.name),
+            )
+
+    if (
+        getattr(result, "attendance_status", None) == "Excused Absent"
+        or result.get(get_stage_status_field(stage)) == "Excused Absent"
+    ):
+        # WAED_DATA already defines renew only from Failed Written / Failed Oral.
+        # Follow those existing transitions without adding new workflow actions.
+        state = getattr(preacher, "waed_status", None)
+        if state == "Failed Written":
+            move_to("Scheduling an appointment", "renew")
+        elif state == "Failed Oral":
+            move_to("Scheduling an appointment", "renew")
+        elif stage == WRITTEN_STAGE and state == "in the written exam":
+            if try_apply(preacher, "Fail Written Exam"):
+                move_to("Scheduling an appointment", "renew")
+            else:
+                frappe.log_error(
+                    "Could not move excused candidate through existing WAED_DATA transitions",
+                    "Failed to renew preacher {0}".format(preacher.name),
+                )
+        else:
+            frappe.log_error(
+                "No existing WAED_DATA renew transition from state {0}".format(state),
+                "Failed to renew preacher {0}".format(preacher.name),
+            )
+        return
+
     if stage == WRITTEN_STAGE:
         if result.written_pass_status == PASS_PASSED:
-            try_apply(preacher, "Pass written")
+            move_to("Passed the Written Exam", "Pass written")
             if result.oral_exam_form:
-                try_apply(preacher, "Transfer to the oral exam")
+                move_to("In the oral exam", "Transfer to the oral exam")
             else:
-                try_apply(preacher, "Approve Candidate", "accepted")
+                move_to("Approved", "Approve Candidate", "accepted")
         else:
-            try_apply(preacher, "Fail Written Exam", "faild in written")
+            move_to("Failed Written", "Fail Written Exam", "faild in written")
         return
 
     if stage == ORAL_STAGE and result.status == STATUS_FINAL_APPROVED:
         if result.oral_pass_status == PASS_PASSED:
-            try_apply(preacher, "Approve Candidate", "accepted")
+            move_to("Approved", "Approve Candidate", "accepted")
         else:
-            try_apply(preacher, "Fail Oral Exam", "faild in oral")
+            move_to("Failed Oral", "Fail Oral Exam", "faild in oral")
 
 
 def update_group_status_after_save(exam_group_date, stage):
@@ -547,6 +631,10 @@ def get_sessions_overview(gender=None):
 
         written_graded = sum(1 for r in res_rows if r.written_status in [STAGE_GRADED, STAGE_APPROVED, "Excused Absent", "Unexcused Absent"])
         written_approved = sum(1 for r in res_rows if r.written_status == STAGE_APPROVED)
+        written_decided = sum(
+            1 for r in res_rows
+            if r.written_status in [STAGE_APPROVED, "Excused Absent", "Unexcused Absent"]
+        )
         written_passed = sum(1 for r in res_rows if r.written_status == STAGE_APPROVED and r.written_pass_status == PASS_PASSED)
         
         oral_graded = sum(1 for r in res_rows if r.oral_status in [STAGE_GRADED, STAGE_APPROVED, "Excused Absent", "Unexcused Absent"])
@@ -554,24 +642,25 @@ def get_sessions_overview(gender=None):
         final_approved = sum(1 for r in res_rows if r.status == STATUS_FINAL_APPROVED)
 
         has_oral = bool(sess.get("oral_exam"))
+        written_stage_approved = sess.get("exam_status") in {"Written Approved", "Completed"}
         
         if final_approved >= total_candidates and total_candidates > 0:
             step = "completed"
             step_label = "مكتمل ومعتمد نهائياً"
             step_badge = "success"
-        elif has_oral and written_approved >= total_candidates and oral_approved >= written_passed and total_candidates > 0:
+        elif written_stage_approved and has_oral and written_decided >= total_candidates and oral_approved >= written_passed and total_candidates > 0:
             step = "completed"
             step_label = "مكتمل ومعتمد نهائياً"
             step_badge = "success"
-        elif has_oral and written_approved >= total_candidates and oral_graded >= written_passed and written_passed > 0:
+        elif written_stage_approved and has_oral and written_decided >= total_candidates and oral_graded >= written_passed and written_passed > 0:
             step = "ready_oral_approval"
             step_label = "جاهز لاعتماد الشفوي"
             step_badge = "warning"
-        elif has_oral and written_approved >= total_candidates and written_passed > 0:
+        elif written_stage_approved and has_oral and written_decided >= total_candidates and written_passed > 0:
             step = "ready_oral_grading"
             step_label = "جاهز لرصد الشفوي"
             step_badge = "info"
-        elif written_approved >= total_candidates and total_candidates > 0:
+        elif written_stage_approved and written_decided >= total_candidates and total_candidates > 0:
             step = "completed"
             step_label = "مكتمل ومعتمد نهائياً"
             step_badge = "success"
@@ -593,6 +682,7 @@ def get_sessions_overview(gender=None):
             "total_candidates": total_candidates,
             "written_graded": written_graded,
             "written_approved": written_approved,
+            "written_decided": written_decided,
             "written_passed": written_passed,
             "oral_graded": oral_graded,
             "oral_approved": oral_approved,

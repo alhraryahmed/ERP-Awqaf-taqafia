@@ -5,7 +5,7 @@
 """
 
 import frappe
-from frappe.utils import flt
+from urllib.parse import quote
 
 
 @frappe.whitelist()
@@ -64,6 +64,14 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
     if not print_format:
         frappe.throw("Print Format is required.")
 
+    configured_action = any(
+        action.get("target_doctype") == target_doctype
+        and action.get("print_format") == print_format
+        for action in get_print_actions()
+    )
+    if not configured_action:
+        frappe.throw("Print action is not configured.")
+
     frappe.has_permission(
         source_doctype,
         "read",
@@ -74,15 +82,12 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
     target_name = source_name
 
     if target_doctype == "exam_result":
-        frappe.has_permission(
-            "exam_result",
-            "read",
-            throw=True,
-        )
+        if source_doctype != "waed_info":
+            frappe.throw("Exam result printing must be requested from a preacher record.")
 
         target_name = frappe.db.get_value(
             "exam_result",
-            {"waed": source_name},
+            {"waed": source_name, "docstatus": ["!=", 2]},
             "name",
             order_by="creation desc",
         )
@@ -93,12 +98,14 @@ def get_print_url(source_doctype, source_name, target_doctype, print_format):
     if not frappe.db.exists(target_doctype, target_name):
         frappe.throw("المستند المطلوب غير موجود.")
 
+    frappe.has_permission(target_doctype, "read", doc=target_name, throw=True)
+
     return (
         frappe.utils.get_url()
         + "/printview?"
-        + f"doctype={target_doctype}"
-        + f"&name={target_name}"
-        + f"&format={print_format}"
+        + f"doctype={quote(str(target_doctype))}"
+        + f"&name={quote(str(target_name))}"
+        + f"&format={quote(str(print_format))}"
         + "&no_letterhead=0"
         + "&trigger_print=0"
     )
