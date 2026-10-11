@@ -441,27 +441,6 @@
   "workflow_state": "referred for the exam"
  },
  {
-  "completed_by": "a.habib@awqaf.gov.ly",
-  "completed_by_role": "All",
-  "docstatus": 0,
-  "doctype": "Workflow Action",
-  "modified": "2026-10-01 12:37:34.820118",
-  "name": "bqk8jmb1kr",
-  "permitted_roles": [
-   {
-    "parent": "bqk8jmb1kr",
-    "parentfield": "permitted_roles",
-    "parenttype": "Workflow Action",
-    "role": "All"
-   }
-  ],
-  "reference_doctype": "exam_group_date",
-  "reference_name": "EX-2026-10-04-01",
-  "status": "Completed",
-  "user": null,
-  "workflow_state": "Scheduled"
- },
- {
   "completed_by": null,
   "completed_by_role": null,
   "docstatus": 0,
@@ -499,27 +478,6 @@
   ],
   "reference_doctype": "exam_group_date",
   "reference_name": "EX-2026-10-15-01",
-  "status": "Open",
-  "user": null,
-  "workflow_state": "Written In Progress"
- },
- {
-  "completed_by": null,
-  "completed_by_role": null,
-  "docstatus": 0,
-  "doctype": "Workflow Action",
-  "modified": "2026-10-01 12:37:40.190816",
-  "name": "bs96cet2j3",
-  "permitted_roles": [
-   {
-    "parent": "bs96cet2j3",
-    "parentfield": "permitted_roles",
-    "parenttype": "Workflow Action",
-    "role": "All"
-   }
-  ],
-  "reference_doctype": "exam_group_date",
-  "reference_name": "EX-2026-10-04-01",
   "status": "Open",
   "user": null,
   "workflow_state": "Written In Progress"
@@ -2352,8 +2310,8 @@
   "workflow_state": "Failed Written"
  },
  {
-  "completed_by": null,
-  "completed_by_role": null,
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
   "docstatus": 0,
   "doctype": "Workflow Action",
   "modified": "2026-09-29 16:58:20.490291",
@@ -2368,7 +2326,7 @@
   ],
   "reference_doctype": "waed_info",
   "reference_name": "محمد-علي-الزطريني-مكتب-تاجوراء-0111",
-  "status": "Open",
+  "status": "Completed",
   "user": null,
   "workflow_state": "Failed Written"
  },
@@ -10485,8 +10443,8 @@
   "workflow_state": "New"
  },
  {
-  "completed_by": null,
-  "completed_by_role": null,
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
   "docstatus": 0,
   "doctype": "Workflow Action",
   "modified": "2026-08-09 17:15:43.631467",
@@ -10501,7 +10459,7 @@
   ],
   "reference_doctype": "waed_info",
   "reference_name": "علي-محمد-الشبلي-المحرم-مكتب-طرابلس-المركز-0092",
-  "status": "Open",
+  "status": "Completed",
   "user": null,
   "workflow_state": "New"
  },
@@ -10884,8 +10842,8 @@
   "workflow_state": "New"
  },
  {
-  "completed_by": null,
-  "completed_by_role": null,
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
   "docstatus": 0,
   "doctype": "Workflow Action",
   "modified": "2026-08-09 17:15:44.170184",
@@ -10900,7 +10858,7 @@
   ],
   "reference_doctype": "waed_info",
   "reference_name": "محمد-علي-الزطريني-مكتب-تاجوراء-0111",
-  "status": "Open",
+  "status": "Completed",
   "user": null,
   "workflow_state": "New"
  },
@@ -10989,8 +10947,8 @@
   "workflow_state": "New"
  },
  {
-  "completed_by": null,
-  "completed_by_role": null,
+  "completed_by": "taqafia@awqaf.gov.ly",
+  "completed_by_role": "All",
   "docstatus": 0,
   "doctype": "Workflow Action",
   "modified": "2026-08-09 17:15:44.319480",
@@ -11005,7 +10963,7 @@
   ],
   "reference_doctype": "waed_info",
   "reference_name": "طه-محمد-سالم-عبد-اللطيف-الشويرف-مكتب-تاجوراء-0116",
-  "status": "Open",
+  "status": "Completed",
   "user": null,
   "workflow_state": "New"
  },
@@ -19324,5 +19282,278 @@
   "status": "Open",
   "user": null,
   "workflow_state": "Ongoing"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 12:34:00.981749",
+  "name": "v7p689vhb2",
+  "permitted_roles": [
+   {
+    "parent": "v7p689vhb2",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-19-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 12:34:02.268449",
+  "name": "v8655opt5n",
+  "permitted_roles": [
+   {
+    "parent": "v8655opt5n",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-19-01",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "taqafia@awqaf.gov.ly",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 12:38:11.151654",
+  "name": "1lvbb2d0g7",
+  "permitted_roles": [
+   {
+    "parent": "1lvbb2d0g7",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "طه-محمد-سالم-عبد-اللطيف-الشويرف-مكتب-تاجوراء-0116",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 12:38:11.208087",
+  "name": "1m04d7vma1",
+  "permitted_roles": [
+   {
+    "parent": "1m04d7vma1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "طه-محمد-سالم-عبد-اللطيف-الشويرف-مكتب-تاجوراء-0116",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:57:16.308077",
+  "name": "j5rb6vndk0",
+  "permitted_roles": [
+   {
+    "parent": "j5rb6vndk0",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي-محمد-الشبلي-المحرم-مكتب-طرابلس-المركز-0092",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "referred for the exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:57:16.390637",
+  "name": "j5ragnai6o",
+  "permitted_roles": [
+   {
+    "parent": "j5ragnai6o",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-19-02",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Scheduled"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:57:18.151461",
+  "name": "j6dhledfu5",
+  "permitted_roles": [
+   {
+    "parent": "j6dhledfu5",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-19-02",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Written In Progress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:57:54.615763",
+  "name": "jhqbtr7639",
+  "permitted_roles": [
+   {
+    "parent": "jhqbtr7639",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي-محمد-الشبلي-المحرم-مكتب-طرابلس-المركز-0092",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "in the written exam"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "All",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:58:15.092539",
+  "name": "jo6cu2ei67",
+  "permitted_roles": [
+   {
+    "parent": "jo6cu2ei67",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي-محمد-الشبلي-المحرم-مكتب-طرابلس-المركز-0092",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:58:15.156201",
+  "name": "jo7dipvmeu",
+  "permitted_roles": [
+   {
+    "parent": "jo7dipvmeu",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "علي-محمد-الشبلي-المحرم-مكتب-طرابلس-المركز-0092",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:58:15.255050",
+  "name": "jo8cb1puqt",
+  "permitted_roles": [
+   {
+    "parent": "jo8cb1puqt",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "محمد-علي-الزطريني-مكتب-تاجوراء-0111",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Passed the Written Exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:58:15.318809",
+  "name": "jo9d7j554c",
+  "permitted_roles": [
+   {
+    "parent": "jo9d7j554c",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "waed_info",
+  "reference_name": "محمد-علي-الزطريني-مكتب-تاجوراء-0111",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "In the oral exam"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2026-10-11 14:58:15.379340",
+  "name": "jo9io764i4",
+  "permitted_roles": [
+   {
+    "parent": "jo9io764i4",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "All"
+   }
+  ],
+  "reference_doctype": "exam_group_date",
+  "reference_name": "EX-2026-10-19-02",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Written Approved"
  }
 ]

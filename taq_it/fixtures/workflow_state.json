@@ -255,15 +255,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-06-24 16:29:58.101127",
-  "name": "Completed",
-  "style": "Success",
-  "workflow_state_name": "Completed"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2025-10-13 16:04:44.059325",
   "name": "نشاط معتمد",
   "style": "Info",
@@ -322,15 +313,6 @@
   "name": "Passed the Written Exam",
   "style": "Success",
   "workflow_state_name": "Passed the Written Exam"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2026-07-16 14:46:01.820402",
-  "name": "referred for the exam",
-  "style": "Info",
-  "workflow_state_name": "referred for the exam"
  },
  {
   "docstatus": 0,
@@ -403,5 +385,23 @@
   "name": "Approved",
   "style": "Success",
   "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-24 16:29:58.101127",
+  "name": "Completed",
+  "style": "Success",
+  "workflow_state_name": "Completed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-16 14:46:01.820402",
+  "name": "referred for the exam",
+  "style": "Info",
+  "workflow_state_name": "referred for the exam"
  }
 ]

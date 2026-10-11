@@ -12,6 +12,7 @@ from taq_it.taqafia.doctype.exam_result.exam_result import (
     ORAL_STAGE,
     PASS_FAILED,
     PASS_NOT_REQUIRED,
+    PASS_PENDING,
     PASS_PASSED,
     STAGE_APPROVED,
     STAGE_GRADED,
@@ -28,6 +29,7 @@ from taq_it.taqafia.doctype.exam_result.exam_result import (
 
 
 GRADING_ROLES = {
+    "مشرف لجان امتحانات الوعاظ",
     "مشرف رصد الامتحانات",
     "مشرف رصد امتحانات الوعاظ",
     "مشرفة رصد امتحانات الواعظات",
@@ -47,6 +49,8 @@ class exam_grading_tool(Document):
 
 
 def has_any_role(roles_set):
+    if frappe.session.user == "Administrator":
+        return True
     user_roles = set(frappe.get_roles())
     return bool(user_roles.intersection(roles_set | {SYSTEM_MANAGER_ROLE}))
 
@@ -103,7 +107,7 @@ def load_preachers(exam_group_date, grading_stage):
     if stage == WRITTEN_STAGE:
         candidate_rows = get_written_candidate_rows(group, exam_form)
     else:
-        candidate_rows = get_oral_candidate_rows(group)
+        candidate_rows = get_oral_candidate_rows(group, allow_completed=True)
 
     for candidate in candidate_rows:
         result = candidate.get("result")
@@ -198,21 +202,21 @@ def get_question_score(question):
     return flt(score or 0)
 
 
-def get_oral_candidate_rows(group):
-    written_results = frappe.get_all(
-        "exam_result",
-        filters={"exam_group_date": group.name},
-        fields=["name", "written_status", "written_pass_status"],
-    )
+def get_oral_candidate_rows(group, allow_completed=False):
+    written_results = get_complete_session_results(group)
+    undecided = [
+        result.name
+        for result in written_results
+        if result.written_status not in {STAGE_APPROVED, "Excused Absent", "Unexcused Absent"}
+    ]
+    if undecided:
+        frappe.throw("يجب اعتماد أو حسم التحريري لجميع المترشحين قبل فتح الشفوي.")
 
-    if not written_results:
-        frappe.throw("يجب رصد واعتماد درجات التحريري قبل رصد درجات الشفوي.")
-
-    has_approved_written = any(
-        result.written_status == STAGE_APPROVED for result in written_results
-    )
-    if not has_approved_written:
-        frappe.throw("يجب اعتماد درجات التحريري قبل رصد درجات الشفوي.")
+    allowed_statuses = {"Oral In Progress"}
+    if allow_completed:
+        allowed_statuses.add("Completed")
+    if group.exam_status not in allowed_statuses:
+        frappe.throw("يجب اعتماد التحريري كاملاً قبل فتح الشفوي.")
 
     result_names = frappe.get_all(
         "exam_result",
@@ -224,6 +228,9 @@ def get_oral_candidate_rows(group):
         pluck="name",
         order_by="creation asc",
     )
+
+    if not result_names:
+        frappe.throw("لا يوجد مترشحون ناجحون في التحريري للانتقال إلى الشفوي.")
 
     rows = []
     for result_name in result_names:
@@ -237,6 +244,34 @@ def get_oral_candidate_rows(group):
         )
 
     return rows
+
+
+def get_complete_session_results(group):
+    candidate_names = set(get_group_candidate_names(group))
+    if not candidate_names:
+        frappe.throw("لا توجد قائمة مترشحين في جلسة الامتحان.")
+
+    results = frappe.get_all(
+        "exam_result",
+        filters={"exam_group_date": group.name},
+        fields=["name", "waed", "docstatus", "status", "written_status", "written_pass_status", "oral_status"],
+        order_by="creation asc",
+    )
+    result_candidates = {result.waed for result in results}
+    missing = candidate_names - result_candidates
+    unexpected = result_candidates - candidate_names
+
+    if missing or unexpected or len(result_candidates) != len(results):
+        details = []
+        if missing:
+            details.append("لم تُنشأ نتيجة للمترشحين: {0}".format(", ".join(sorted(missing))))
+        if unexpected:
+            details.append("توجد نتائج لمترشحين خارج القائمة: {0}".format(", ".join(sorted(unexpected))))
+        if len(result_candidates) != len(results):
+            details.append("توجد نتائج مكررة لمترشح في الجلسة")
+        frappe.throw("لا يمكن اعتماد المرحلة قبل مطابقة نتائج كامل قائمة الجلسة. " + "؛ ".join(details))
+
+    return results
 
 
 def sort_question_columns(question_map):
@@ -264,6 +299,13 @@ def save_grades(exam_group_date, grading_stage, rows):
     ensure_stage_is_available(group, stage)
 
     frappe.has_permission("exam_result", "write", throw=True)
+
+    if stage == ORAL_STAGE:
+        # The oral stage must remain locked until every written candidate has
+        # a final written decision and the session is in an oral workflow state.
+        get_oral_candidate_rows(group)
+    elif group.exam_status != "Written In Progress":
+        frappe.throw("مرحلة التحريري مقفلة أو أن الجلسة لا تقبل رصد درجات جديدة.")
 
     if isinstance(rows, str):
         rows = frappe.parse_json(rows)
@@ -352,7 +394,6 @@ def save_grades(exam_group_date, grading_stage, rows):
         result.save()
         updated.append(result.name)
 
-    update_group_status_after_save(group.name, stage)
     return {"updated": updated}
 
 
@@ -416,8 +457,16 @@ def approve_stage(exam_group_date, grading_stage):
 
     frappe.has_permission("exam_result", "write", throw=True)
 
+    all_results = get_complete_session_results(group)
+    expected_group_status = "Written In Progress" if stage == WRITTEN_STAGE else "Oral In Progress"
+    if group.exam_status != expected_group_status:
+        frappe.throw("لا يمكن اعتماد المرحلة قبل اكتمال رصدها ووصول الجلسة إلى الحالة المتوقعة.")
+
     filters = {"exam_group_date": group.name}
     if stage == ORAL_STAGE:
+        # Recheck the prerequisite on the server; UI tab locking is not an
+        # authorization or workflow boundary.
+        get_oral_candidate_rows(group)
         filters.update(
             {
                 "written_status": STAGE_APPROVED,
@@ -436,6 +485,9 @@ def approve_stage(exam_group_date, grading_stage):
         if stage == ORAL_STAGE:
             frappe.throw("يجب اعتماد درجات التحريري قبل اعتماد درجات الشفوي.")
         frappe.throw("No Exam Results found for this stage.")
+
+    if stage == WRITTEN_STAGE and len(results) != len(all_results):
+        frappe.throw("لا يمكن اعتماد التحريري قبل رصد جميع مترشحي الجلسة.")
 
     status_field = get_stage_status_field(stage)
     not_ready = [
@@ -467,6 +519,80 @@ def approve_stage(exam_group_date, grading_stage):
     update_group_status_after_approval(group.name, stage)
 
     return {"approved": approved, "submitted": submitted}
+
+
+@frappe.whitelist()
+def reopen_stage(exam_group_date, grading_stage, reason):
+    """Reopen written grading only when no oral-stage work can be invalidated."""
+    if not has_any_role({SYSTEM_MANAGER_ROLE}):
+        frappe.throw("إعادة فتح مرحلة معتمدة متاحة لمدير النظام فقط.")
+
+    stage = normalize_stage(grading_stage)
+    if stage != WRITTEN_STAGE:
+        frappe.throw("لا يمكن إعادة فتح الشفوي بعد الاعتماد؛ نتائجه النهائية تتطلب مسار إلغاء مستقل.")
+
+    reason = (reason or "").strip()
+    if not reason:
+        frappe.throw("يجب إدخال سبب إعادة فتح المرحلة.")
+    if len(reason) > 1000:
+        frappe.throw("سبب إعادة الفتح يجب ألا يتجاوز 1000 حرف.")
+
+    group = get_group(exam_group_date)
+    frappe.has_permission("exam_group_date", "read", doc=group.name, throw=True)
+    frappe.has_permission("exam_result", "write", throw=True)
+
+    if group.exam_status not in {"Oral In Progress", "Completed"}:
+        frappe.throw("لا يمكن إعادة فتح التحريري إلا بعد اعتماده.")
+
+    results = get_complete_session_results(group)
+    if not results:
+        frappe.throw("لا توجد نتائج لإعادة فتحها.")
+
+    oral_work_started = [
+        result.name
+        for result in results
+        if result.docstatus == 1
+        or result.status == STATUS_FINAL_APPROVED
+        or result.oral_status not in {STAGE_NOT_GRADED, STAGE_NOT_REQUIRED}
+    ]
+    if oral_work_started:
+        frappe.throw(
+            "لا يمكن إعادة فتح التحريري بعد بدء أو اعتماد الشفوي للمترشحين: {0}".format(
+                ", ".join(oral_work_started)
+            )
+        )
+
+    reopened = []
+    for result_info in results:
+        result = frappe.get_doc("exam_result", result_info.name)
+        if result.written_status == STAGE_APPROVED:
+            result.written_status = STAGE_GRADED
+            result.written_pass_status = PASS_PENDING
+            result.status = STATUS_WRITTEN_GRADED
+            result.pass_status = PASS_PENDING
+            if result.oral_exam_form:
+                result.oral_status = STAGE_NOT_GRADED
+                result.oral_pass_status = PASS_PENDING
+            else:
+                result.oral_status = STAGE_NOT_REQUIRED
+                result.oral_pass_status = PASS_NOT_REQUIRED
+
+            frappe.flags.exam_stage_reopen = WRITTEN_STAGE
+            try:
+                result.save()
+            finally:
+                frappe.flags.exam_stage_reopen = None
+            reopened.append(result.name)
+
+    # This controlled rollback is deliberately server-only: exposing a normal
+    # Workflow action would let users move the group without reopening results.
+    frappe.db.set_value("exam_group_date", group.name, "exam_status", "Written In Progress")
+    group.add_comment(
+        "Comment",
+        "أعيد فتح مرحلة التحريري بواسطة {0}. السبب: {1}".format(frappe.session.user, reason),
+    )
+
+    return {"reopened": reopened, "exam_group_date": group.name}
 
 
 def update_preacher_workflow_after_stage(result, stage):
@@ -539,14 +665,6 @@ def update_preacher_workflow_after_stage(result, stage):
             move_to("Failed Oral", "Fail Oral Exam", "faild in oral")
 
 
-def update_group_status_after_save(exam_group_date, stage):
-    if not frappe.db.has_column("exam_group_date", "exam_status"):
-        return
-
-    next_status = "Written Graded" if stage == WRITTEN_STAGE else "Oral Graded"
-    frappe.db.set_value("exam_group_date", exam_group_date, "exam_status", next_status)
-
-
 def update_group_status_after_approval(exam_group_date, stage):
     if not frappe.db.has_column("exam_group_date", "exam_status"):
         return
@@ -554,20 +672,29 @@ def update_group_status_after_approval(exam_group_date, stage):
     group = frappe.get_doc("exam_group_date", exam_group_date)
 
     if stage == ORAL_STAGE:
-        next_status = "Completed"
-    elif not group.oral_exam:
-        next_status = "Completed"
-    else:
-        has_oral_candidates = frappe.db.exists(
-            "exam_result",
-            {
-                "exam_group_date": exam_group_date,
-                "written_pass_status": PASS_PASSED,
-            },
-        )
-        next_status = "Written Approved" if has_oral_candidates else "Completed"
+        if group.exam_status != "Oral In Progress":
+            frappe.throw("يجب أن تكون الجلسة في حالة Oral In Progress قبل إكمالها.")
+        apply_workflow(group, "Complete Exam")
+        return
 
-    frappe.db.set_value("exam_group_date", exam_group_date, "exam_status", next_status)
+    if group.exam_status != "Written In Progress":
+        frappe.throw("يجب أن تكون الجلسة في حالة Written In Progress قبل اعتماد التحريري.")
+
+    apply_workflow(group, "Approve Written Stage")
+    group.reload()
+
+    has_oral_candidates = bool(group.oral_exam) and frappe.db.exists(
+        "exam_result",
+        {
+            "exam_group_date": exam_group_date,
+            "written_status": STAGE_APPROVED,
+            "written_pass_status": PASS_PASSED,
+        },
+    )
+    if not has_oral_candidates:
+        # Sessions without an oral stage (or without written passes) still
+        # complete through the workflow, never by mutating exam_status directly.
+        apply_workflow(group, "Complete Exam")
 
 
 @frappe.whitelist()
@@ -642,7 +769,7 @@ def get_sessions_overview(gender=None):
         final_approved = sum(1 for r in res_rows if r.status == STATUS_FINAL_APPROVED)
 
         has_oral = bool(sess.get("oral_exam"))
-        written_stage_approved = sess.get("exam_status") in {"Written Approved", "Completed"}
+        written_stage_approved = sess.get("exam_status") in {"Oral In Progress", "Completed"}
         
         if final_approved >= total_candidates and total_candidates > 0:
             step = "completed"

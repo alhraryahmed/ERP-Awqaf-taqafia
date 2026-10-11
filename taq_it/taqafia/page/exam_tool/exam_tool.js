@@ -52,6 +52,7 @@
 // For license information, please see license.txt
 
 const GRADING_ROLES = [
+    "مشرف لجان امتحانات الوعاظ",
     "مشرف رصد الامتحانات",
     "مشرف رصد امتحانات الوعاظ",
     "مشرفة رصد امتحانات الواعظات",
@@ -131,6 +132,15 @@ class ExamGradingToolPage {
         return this.user_roles.includes("Administrator") || this.user_roles.includes("System Manager") || APPROVAL_ROLES.some(role => this.user_roles.includes(role));
     }
 
+    can_reopen_written_stage() {
+        const sess = this.active_session_data;
+        return (this.user_roles.includes("Administrator") || this.user_roles.includes("System Manager")) &&
+            this.current_stage === "Written" &&
+            this.is_stage_approved("Written") &&
+            Boolean(sess && ["Oral In Progress", "Completed"].includes(sess.exam_status)) &&
+            !(sess.oral_graded || 0) && !(sess.oral_approved || 0);
+    }
+
     is_session_completed() {
         if (!this.active_session_data) return false;
         const sess = this.active_session_data;
@@ -142,7 +152,7 @@ class ExamGradingToolPage {
         if (!sess || !sess.total_candidates) return false;
 
         if (stage === "Written") {
-            return ["Written Approved", "Completed"].includes(sess.exam_status) &&
+            return ["Oral In Progress", "Completed"].includes(sess.exam_status) &&
                 (sess.written_decided || 0) >= sess.total_candidates;
         }
 
@@ -302,6 +312,10 @@ class ExamGradingToolPage {
         // Approve Button
         this.wrapper.on("click", "#btn-footer-approve", () => {
             this.approve_stage();
+        });
+
+        this.wrapper.on("click", "[data-reopen-written-stage]", () => {
+            this.reopen_written_stage();
         });
 
         // Print Official Report Button
@@ -481,10 +495,17 @@ class ExamGradingToolPage {
                     </button>
                 `;
             } else {
-                statusPillHtml = `<span class="eg-card-status-pill eg-status-open"><span class="eg-status-dot"></span> متاحة للرصد والاعتماد ⚡</span>`;
+                const pendingAction = {
+                    ready_written_grading: ["بانتظار رصد التحريري", "بدء رصد التحريري"],
+                    ready_written_approval: ["بانتظار اعتماد التحريري", "مراجعة واعتماد التحريري"],
+                    ready_oral_grading: ["بانتظار رصد الشفوي", "متابعة رصد الشفوي"],
+                    ready_oral_approval: ["بانتظار اعتماد الشفوي", "مراجعة واعتماد الشفوي"]
+                }[sess.step] || ["الجلسة قيد الإجراء", "متابعة الجلسة"];
+
+                statusPillHtml = `<span class="eg-card-status-pill eg-status-open"><span class="eg-status-dot"></span> ${pendingAction[0]} ⚡</span>`;
                 btnActionHtml = `
                     <button type="button" class="eg-card-btn eg-card-btn-primary" data-open-session="${frappe.utils.escape_html(sess.name)}">
-                        <span>✍️ متابعة الرصد والاعتماد</span>
+                        <span>✍️ ${pendingAction[1]}</span>
                     </button>
                 `;
             }
@@ -521,7 +542,7 @@ class ExamGradingToolPage {
 
                     <div class="eg-card-progress-wrap">
                         <div class="eg-card-progress-header">
-                            <span>نسبة الإنجاز</span>
+                            <span>اكتمال الرصد</span>
                             <span class="eg-num">${progressPct}%</span>
                         </div>
                         <div class="eg-card-progress-track">
@@ -693,11 +714,19 @@ class ExamGradingToolPage {
         const titleEl = this.wrapper.find("[data-guidance-title]");
         const descEl = this.wrapper.find("[data-guidance-desc]");
         const actionBtn = this.wrapper.find("[data-approve-btn-text]");
+        const guidanceAction = this.wrapper.find("[data-guidance-action]").empty();
         const isCompleted = this.is_session_completed();
 
         if (this.current_stage !== "Final" && this.is_stage_approved(this.current_stage)) {
             titleEl.text("هذه المرحلة معتمدة 🔒 (وضع القراءة فقط)");
             descEl.text("يمكنك استعراض نتائج المرحلة المعتمدة والتنقل بين المراحل. أزرار الحفظ والاعتماد مخفية لهذه المرحلة.");
+            if (this.can_reopen_written_stage()) {
+                guidanceAction.html(`
+                    <button type="button" class="btn btn-default" data-reopen-written-stage>
+                        🔓 إعادة فتح التحريري
+                    </button>
+                `);
+            }
             return;
         }
 
@@ -1315,6 +1344,8 @@ class ExamGradingToolPage {
                     message: "تم حفظ الدرجات بنجاح، وأصبحت المرحلة جاهزة للاعتماد.",
                     indicator: "green"
                 });
+                const savedSession = this.active_session;
+                this.load_sessions(() => this.select_session(savedSession));
             },
             error: () => {
                 this.set_save_status("dirty");
@@ -1349,6 +1380,45 @@ class ExamGradingToolPage {
                 }
             });
         });
+    }
+
+    reopen_written_stage() {
+        if (!this.can_reopen_written_stage()) return;
+
+        frappe.confirm(
+            "سيُعاد فتح التحريري للتعديل. لا يمكن تنفيذ ذلك بعد بدء رصد الشفوي أو اعتماد نتائجه.",
+            () => {
+                frappe.prompt(
+                    [{
+                        fieldname: "reason",
+                        fieldtype: "Small Text",
+                        label: "سبب إعادة الفتح",
+                        reqd: 1
+                    }],
+                    (values) => {
+                        frappe.call({
+                            method: "taq_it.taqafia.doctype.exam_grading_tool.exam_grading_tool.reopen_stage",
+                            args: {
+                                exam_group_date: this.active_session,
+                                grading_stage: "Written",
+                                reason: values.reason
+                            },
+                            callback: () => {
+                                frappe.show_alert({
+                                    message: "تمت إعادة فتح التحريري وسُجل السبب في سجل الجلسة.",
+                                    indicator: "orange"
+                                });
+                                this.has_unsaved_changes = false;
+                                const reopenedSession = this.active_session;
+                                this.load_sessions(() => this.select_session(reopenedSession));
+                            }
+                        });
+                    },
+                    "إعادة فتح التحريري",
+                    "إعادة الفتح"
+                );
+            }
+        );
     }
 
     print_results() {

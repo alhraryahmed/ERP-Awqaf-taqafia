@@ -70,6 +70,21 @@ class exam_result(Document):
             if previous.get(status_field) != STAGE_APPROVED:
                 continue
 
+            if getattr(frappe.flags, "exam_stage_reopen", None) == stage:
+                if self.get(status_field) != STAGE_GRADED:
+                    frappe.throw("Reopening an approved stage must return it to Graded status.")
+                before_rows = [
+                    (row.name, row.aspect, row.question_number, row.max_grade, row.score)
+                    for row in previous.get(table_field) or []
+                ]
+                current_rows = [
+                    (row.name, row.aspect, row.question_number, row.max_grade, row.score)
+                    for row in self.get(table_field) or []
+                ]
+                if before_rows != current_rows:
+                    frappe.throw("Grades cannot be changed as part of reopening a stage.")
+                continue
+
             if self.get(status_field) != STAGE_APPROVED:
                 frappe.throw("Approved {0} exam results cannot be reopened.".format(stage))
 

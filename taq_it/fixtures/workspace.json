@@ -1,6 +1,32 @@
 [
  {
   "charts": [],
+  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"البر الوقفية\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"مركز معالجة البيانات\",\"type\":\"Page\",\"link_to\":\"bir_data_processor\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"معاملات البر الوقفية\",\"type\":\"DocType\",\"link_to\":\"Bir Transaction\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"كشوف الحساب المصرفية\",\"type\":\"DocType\",\"link_to\":\"Bir Bank Statement\"}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "bank",
+  "indicator_color": null,
+  "is_hidden": 0,
+  "label": "البر الوقفية",
+  "links": [],
+  "modified": "2026-10-11 14:44:51.159409",
+  "module": "Bir Waqf",
+  "name": "البر الوقفية",
+  "number_cards": [],
+  "parent_page": null,
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 1.0,
+  "shortcuts": [],
+  "title": "البر الوقفية"
+ },
+ {
+  "charts": [],
   "content": "[{\"id\":\"nxHeaderShort\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"nxScTheme\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Theme Studio\",\"col\":3}},{\"id\":\"nxScSound\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sound Studio\",\"col\":3}},{\"id\":\"nxScThemes\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Themes\",\"col\":3}},{\"id\":\"nxScSettings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Theme Settings\",\"col\":3}},{\"id\":\"nxScPerms\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Permission Inspector\",\"col\":3}},{\"id\":\"nxSpacer1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"nxHeaderMasters\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"nxCardStudios\",\"type\":\"card\",\"data\":{\"card_name\":\"Studios\",\"col\":4}},{\"id\":\"nxCardThemes\",\"type\":\"card\",\"data\":{\"card_name\":\"Themes\",\"col\":4}},{\"id\":\"nxCardPrefs\",\"type\":\"card\",\"data\":{\"card_name\":\"My Preferences\",\"col\":4}},{\"id\":\"nxCardAdmin\",\"type\":\"card\",\"data\":{\"card_name\":\"Administration\",\"col\":4}}]",
   "custom_blocks": [],
   "docstatus": 0,
@@ -19812,7 +19838,7 @@
   "is_hidden": 0,
   "label": "إدارة الشؤون الثقافية والدعوية",
   "links": [],
-  "modified": "2026-08-19 13:57:52.572398",
+  "modified": "2026-10-08 11:58:22.922317",
   "module": "taqafia",
   "name": "إدارة الشؤون الثقافية والدعوية",
   "number_cards": [],
@@ -19826,6 +19852,12 @@
     "parentfield": "roles",
     "parenttype": "Workspace",
     "role": "موظفي الثقافية بالديوان"
+   },
+   {
+    "parent": "إدارة الشؤون الثقافية والدعوية",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "مشرف لجان امتحانات الوعاظ"
    }
   ],
   "sequence_id": 35.0,
@@ -20463,7 +20495,7 @@
   "is_hidden": 0,
   "label": "قسم الامتحانات",
   "links": [],
-  "modified": "2026-08-24 16:24:24.929514",
+  "modified": "2026-10-08 11:58:59.923633",
   "module": "taqafia",
   "name": "قسم الامتحانات",
   "number_cards": [],
@@ -20477,6 +20509,12 @@
     "parentfield": "roles",
     "parenttype": "Workspace",
     "role": "موظفي الثقافية بالديوان"
+   },
+   {
+    "parent": "قسم الامتحانات",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "مشرف لجان امتحانات الوعاظ"
    }
   ],
   "sequence_id": 38.0,
@@ -20934,32 +20972,6 @@
    }
   ],
   "title": "Helpdesk"
- },
- {
-  "charts": [],
-  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"البر الوقفية\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"مركز معالجة البيانات\",\"type\":\"Page\",\"link_to\":\"bir_data_processor\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"معاملات البر الوقفية\",\"type\":\"DocType\",\"link_to\":\"Bir Transaction\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"كشوف الحساب المصرفية\",\"type\":\"DocType\",\"link_to\":\"Bir Bank Statement\"}}]",
-  "custom_blocks": [],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "bank",
-  "indicator_color": null,
-  "is_hidden": 0,
-  "label": "البر الوقفية",
-  "links": [],
-  "modified": "2026-10-01 10:48:03.650330",
-  "module": "Bir Waqf",
-  "name": "البر الوقفية",
-  "number_cards": [],
-  "parent_page": null,
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [],
-  "sequence_id": 1.0,
-  "shortcuts": [],
-  "title": "البر الوقفية"
  },
  {
   "charts": [],
