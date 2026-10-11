@@ -1,10 +1,10 @@
 # Copyright (c) 2026, ahmeed and contributors
 # For license information, please see license.txt
 
+from urllib.parse import quote
+
 import frappe
 from frappe.model.document import Document
-from frappe.utils.file_manager import save_file
-import re
 
 WRITTEN_STAGE = "Written"
 ORAL_STAGE = "Oral"
@@ -56,6 +56,33 @@ class exam_result(Document):
 
         if previous.status == STATUS_FINAL_APPROVED and self.docstatus == previous.docstatus:
             frappe.throw("Final approved exam results cannot be modified.")
+
+        if self.attendance_status != previous.attendance_status and (
+            previous.written_status == STAGE_APPROVED
+            or previous.oral_status == STAGE_APPROVED
+        ):
+            frappe.throw("Attendance cannot be changed after a stage has been approved.")
+
+        for stage, table_field, status_field in (
+            (WRITTEN_STAGE, "written_questions", "written_status"),
+            (ORAL_STAGE, "oral_questions", "oral_status"),
+        ):
+            if previous.get(status_field) != STAGE_APPROVED:
+                continue
+
+            if self.get(status_field) != STAGE_APPROVED:
+                frappe.throw("Approved {0} exam results cannot be reopened.".format(stage))
+
+            before_rows = [
+                (row.name, row.aspect, row.question_number, row.max_grade, row.score)
+                for row in previous.get(table_field) or []
+            ]
+            current_rows = [
+                (row.name, row.aspect, row.question_number, row.max_grade, row.score)
+                for row in self.get(table_field) or []
+            ]
+            if before_rows != current_rows:
+                frappe.throw("Approved {0} grades cannot be modified.".format(stage))
 
     def validate_unique_candidate_in_group(self):
         if not self.exam_group_date or not self.waed:
@@ -319,7 +346,7 @@ def get_exam_result_print_url(waed):
 
     result_name = frappe.db.get_value(
         "exam_result",
-        {"waed": waed},
+        {"waed": waed, "docstatus": ["!=", 2]},
         "name",
         order_by="creation desc",
     )
@@ -336,14 +363,91 @@ def get_exam_result_print_url(waed):
     if result_status == STATUS_DRAFT:
         frappe.throw("لا يمكن طباعة كشف الدرجات قبل رصد الدرجات.")
 
+    frappe.has_permission("exam_result", "read", doc=result_name, throw=True)
+
     url = (
         frappe.utils.get_url()
         + f"/printview?"
-        + f"doctype=exam_result"
-        + f"&name={result_name}"
-        + f"&format=result"
+        + f"doctype={quote('exam_result')}"
+        + f"&name={quote(str(result_name))}"
+        + f"&format={quote('result')}"
         + f"&no_letterhead=0"
         + f"&trigger_print=0"
     )
 
     return url
+
+
+def _print_view_url(doctype, name, print_format):
+    return (
+        frappe.utils.get_url()
+        + "/printview?"
+        + f"doctype={quote(doctype)}"
+        + f"&name={quote(str(name))}"
+        + f"&format={quote(str(print_format))}"
+        + "&no_letterhead=0"
+        + "&trigger_print=1"
+    )
+
+
+def _get_waed_license_print_action():
+    """Return the active exam_result action whose print format belongs to waed_info."""
+    actions = frappe.get_all(
+        "waed_print_action",
+        filters={"target_doctype": "exam_result", "enabled": 1},
+        fields=["title", "print_format", "sort_order"],
+        order_by="sort_order asc, modified desc",
+    )
+
+    for action in actions:
+        if not action.print_format:
+            continue
+        print_format = frappe.db.get_value(
+            "Print Format",
+            action.print_format,
+            ["doc_type", "disabled"],
+            as_dict=True,
+        )
+        if print_format and print_format.doc_type == "waed_info" and not print_format.disabled:
+            return action
+
+    return None
+
+
+@frappe.whitelist()
+def get_successful_exam_result_print_options(result_name=None):
+    """Return configured print labels and permission-checked URLs for a passed result."""
+    frappe.has_permission("exam_result", "read", throw=True)
+    frappe.has_permission("waed_info", "read", throw=True)
+
+    license_action = _get_waed_license_print_action()
+    response = {
+        "license_title": (
+            (license_action.title or license_action.print_format)
+            if license_action
+            else None
+        ),
+        "license_available": bool(license_action),
+    }
+    if not result_name:
+        return response
+
+    result = frappe.get_doc("exam_result", result_name)
+    frappe.has_permission("exam_result", "read", doc=result, throw=True)
+    frappe.has_permission("waed_info", "read", doc=result.waed, throw=True)
+
+    if result.docstatus == 2:
+        frappe.throw("لا يمكن طباعة نتيجة ملغاة.")
+    if result.status != STATUS_FINAL_APPROVED or result.pass_status != FINAL_PASSED:
+        frappe.throw("تتوفر مستندات الطباعة للنتائج الناجحة والمعتمدة فقط.")
+
+    response["urls"] = {
+        "form": _print_view_url("exam_result", result.name, "result2"),
+        "grades": _print_view_url("exam_result", result.name, "result"),
+        "license": (
+            _print_view_url("waed_info", result.waed, license_action.print_format)
+            if license_action
+            else None
+        ),
+    }
+    return response

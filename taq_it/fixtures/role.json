@@ -4,6 +4,32 @@
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Role",
+  "home_page": "app/web-form/link-employee-account",
+  "is_custom": 0,
+  "modified": "2026-09-28 15:21:01.391174",
+  "name": "بانتظار الربط",
+  "restrict_to_domain": null,
+  "role_name": "بانتظار الربط",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-10-01 10:47:37.514297",
+  "name": "Theme User",
+  "restrict_to_domain": null,
+  "role_name": "Theme User",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
   "home_page": null,
   "is_custom": 1,
   "modified": "2026-08-20 18:39:13.446773",
@@ -231,19 +257,6 @@
   "name": "Guest",
   "restrict_to_domain": null,
   "role_name": "Guest",
-  "two_factor_auth": 0
- },
- {
-  "desk_access": 1,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Role",
-  "home_page": null,
-  "is_custom": 0,
-  "modified": "2025-09-21 18:25:47.755263",
-  "name": "System Manager",
-  "restrict_to_domain": null,
-  "role_name": "System Manager",
   "two_factor_auth": 0
  },
  {
@@ -1011,6 +1024,32 @@
   "name": "TP Manager",
   "restrict_to_domain": null,
   "role_name": "TP Manager",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-04-01 16:53:32.315334",
+  "name": "System Manager",
+  "restrict_to_domain": null,
+  "role_name": "System Manager",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": "",
+  "is_custom": 0,
+  "modified": "2026-04-09 16:49:29.791727",
+  "name": "مستخدم منصة البر",
+  "restrict_to_domain": null,
+  "role_name": "مستخدم منصة البر",
   "two_factor_auth": 0
  }
 ]

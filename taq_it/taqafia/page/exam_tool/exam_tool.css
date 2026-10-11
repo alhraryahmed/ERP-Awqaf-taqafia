@@ -1456,8 +1456,7 @@
     min-width: 0;
     padding: clamp(14px, 2.2vw, 28px);
     background-color: #F8FAFC;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23062E3F' stroke-width='.75' stroke-opacity='.055'%3E%3Cpath d='M60 0 78 18h24v24l18 18-18 18v24H78l-18 18-18-18H18V78L0 60l18-18V18h24z'/%3E%3Cpath d='m60 20 28 28-28 28-28-28zM0 0l120 120M120 0 0 120M60 0v120M0 60h120'/%3E%3Ccircle cx='60' cy='60' r='24'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
+    background-image: none !important;
     border: 1px solid #E2E8F0;
     border-radius: 24px;
     font-family: 'Noto Kufi Arabic', sans-serif;

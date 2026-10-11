@@ -11,6 +11,7 @@ app_license = "mit"
 #
 app_include_css = [
     "/assets/taq_it/css/taq-font.css",
+    "/assets/taq_it/css/global_html_block.css",
     # "/assets/taq_it/css/variables.css",
     # "/assets/taq_it/css/design_system.css",
     # "/assets/taq_it/css/layout.css",
@@ -23,15 +24,9 @@ app_include_css = [
     # "/assets/taq_it/css/reports.css",
 ]
 
-#app_include_js = [
-# #   "/assets/taq_it/js/app.js",
-#    "/assets/taq_it/js/sidebar.js",
-#    "/assets/taq_it/js/workspace.js",
-#    "/assets/taq_it/js/forms.js",
-#    "/assets/taq_it/js/list.js",
-#    "/assets/taq_it/js/charts.js",
-#    "/assets/taq_it/js/login.js",
-#]
+app_include_js = [
+      "/assets/taq_it/js/global_html_block.js",
+]
 
 fixtures = [
     {"doctype": "Custom Field"},

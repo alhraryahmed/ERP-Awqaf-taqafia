@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"h8xImMkqk8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u0627\u0644\u0642\u0631\u0622\u0646\u064a\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u062c\u062f</span>\",\"col\":12}},{\"id\":\"9rVXSU8E-_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rI-_fJhXEg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u0643\u062a\u0627\u0628\u0629 \u0627\u0644\u062a\u0642\u0627\u0631\u064a\u0631\",\"col\":3}},{\"id\":\"ivL3qh5Z8l\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u0633\u062c\u0644 \u0627\u0644\u0627\u0635\u0648\u0644\",\"col\":3}},{\"id\":\"06r1QzyzTK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"brvLbgyfQ6\",\"type\":\"card\",\"data\":{\"card_name\":\"\u0627\u0644\u0627\u0635\u0648\u0644 (\u0645\u0631\u0627\u0643\u0632 \u062a\u062d\u0641\u064a\u0638 \u0648\u0645\u0633\u0627\u062c\u062f)\",\"col\":4}}]",
- "creation": "2026-07-26 16:04:38.690386",
+ "creation": "2026-09-30 10:58:15.367493",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -53,7 +53,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-08-19 13:57:53.257676",
+ "modified": "2026-09-30 21:26:50.071850",
  "modified_by": "Administrator",
  "module": "Lagna-waqf",
  "name": "\u0627\u0644\u0642\u0631\u0622\u0646\u064a\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u062c\u062f",
@@ -63,7 +63,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 46.0,
+ "sequence_id": 41.0,
  "shortcuts": [
   {
    "color": "Blue",
